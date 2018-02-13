@@ -122,7 +122,7 @@ train_df$namelength <- as.numeric(nchar(train_df$name))
 
 
 
-
+  
 # Train a Random Forest model with cross-validation
 
 cv_folds <- sample(1:3, size = nrow(train), replace = TRUE)
