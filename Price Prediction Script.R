@@ -1,9 +1,19 @@
+### Process: ###
+# - Treat NA values
+# - Cleanse Data and transform
+# - EDA and Histograms
+# - fit initial model
+# - feature engineering
+# - more modeling
+
 ### Step 1:  Load libraries ###
+
 debug(utils:::unpackPkgZip) #get past firewall
 
 library(randomForest)
 library(magrittr)
 library(dplyr)
+library(lubridate)
 
 ### Step 2: Load data ###
 
@@ -27,51 +37,15 @@ all_data <- all_data[,keep_cols]
 
 ### Exploratory Questions ###
 
-# Break up amenities into dummy vars?
-#Figure out variables to remove: We could probably remove picture URL 
-#how do we handle missing values?
-#should we remove description because it adds little value?
-#do amenities affect price? If so, binary values can be used by creating one column per amenity (see code below)
-
-### Data transformation ###
-#transform data
-amenities<-strsplit(train$amenities, ",")
-a<-unlist(amenities)
-a<-gsub("[{]","", a)
-a<-gsub("[}]","", a)
-a<-gsub("[^A-Za-z0-9,;._-]"," ", a)
-a<-trimws(a)
-b<-sort(table(a), decreasing = T)
-col_name<-names(b)
-temp_df<-data.frame(matrix(ncol = 131, nrow = nrow(train)))
-colnames(temp_df) <- col_name
-train_df<-cbind(train, temp_df)
-
-### cleanse data ###
-
-# convert cleaning fee to boolean
-train_df$cleaning_fee <- as.logical(train_df$cleaning_fee)
-
-# convert first_review to date format
-# convert host_has profile pic to boolean
-train_df$host_has_profile_pic <- as.logical(train_df$host_has_profile_pic)
-
-# convert host_identity_verified to boolean
-train_df$host_identity_verified <- as.logical(train_df$host_identity_verified)
-
-# convert host_since to date
-# convert instant_bookable to boolean
-train_df$instant_bookable <- as.logical(train_df$instant_bookable)
-
-# convert last_review to date
-# difference between first review and last review
-# make a nchar(name) column
-train_df$namelength <- as.numeric(nchar(train_df$name))
-
-### EDA and histograms
+# - Break up amenities into dummy vars?
+# - Figure out variables to remove: We could probably remove picture URL 
+# - how do we handle missing values?
+# - should we remove description because it adds little value?
+# - do amenities affect price? If so, binary values can be used by creating one column per amenity (see code below)
 
 
-###treating NAs
+### Treating NAs ###
+
 #large NA: bathrooms (convert to Not Specified), reviews_scores_rating, bedrooms, beds 
 
 
@@ -86,6 +60,68 @@ fillna <- function(column) {
 col_type <- sapply(all_data,class)
 numeric_type <- !(col_type %in% c("character","factor"))
 all_data[,numeric_type] <- sapply(all_data[,numeric_type], fillna)
+
+
+
+
+### Data transformation ###
+
+#transform data
+amenities<-strsplit(train$amenities, ",")
+a<-unlist(amenities)
+a<-gsub("[{]","", a)
+a<-gsub("[}]","", a)
+a<-gsub("[^A-Za-z0-9,;._-]"," ", a)
+a<-trimws(a)
+b<-sort(table(a), decreasing = T)
+col_name<-names(b)
+temp_df<-data.frame(matrix(ncol = 131, nrow = nrow(train)))
+colnames(temp_df) <- col_name
+train_df<-cbind(train, temp_df)
+
+### Cleanse Data ###
+
+# convert cleaning fee to boolean
+train_df$cleaning_fee <- as.logical(train_df$cleaning_fee)
+
+# convert first_review to date format
+train_df$first_review <- as.Date(train_df$first_review, format = "%Y-%m-%d")
+
+# convert host_has profile pic to boolean
+train_df$host_has_profile_pic <- as.logical(train_df$host_has_profile_pic)
+
+# convert host_identity_verified to boolean
+train_df$host_identity_verified <- as.logical(train_df$host_identity_verified)
+
+# convert host_since to date
+train_df$host_since <- as.Date(train_df$host_since, format = "%Y-%m-%d")
+
+# convert instant_bookable to boolean
+train_df$instant_bookable <- as.logical(train_df$instant_bookable)
+
+# convert last_review to date
+train_df$last_review <- as.Date(train_df$last_review, format = "%Y-%m-%d")
+
+# difference between first review and last review (measured in days)
+train_df$diff_first_last_review <- difftime(train_df$last_review, train_df$first_review, units = "days")
+
+# make a nchar(name) column
+train_df$namelength <- as.numeric(nchar(train_df$name))
+
+### EDA and Histograms ###
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Train a Random Forest model with cross-validation
 
