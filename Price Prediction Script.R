@@ -15,6 +15,7 @@ library(magrittr)
 library(dplyr)
 library(lubridate)
 library(zipcode)
+library(mice)
 
 ### Step 2: Load data ###
 
@@ -80,32 +81,52 @@ train_df[,24:ncol(train_df)][is.na(train_df[,24:ncol(train_df)])]<-0
 ### Treating NAs ###
 
 # fill missing zip codes using the 'zipcode' package and joining the data:
-data("zipcode")
-str(zipcode)
-zipcode$zip <- as.numeric(zipcode$zip)
-train_df$zipcode <- as.numeric(train_df$zipcode)
+# data("zipcode")
+# str(zipcode)
+# zipcode$zip <- as.numeric(zipcode$zip)
+# train_df$zipcode <- as.numeric(train_df$zipcode)
+# 
+# trainzip <- train_df[,c("latitude", "longitude", "zipcode", "city")]
+# trainzipna <- trainzip[is.na(trainzip$zipcode),] #keep just na zips
+# new_zip <- left_join(trainzipna, zipcode, c('latitude' = 'latitude', 'longitude' = 'longitude'))
+#write.csv(new_zip, "new_zip.csv")
 
-trainzip <- train_df[,c("latitude", "longitude", "zipcode")]
-trainzipna <- trainzip[is.na(trainzip$zipcode),] #keep just na zips
-new_zip <- left_join(zipcode, trainzipna, c('zip' = 'zipcode'))
+#used website to impute missing zip codes:
+new_zip2 <- read.csv("~/Airbnb-price-prediction/new_zip2.csv")
+
+# Struggling to figure out merge, so just merged via excel - zipcode is now accurate and no NAs
 
 
-# Use lat/long to estimate bathroom, bedrooms, and beds; for zipcode as well
+
+
+
+# Use lat/long to estimate bathroom, bedrooms, and beds; 
+
+#use mice package
+
+#bathrooms, bedrooms, beds:
+imputed_bathrooms <- mice(as.data.frame(train_df[,c("bathrooms", "bedrooms", "beds", "id")], m=5, maxit = 50, method = 'pmm', seed = 500))
+completeData <- complete(imputed_bathrooms,2)
+train_df <- merge(completeData, train_df, by = "id")
+
+train_df <- train_df[ , -which(names(train_df) %in% c("bathrooms.y","bedrooms.y", "beds.y"))] #remove duplicate columns
+names(train_df)[names(train_df) == 'bathrooms.x'] <- 'bathrooms'
+names(train_df)[names(train_df) == 'bedrooms.x'] <- 'bedrooms'
+names(train_df)[names(train_df) == 'beds.x'] <- 'beds'
+
+
 
 
 # reviews scores -> new tag, fix NA's
 # 
 
-# Impute missing values with 0
 
-fillna <- function(column) {
-  column[is.na(column)] <- 0
-  return(column)
-}
 
-col_type <- sapply(all_data,class)
-numeric_type <- !(col_type %in% c("character","factor"))
-all_data[,numeric_type] <- sapply(all_data[,numeric_type], fillna)
+
+
+
+
+
 
 
 

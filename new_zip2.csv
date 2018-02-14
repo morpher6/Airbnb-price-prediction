@@ -1,0 +1,988 @@
+latitude,longitude,city,Address,Zip
+33.72616699,-118.2980995,LA,"West 20th Street, San Pedro, Los Angeles, Los Angeles County, California, 90732, United States of America",90732
+33.76512447,-118.1774934,LA,"South 5th Place, Willowville, Long Beach, Los Angeles County, California, 90802, United States of America",90802
+33.76554868,-118.1805145,LA,"South 2nd Place, Willowville, Long Beach, Los Angeles County, California, 90802, United States of America",90802
+33.76934633,-118.1756509,LA,"Bird Way, Belmont Shore, Long Beach, Los Angeles County, California, 90802, United States of America",90802
+33.77145442,-118.1699966,LA,"East 4th Street, Belmont Shore, Long Beach, Los Angeles County, California, 90814, United States of America",90814
+33.77276132,-118.4116232,LA,"Via Palestra, Palos Verdes Estates, Los Angeles County, California, 90274, United States of America",90274
+33.78618778,-118.1500988,LA,"Loma Avenue, Belmont Shore, Long Beach, Los Angeles County, California, 90804, United States of America",90804
+33.79244654,-118.372694,LA,"Bayridge Road, Ranchos Palos Verdes, Los Angeles County, California, 90275, United States of America",90275
+33.79937475,-118.316879,LA,"West 248th Street, Lomita, Los Angeles County, California, 90717, United States of America",90717
+33.81522977,-118.3868687,LA,"South Catalina Avenue, Redondo Beach, Los Angeles County, California, 90277, United States of America",90277
+33.81697793,-118.1880231,LA,"30A, San Diego Freeway, Signal Hill, Los Angeles County, California, 90806, United States of America",90806
+33.81844571,-118.125882,LA,"Wardlow Street, Los Altos, Long Beach, Los Angeles County, California, 90808, United States of America",90808
+33.82158994,-118.3883018,LA,"South Catalina Avenue, Redondo Beach, Los Angeles County, California, 90277, United States of America",90277
+33.83663012,-118.3812212,LA,"VIP Liquor & Market, 604, Torrance Boulevard, Redondo Beach, Los Angeles County, California, 90277, United States of America",90277
+33.83942446,-118.3862454,LA,"South Broadway, Redondo Beach, Los Angeles County, California, 90277, United States of America",90277
+33.83985344,-118.3820347,LA,"Garnet Street, Redondo Beach, Los Angeles County, California, 90277, United States of America",90277
+33.84225889,-118.3815197,LA,"Emerald Street, Redondo Beach, Los Angeles County, California, 90277, United States of America",90277
+33.86328328,-118.3995413,LA,"Palm Drive, Hermosa Beach, Los Angeles County, California, 90254, United States of America",90254
+33.86508911,-118.3783881,LA,"Marshallfield Lane, Redondo Beach, Los Angeles County, California, 90278, United States of America",90278
+33.86739229,-118.1887713,LA,"East Harding Street, North Long Beach, Long Beach, Los Angeles County, California, 90805, United States of America",90805
+33.86875229,-118.2580689,LA,"Lysander Drive, Keystone, Carson, Los Angeles County, California, 90746, United States of America",90746
+33.87069884,-118.1890233,LA,"Pali Drive, North Long Beach, Long Beach, Los Angeles County, California, 90805, United States of America",90805
+33.87306446,-118.3786645,LA,"Artesia Boulevard, Redondo Beach, Los Angeles County, California, 90278, United States of America",90278
+33.9199744,-118.4206253,LA,"Whiting Street, El Segundo, Los Angeles County, California, 90245, United States of America",90245
+33.95758309,-118.3317194,LA,"Rosehedge Lane, Inglewood, Los Angeles County, California, 90305, United States of America",90305
+33.97213992,-118.4518058,LA,"Bora Bora Way, Marina del Rey, Beverly Hills, Los Angeles County, California, 90292, United States of America",90292
+33.97385042,-117.9042943,LA,"Marimba Street, Rowland Heights, Los Angeles County, California, 91748, United States of America",91748
+33.97785842,-118.4656221,LA,"Venice/Marina Beachfront Bungalow, Ocean Front Walk, Venice, Los Angeles, Los Angeles County, California, 90292, United States of America",90292
+33.97878878,-118.4618099,LA,"Via Dolce, Los Angeles, Los Angeles County, California, 90292, United States of America",90292
+33.97885075,-118.4656801,LA,"Cabo Cantina, 30, Washington Boulevard, Venice, Los Angeles, Los Angeles County, California, 90292, United States of America",90292
+33.97924401,-118.4510847,LA,"Panay Way, Marina del Rey, Ocean Park, Los Angeles County, California, 90292, United States of America",90292
+33.98002755,-118.0327963,LA,"Painter Avenue, East Whittier, Whittier, Los Angeles County, California, 90605, United States of America",90605
+33.98178165,-118.4671676,LA,"Pacific Avenue, Venice, Los Angeles, Los Angeles County, California, 90292, United States of America",90292
+33.98535141,-118.4735611,LA,"Squash, Venice Beach Bike Path, Venice, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.98667547,-118.466761,LA,"North Venice Boulevard, Venice, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.98752414,-118.4604281,LA,"Mildred Avenue, Venice, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.98817372,-118.4604527,LA,"Abbot Kinney Boulevard, Venice, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.98838288,-118.450989,LA,"Jolly Roger Hotel, W Washington Boulevard, Venice, Los Angeles, Los Angeles County, California, 90292, United States of America",90292
+33.98919323,-118.4142837,LA,"Havelock Avenue, Del Rey, Culver Garden, Los Angeles, Los Angeles County, California, 90066, United States of America",90066
+33.9939985,-118.4758427,LA,"Vegan scene, 610, Main Street, Venice, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.99445279,-118.4584923,LA,"Superba Court, Venice, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.99539244,-118.4641347,LA,"Oakwood Recreation Center, 7th Avenue, Venice, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.99565703,-118.3030899,LA,"West 51st Place, Wildasin, Leimert Park, Los Angeles, Los Angeles County, California, 90062, United States of America",90062
+33.99572975,-118.4773957,LA,"Main Street, Venice, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.9960412,-118.44598,LA,"Walgrove Avenue, Mar Vista, Los Angeles, Los Angeles County, California, 90066, United States of America",90066
+33.99633207,-118.4495831,LA,"Glyndon Avenue, Mar Vista, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.99658288,-118.4173832,LA,"Kensington Road, Del Rey, Culver Garden, Los Angeles, Los Angeles County, California, 90066, United States of America",90066
+33.99676959,-118.4503613,LA,"Glyndon Court, Mar Vista, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.99727763,-118.4500479,LA,"Lucille Avenue, Mar Vista, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+33.99757219,-118.3256696,LA,"8th Avenue, Van Ness, Leimert Park, Los Angeles, Los Angeles County, California, 90043, United States of America",90043
+33.99845781,-118.4168993,LA,"Avon Way, Del Rey, Culver Garden, Los Angeles, Los Angeles County, California, 90066, United States of America",90066
+33.99965264,-118.4741228,LA,"Rennie Court, Venice, Los Angeles, Los Angeles County, California, 90405, United States of America",90405
+34.00170174,-118.4678799,LA,"Out of the closet, 214, Lincoln Boulevard, Venice, Los Angeles, Los Angeles County, California, 90291, United States of America",90291
+34.00201969,-118.4812119,LA,"Sermon on the Mountain Church, Hill Street, Santa Monica, Los Angeles County, California, 90405, United States of America",90405
+34.00258325,-118.4376002,LA,"Stewart Avenue, Mar Vista, Los Angeles, Los Angeles County, California, 90066, United States of America",90066
+34.00446681,-118.4319379,LA,"LA Brakeless, 11601, Venice Boulevard, Mar Vista, Los Angeles, Los Angeles County, California, 90066, United States of America",90066
+34.0055704,-118.4455681,LA,"Beethoven Street, Mar Vista, Los Angeles, Los Angeles County, California, 90066, United States of America",90066
+34.00786613,-118.4681293,LA,"Ashland Avenue, Santa Monica, Los Angeles County, California, 90405, United States of America",90405
+34.00947436,-118.4648314,LA,"Wellesley Drive, Santa Monica, Los Angeles County, California, 90405, United States of America",90405
+34.01804694,-118.4843974,LA,"11th Street, Santa Monica, Los Angeles County, California, 90405, United States of America",90405
+34.01846842,-118.3921841,LA,"Duquesne Avenue, Culver City, Los Angeles County, California, 90232, United States of America",90232
+34.01894609,-118.4901797,LA,"CVS, Lincoln Boulevard, Santa Monica, Los Angeles County, California, 90045, United States of America",90045
+34.0193767,-118.4917326,LA,"LACMTA, Santa Monica Boulevard, Santa Monica, Los Angeles County, California, 90404, United States of America",90404
+34.02054519,-118.4058165,LA,"3755, Mentone Avenue, Palms, Los Angeles, Los Angeles County, California, 90034, United States of America",90034
+34.02138303,-118.3957099,LA,"Culver City Hall, Culver Boulevard, Culver City, Los Angeles County, California, 90293, United States of America",90293
+34.02305,-118.1977293,LA,"Esperanza Street, Boyle Heights, Los Angeles, Los Angeles County, California, 90023, United States of America",90023
+34.02361843,-118.5011744,LA,"5th Court, Santa Monica, Los Angeles County, California, 90401, United States of America",90401
+34.02516121,-118.5003408,LA,"Idaho Avenue, Santa Monica, Los Angeles County, California, 90403, United States of America",90403
+34.02578455,-118.5134112,LA,"Cyclehop, San Vicente Boulevard, Santa Monica, Los Angeles County, California, 90402, United States of America",90402
+34.02605281,-118.2095383,LA,"Garnet Street, Ninth Street Junction, Boyle Heights, Los Angeles, Los Angeles County, California, 90023, United States of America",90023
+34.02643452,-118.7681337,LA,"Meadows Court, Le Mer Private Estates, Malibu, Los Angeles County, California, 90265, United States of America",90265
+34.02692472,-117.8053239,LA,"Decorah Road, Diamond Bar, Los Angeles County, California, 91765, United States of America",91765
+34.02820503,-118.2917788,LA,"Vermont Avenue, Saint James Park, Los Angeles, Los Angeles County, California, 90089, United States of America",90089
+34.02843893,-117.7602949,LA,"Rio Rancho Road, Pomona, Los Angeles County, California, 91766, United States of America",91766
+34.028458,-118.7544855,LA,"Latigo Shore Drive, Malibu, Los Angeles County, California, 90265, United States of America",90265
+34.02850067,-118.4527635,LA,"West Pico Boulevard, Santa Monica, Los Angeles County, California, 90064, United States of America",90064
+34.02883467,-118.4430799,LA,"Gateway Boulevard, Sawtelle, Mar Vista, Los Angeles, Los Angeles County, California, 90064, United States of America",90064
+34.02890491,-118.4014203,LA,"Exposition Boulevard, Los Angeles, Los Angeles County, California, 90034, United States of America",90034
+34.02894299,-118.4861454,LA,"W.I. Simonson, 1626, Wilshire Boulevard, Brentwood, Los Angeles, Los Angeles County, California, 90403, United States of America",90403
+34.02923521,-117.8109568,LA,"Foothill Transit 482, Diamond Bar Boulevard, Diamond Bar, Los Angeles County, California, 91765, United States of America",91765
+34.02957551,-118.3549257,LA,"Westhaven Street, The Village Green, Los Angeles, Los Angeles County, California, 90016, United States of America",90016
+34.02982025,-118.5091161,LA,"Georgina Place, Santa Monica, Los Angeles County, California, 90402, United States of America",90402
+34.03127621,-118.8459032,LA,"Broad Beach Road, Malibu, Los Angeles County, California, 90265, United States of America",90265
+34.03217712,-118.3497694,LA,"Church of the Advent, 11601, South Longwood Avenue, The Village Green, Los Angeles, Los Angeles County, California, 90016, United States of America",90016
+34.03244258,-118.2888231,LA,"Ellendale Place, Saint James Park, Los Angeles, Los Angeles County, California, 90007, United States of America",90007
+34.03475197,-118.3775137,LA,"La Cienega Boulevard, The Village Green, Los Angeles, Los Angeles County, California, 90034, United States of America",90034
+34.03476038,-118.4755955,LA,"Arizona Avenue, Santa Monica, Los Angeles County, California, 90404, United States of America",90404
+34.03500319,-118.4712521,LA,"Christian and Missionary Alliance Church, Santa Monica Place South, Santa Monica, Los Angeles County, California, CA 90404, United States of America",90404
+34.03502852,-118.4298998,LA,"Greenfield Avenue, Palms, Los Angeles, Los Angeles County, California, 90064, United States of America",90064
+34.0369648,-118.512742,LA,"Amalfi Drive, Pacific Palisades, Riviera, Los Angeles, Los Angeles County, California, 90272, United States of America",90272
+34.03702651,-118.4855315,LA,"22nd Court, Santa Monica, Los Angeles County, California, 90403, United States of America",90403
+34.03802024,-118.47408,LA,"Kim and Kristine Halverson, Realtors, 3130, Wilshire Boulevard, Santa Monica, Los Angeles County, California, 90403, United States of America",90403
+34.03871177,-118.2134294,LA,"Soto Street, Brooklyn Heights, Boyle Heights, Los Angeles, Los Angeles County, California, 90033, United States of America",90033
+34.03951492,-118.4479298,LA,"Colby Avenue, Sawtelle, Westwood, Los Angeles, Los Angeles County, California, 90025, United States of America",90025
+34.04034835,-118.3118462,LA,"South Saint Andrew's Place, Country Club Park, Cienega, Los Angeles, Los Angeles County, California, 90019, United States of America",90019
+34.04178753,-118.291582,LA,"South Vermont Avenue, Koreatown, Saint James Park, Los Angeles, Los Angeles County, California, 90006, United States of America",90006
+34.04358873,-118.2628289,LA,"Bowes Building, 11601, West Olympic Boulevard, South Park, Bunker Hill, Los Angeles, Los Angeles County, California, 90064, United States of America",90064
+34.04386311,-118.4504564,LA,"West Los Angeles Community Police Station, 11601, Butler Avenue, West Los Angeles, Westwood, Los Angeles, Los Angeles County, California, 90025, United States of America",90025
+34.04466292,-118.2367429,LA,"801, East 4th Place, Arts District, Little Tokyo Historic District, Los Angeles, Los Angeles County, California, 90013, United States of America",90013
+34.04612445,-118.2510907,LA,"Crack Gallery, 11601, West 6th Street, Historic Core District, Bunker Hill, Los Angeles, Los Angeles County, California, 90014, United States of America",90014
+34.04658272,-118.2422416,LA,"The Escondite, 11601, Boyd Street, Toy District, Little Tokyo Historic District, Los Angeles, Los Angeles County, California, 90013, United States of America",90013
+34.04793458,-118.2581559,LA,"Sheraton, 11601, South Hope Street, Financial District, Bunker Hill, Los Angeles, Los Angeles County, California, 90015, United States of America",90015
+34.04820542,-118.2621134,LA,"Corner Bakery, 11601, 8th Street, South Park, Bunker Hill, Los Angeles, Los Angeles County, California, 90017, United States of America",90017
+34.04839785,-118.2494614,LA,"430, South Broadway, Historic Core District, Bunker Hill, Los Angeles, Los Angeles County, California, 90013, United States of America",90013
+34.04926518,-118.2515005,LA,"444, South Hill Street, Financial District, Bunker Hill, Los Angeles, Los Angeles County, California, 90013, United States of America",90013
+34.04946915,-118.4603864,LA,"Wilshire / Barrington, 11601, Wilshire Boulevard, West Los Angeles, Brentwood, Los Angeles, Los Angeles County, California, 90025, United States of America",90025
+34.050218,-118.4585874,LA,"Wilshire Blvd / Federal Ave, Wilshire Boulevard, West Los Angeles, Brentwood, Los Angeles, Los Angeles County, California, 90025, United States of America",90025
+34.05130296,-118.2444573,LA,"Los Angeles Police Department Headquarters, South Spring Street, Historic Core District, Little Tokyo Historic District, Los Angeles, Los Angeles County, California, 90012, United States of America",90012
+34.05155067,-118.4671697,LA,"Dorothy Street, Westgate, Brentwood, Los Angeles, Los Angeles County, California, 90049, United States of America",90049
+34.05194528,-118.2446182,LA,"Los Angeles Police Department Headquarters, South Spring Street, Historic Core District, Little Tokyo Historic District, Los Angeles, Los Angeles County, California, 90012, United States of America",90012
+34.05211556,-118.3827136,LA,"Cashio Street, South Carthay, Palms, Los Angeles, Los Angeles County, California, 90035, United States of America",90035
+34.05227091,-118.2437895,LA,"Los Angeles City Hall Park, West 1st Street, Civic Center, Little Tokyo Historic District, Los Angeles, Los Angeles County, California, 90012, United States of America",90012
+34.05235269,-118.2536818,LA,"South Hope Street, Financial District, Bunker Hill, Los Angeles, Los Angeles County, California, 90071, United States of America",90071
+34.05299269,-118.4374978,LA,"Malcolm Avenue, Westwood, Los Angeles, Los Angeles County, California, 90024, United States of America",90024
+34.05321218,-118.7898307,LA,"Murphy Motorway, Malibu Vista, Los Angeles County, California, 90265, United States of America",90265
+34.05399172,-118.3267548,LA,"Country Club Drive, Oxford Square, Cienega, Los Angeles, Los Angeles County, California, 90019, United States of America",90019
+34.05653731,-118.39163,LA,"Cardiff Avenue, South Carthay, Palms, Los Angeles, Los Angeles County, California, 90035, United States of America",90035
+34.0572371,-118.3990043,LA,"Beverwil Drive, Beverly Hills, Los Angeles County, California, 90035, United States of America",90035
+34.05731683,-118.2524898,LA,"Figueroa Street, Bunker Hill, Los Angeles, Los Angeles County, California, 90012-2410, United States of America",-2410
+34.05798827,-117.7451933,LA,"East 2nd Street, Pomona, Los Angeles County, California, 91766, United States of America",91766
+34.05841643,-118.3403356,LA,"West 9th Street, Hancock Park, Cienega, Los Angeles, Los Angeles County, California, 90019, United States of America",90019
+34.0585248,-118.3988185,LA,"Smithwood Drive, Beverly Hills, Los Angeles County, California, 90212, United States of America",90212
+34.05883861,-118.3131982,LA,"South Gramercy Place, Country Club Park, Cienega, Los Angeles, Los Angeles County, California, 90019, United States of America",90019
+34.05908002,-118.2998816,LA,"South Normandie Avenue, Koreatown, Saint James Park, Los Angeles, Los Angeles County, California, 90005, United States of America",90005
+34.06167235,-118.3532136,LA,"German Cultural Center, 11601, Wilshire Boulevard, Park La Brea, The Village Green, Los Angeles, Los Angeles County, California, 90036, United States of America",90036
+34.06224616,-118.3656851,LA,"Warner Drive, Carthay Circle, The Village Green, Los Angeles, Los Angeles County, California, 90048, United States of America",90048
+34.06330256,-118.3902756,LA,"South Oakhurst Drive, Beverly Hills, Los Angeles County, California, 90212, United States of America",90212
+34.06419988,-118.4499134,LA,"Magnolia Court, 765, Weyburn Place, Westwood Village, Westwood, Los Angeles, Los Angeles County, California, 90024, United States of America",90024
+34.06521559,-118.3744934,LA,"North Gale Drive, Beverly Hills, Los Angeles County, California, 90211, United States of America",90211
+34.06567474,-118.353428,LA,"Lindenhurst Avenue, Park La Brea, Hollywood, Los Angeles, Los Angeles County, California, 90036, United States of America",90036
+34.06585025,-118.3508357,LA,"Hauser Boulevard, Park La Brea, Hollywood, Los Angeles, Los Angeles County, California, 90036, United States of America",90036
+34.06664036,-118.3054887,LA,"South Hobart Boulevard, Koreatown, Little Armenia, Los Angeles, Los Angeles County, California, 90006, United States of America",90006
+34.06689739,-118.2453282,LA,"College Street, New Chinatown, Angelino Heights, Los Angeles, Los Angeles County, California, 90012, United States of America",90012
+34.06703315,-118.3961405,LA,"SIXTY Beverly Hills, Wilshire Boulevard, Beverly Hills, Los Angeles County, California, 90212, United States of America",90212
+34.06714074,-118.2436675,LA,"Figueroa Terrace, New Chinatown, Angelino Heights, Los Angeles, Los Angeles County, California, 90012, United States of America",90012
+34.06720459,-118.354385,LA,"Curson Avenue East, Park La Brea, Hollywood, Los Angeles, Los Angeles County, California, 90036, United States of America",90036
+34.06737197,-118.2691528,LA,"North Mountain View Avenue, Echo Park, Angelino Heights, Los Angeles, Los Angeles County, California, 90026, United States of America",90026
+34.06746753,-118.3620809,LA,"West 5th Street, Carthay Circle, The Village Green, Los Angeles, Los Angeles County, California, 90048, United States of America",90048
+34.06795325,-118.2788213,LA,"South Benton Way, Angelino Heights, Los Angeles, Los Angeles County, California, 90057, United States of America",90057
+34.06834747,-118.3739811,LA,"South Orlando Avenue, Carthay Circle, Los Angeles, Los Angeles County, California, 90048, United States of America",90048
+34.06888426,-118.2543622,LA,"Calumet Avenue, Echo Park, Angelino Heights, Los Angeles, Los Angeles County, California, 90026, United States of America",90026
+34.06937336,-118.3511733,LA,"Hauser Boulevard, Park La Brea, Hollywood, Los Angeles, Los Angeles County, California, 90036, United States of America",90036
+34.07125142,-118.3769113,LA,"Church of Religious Science of Beverly Hills, 11601, West 4th Street, Carthay Circle, Los Angeles, Los Angeles County, California, 90048, United States of America",90048
+34.07152341,-118.3688556,LA,"Blackburn Avenue, Carthay Circle, Hollywood, Los Angeles, Los Angeles County, California, 90048, United States of America",90048
+34.0718583,-118.3814292,LA,"South Hamel Road, South Carthay, Los Angeles, Los Angeles County, California, 90048, United States of America",90048
+34.07399563,-118.3998153,LA,"North Rexford Drive, Beverly Hills, Los Angeles County, California, 90210, United States of America",90210
+34.07664064,-118.2935148,LA,"Atlcatl, Beverly Boulevard, Koreatown, Little Armenia, Los Angeles, Los Angeles County, California, 90004, United States of America",90004
+34.07755206,-118.3686411,LA,"North Harper Avenue, Whitley Heights, Los Angeles, Los Angeles County, California, 90046, United States of America",90046
+34.07766891,-118.3498985,LA,"North Fuller Avenue, Park La Brea, Hollywood, Los Angeles, Los Angeles County, California, 90046, United States of America",90046
+34.07799819,-118.691651,LA,"Cold Canyon Road, Monte Nido, Los Angeles County, California, 91302, United States of America",91302
+34.07885627,-118.3926919,LA,"Civic Center Drive, Beverly Hills, Los Angeles County, California, 90210, United States of America",90210
+34.07964024,-118.4710382,LA,"Bellagio Road, Westgate Heights, Westwood, Los Angeles, Los Angeles County, California, 90049, United States of America",90049
+34.08043222,-117.8338036,LA,"Via Esperanza, Charter Oak Mobile Estates, Los Angeles County, California, 91773, United States of America",91773
+34.08166987,-118.3424556,LA,"Clinton Street, Park La Brea, Hollywood, Los Angeles, Los Angeles County, California, 90036, United States of America",90036
+34.08194582,-118.319309,LA,"Clinton Street, Hancock Park, Little Armenia, Los Angeles, Los Angeles County, California, 90004, United States of America",90004
+34.08265811,-118.3959142,LA,"Arden Drive, Beverly Hills, Los Angeles County, California, 90210, United States of America",90210
+34.08342842,-118.3554128,LA,"Sneaker Pawn, 11601, Melrose Avenue, Park La Brea, Hollywood, Los Angeles, Los Angeles County, California, 90069, United States of America",90069
+34.08365223,-118.3620158,LA,"Melrose Avenue, Park La Brea, Whitley Heights, Los Angeles, Los Angeles County, California, 90069, United States of America",90069
+34.08384483,-118.3927317,LA,"Sierra Drive, Beverly Hills, Los Angeles County, California, 90210, United States of America",90210
+34.08466233,-118.2627248,LA,"Berkeley Avenue, Silver Lake, Angelino Heights, Los Angeles, Los Angeles County, California, 90026, United States of America",90026
+34.0857891,-118.3444746,LA,"Kor Gym, 11601, North La Brea Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90036, United States of America",90036
+34.08582465,-118.3793594,LA,"Westbourne Drive, West Hollywood, Los Angeles County, California, 90069, United States of America",90069
+34.08728321,-118.3704639,LA,"North Sweetzer Avenue, West Hollywood, Los Angeles County, California, 90069, United States of America",90069
+34.08784352,-118.3550475,LA,"North Curson Avenue, Park La Brea, Hollywood, Los Angeles, Los Angeles County, California, 90046, United States of America",90046
+34.08796776,-118.2740936,LA,"Hamilton Way, Silver Lake, Angelino Heights, Los Angeles, Los Angeles County, California, 90026, United States of America",90026
+34.08810943,-118.3052797,LA,"7, 11601, Hollywood Freeway, East Hollywood, Little Armenia, Los Angeles, Los Angeles County, California, 90029, United States of America",90029
+34.08974187,-118.386142,LA,"Harratt Street, West Hollywood, Los Angeles County, California, 90069, United States of America",90069
+34.08983706,-118.3619908,LA,"North Fairfax Avenue, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09026016,-118.2955053,LA,"North Heliotrope Drive, East Hollywood, Little Armenia, Los Angeles, Los Angeles County, California, 90029, United States of America",90029
+34.09191734,-118.3681399,LA,"Norton Avenue, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09226266,-118.3266769,LA,"Hollywood-Vine Methodist Church, 11601, Lexington Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90038, United States of America",90038
+34.09231535,-118.3644789,LA,"North Laurel Avenue, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09263249,-118.3327427,LA,"Lexington Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90038, United States of America",90038
+34.09276375,-118.3223547,LA,"Gower Street, Little Armenia, Los Angeles, Los Angeles County, California, 90038, United States of America",90038
+34.09295292,-118.3661774,LA,"North Crescent Heights Boulevard, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09299841,-118.3662103,LA,"North Crescent Heights Boulevard, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09372851,-118.3356488,LA,"North Cherokee Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.0938683,-118.3044933,LA,"Hobart Boulevard, East Hollywood, Little Armenia, Los Angeles, Los Angeles County, California, 90029, United States of America",90029
+34.09388259,-118.3656379,LA,"North Crescent Heights Boulevard, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09421121,-118.3647647,LA,"Fountain Avenue, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09483612,-118.3737314,LA,"House of Blues, Olive Drive, West Hollywood, Los Angeles County, California, 90069, United States of America",90069
+34.09537139,-118.3507721,LA,"North Martel Avenue, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09568638,-118.3747154,LA,"Cresthill Road, Whitley Heights, Los Angeles, Los Angeles County, California, 90069, United States of America",90069
+34.09651225,-118.3690574,LA,"North Harper Avenue, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09668957,-118.3929544,LA,"Bobolink Place, Los Angeles, Los Angeles County, California, 90069, United States of America",90069
+34.09778392,-118.3257976,LA,"Sunset and Vine Tower, West Sunset Boulevard, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.09783268,-118.3501551,LA,"Urban ramen, 7300, West Sunset Boulevard, Whitley Heights, Los Angeles, Los Angeles County, California, 90046-4101, United States of America",-4101
+34.09796056,-118.3179566,LA,"DASH, 11601, West Sunset Boulevard, Little Armenia, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.09845679,-117.8615607,LA,"East Covina Boulevard, Covina, Los Angeles County, California, 91724, United States of America",91724
+34.09853911,-118.32285,LA,"Columbia Square, West Sunset Boulevard, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.09886935,-118.3635489,LA,"North Laurel Avenue, West Hollywood, Los Angeles County, California, 90046, United States of America",90046
+34.09888559,-118.3475625,LA,"North Poinsettia Place, Whitley Heights, Los Angeles, Los Angeles County, California, 90046, United States of America",90046
+34.09972019,-118.1079528,LA,"Broadway, San Gabriel, Los Angeles County, California, 91776, United States of America",91776
+34.09975409,-118.3047488,LA,"North Harvard Boulevard, East Hollywood, Little Armenia, Los Angeles, Los Angeles County, California, 90027, United States of America",90027
+34.09978322,-118.3461367,LA,"Hawthorn Avenue, Whitley Heights, Los Angeles, Los Angeles County, California, 90046, United States of America",90046
+34.09999374,-118.7969601,LA,"Mulholland Highway, Seminole Hot Springs, Los Angeles County, California, 90265, United States of America",90265
+34.10049255,-118.2852359,LA,"Camero Avenue, Los Feliz, Little Armenia, Los Angeles, Los Angeles County, California, 90027, United States of America",90027
+34.10068649,-118.3642036,LA,"1632, North Laurel Avenue, West Hollywood, Los Angeles County, California, 90046-2549, United States of America",90046
+34.10090263,-118.3484829,LA,"Temple Israel of Hollywood, 11601, North Fuller Avenue, Whitley Heights, Los Angeles, Los Angeles County, California, 90046, United States of America",90046
+34.10142968,-118.3378529,LA,"6756-6760, Hollywood Boulevard, Whitley Heights, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.1015917,-118.229907,LA,"Kilbourn Street, Mount Washington, Highland Park, Los Angeles, Los Angeles County, California, 90065, United States of America",90065
+34.10165344,-118.3480207,LA,"Hollywood Boulevard, Whitley Heights, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.10167578,-118.2302836,LA,"Kilbourn Street, Mount Washington, Highland Park, Los Angeles, Los Angeles County, California, 90065, United States of America",90065
+34.1020647,-118.3777398,LA,"Queens Road, Whitley Heights, Los Angeles, Los Angeles County, California, 90069, United States of America",90069
+34.1028392,-118.3542013,LA,"North Sierra Bonita Avenue, Whitley Heights, Los Angeles, Los Angeles County, California, 90046, United States of America",90046
+34.10312461,-118.3306569,LA,"North Wilcox Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.10319524,-118.3547518,LA,"North Curson Avenue, Whitley Heights, Los Angeles, Los Angeles County, California, 90046, United States of America",90046
+34.10367122,-118.3304762,LA,"Yucca Street, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.10411943,-118.3294404,LA,"7-11, North Cahuenga Boulevard, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.10421329,-118.2600402,LA,"Ivan Hill Terrace, Silver Lake Heights, Atwater, Los Angeles, Los Angeles County, California, 90039, United States of America",90039
+34.10425279,-118.347803,LA,"Hillside Avenue, Whitley Heights, Los Angeles, Los Angeles County, California, 90046, United States of America",90046
+34.10433452,-118.4451668,LA,"Calgary Lane, Beverly Glen, Westwood, Los Angeles, Los Angeles County, California, 90077, United States of America",90077
+34.10467512,-118.3417326,LA,"North Sycamore Avenue, Whitley Heights, Los Angeles, Los Angeles County, California, 90068, United States of America",90068
+34.10471491,-118.3324974,LA,"Grace Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90028, United States of America",90028
+34.10482626,-118.1912697,LA,"Leslie Way, Newton Park, Highland Park, Los Angeles, Los Angeles County, California, 90042, United States of America",90042
+34.10837877,-118.3109147,LA,"Tryon Road, Little Armenia, Los Angeles, Los Angeles County, California, 90068, United States of America",90068
+34.10848841,-118.299056,LA,"North Alexandria Avenue, East Hollywood, Little Armenia, Los Angeles, Los Angeles County, California, 90027, United States of America",90027
+34.10919868,-118.3155902,LA,"Valley Oak Drive, Little Armenia, Los Angeles, Los Angeles County, California, 90068, United States of America",90068
+34.1107843,-118.3208477,LA,"Cocos Drive, Hollywood, Los Angeles, Los Angeles County, California, 90068, United States of America",90068
+34.1148533,-118.3218959,LA,"North Gower Street, Hollywood, Los Angeles, Los Angeles County, California, 90068, United States of America",90068
+34.11517573,-118.1712685,LA,"Lohman Lane, South Pasadena, Los Angeles County, California, 91030, United States of America",91030
+34.1186175,-118.3166891,LA,"Locksley Place, Little Armenia, Los Angeles, Los Angeles County, California, 90068, United States of America",90068
+34.12246487,-118.3842761,LA,"Parking for Trail, Valley Village, Los Angeles, Los Angeles County, California, 91604, United States of America",91604
+34.1243277,-118.1913183,LA,"Le Gray Avenue, Highland Park, Los Angeles, Los Angeles County, California, 90042, United States of America",90042
+34.12456933,-118.6569192,LA,"Mulholland Highway, Calabasas, Los Angeles County, California, 91302, United States of America",91302
+34.12820319,-118.2176149,LA,"Corliss Street, Eagle Rock, Highland Park, Los Angeles, Los Angeles County, California, 90041, United States of America",90041
+34.1284478,-118.0742825,LA,"Los Angeles County Fire Department Station #5, Rosemead Boulevard, Arcadia, Los Angeles County, California, 91775, United States of America",91775
+34.12873043,-118.7232423,LA,"Patrick Henry Place, Agoura Hills, Los Angeles County, California, 91301, United States of America",91301
+34.13198983,-118.2058435,LA,"Eagle Rock High School, Yosemite Drive, Eagle Rock, Highland Park, Los Angeles, Los Angeles County, California, 90041, United States of America",90041
+34.13205454,-118.2331312,LA,"Verdugo Road, Atwater, Los Angeles, Los Angeles County, California, 90065, United States of America",90065
+34.13273943,-118.2380916,LA,"Oberlin Drive, Glendale, Los Angeles County, California, 91205, United States of America",91205
+34.13380715,-118.6466945,LA,"Mulholland Highway, Calabasas, Los Angeles County, California, 91302, United States of America",91302
+34.13513102,-117.904155,LA,"East 8th Street, Azusa, Los Angeles County, California, 91702, United States of America",91702
+34.13667952,-118.2482943,LA,"Windsor Road, Glendale, Los Angeles County, California, 91205, United States of America",91205
+34.13674062,-118.1640994,LA,"California Terrace, Pasadena, Los Angeles County, California, 91105, United States of America",91105
+34.13828947,-118.3866988,LA,"Sunshine Terrace, Studio City, Valley Village, Los Angeles, Los Angeles County, California, 91604, United States of America",91604
+34.13904564,-118.3870657,LA,"Laurelwood Drive, Studio City, Valley Village, Los Angeles, Los Angeles County, California, 91604, United States of America",91604
+34.14227398,-118.4133875,LA,"Coldwater Canyon Avenue, Studio City, Valley Village, Los Angeles, Los Angeles County, California, 91423, United States of America",91423
+34.14285398,-118.1477387,LA,"Sushi Kimagure Ike, 220, South Raymond Avenue, Pasadena, Los Angeles County, California, 91105, United States of America",91105
+34.14367105,-118.0581318,LA,"Vaquero Road, Arcadia, Los Angeles County, California, 91007, United States of America",91007
+34.14543413,-118.6320224,LA,"Vicasa Drive, Calabasas, Los Angeles County, California, 91302, United States of America",91302
+34.14712286,-118.4715928,LA,"Sepulveda Boulevard, Sherman Oaks, Los Angeles, Los Angeles County, California, 91345, United States of America",91345
+34.14756156,-118.143914,LA,"Pasadena City Hall, North Garfield Avenue, Pasadena, Los Angeles County, California, 91101, United States of America",91101
+34.14804261,-118.2345267,LA,"Wilson Avenue, Glendale, Los Angeles County, California, 91206, United States of America",91206
+34.14925853,-118.1456279,LA,"Walnut Street, Pasadena, Los Angeles County, California, 91102, United States of America",91102
+34.15021443,-118.4322487,LA,"Moorpark Street, Sherman Oaks, Los Angeles, Los Angeles County, California, 91423, United States of America",91423
+34.15113924,-118.36321,LA,"Cartwright Avenue, Universal City, North Hollywood, Los Angeles, Los Angeles County, California, 91602, United States of America",91602
+34.15208822,-118.754532,LA,"Valley Heights Drive, Agoura Hills, Los Angeles County, California, 91301, United States of America",91301
+34.15224893,-118.6211101,LA,"Cass Avenue, Woodland Hills, Los Angeles, Los Angeles County, California, 91364, United States of America",91364
+34.15276703,-118.4616043,LA,"Noble Avenue, Sherman Oaks, Los Angeles, Los Angeles County, California, 91403, United States of America",91403
+34.15291492,-118.1430015,LA,"North Euclid Avenue, Pasadena, Los Angeles County, California, 91101, United States of America",91101
+34.15311889,-118.7621196,LA,"Clee Court, Agoura Hills, Los Angeles County, California, 91301, United States of America",91301
+34.15314485,-118.3430091,LA,"West Alameda Avenue, Burbank, Los Angeles County, California, 91505, United States of America",91505
+34.15392332,-118.4552291,LA,"Willis Avenue, Sherman Oaks, Los Angeles, Los Angeles County, California, 91403, United States of America",91403
+34.15415282,-118.0260925,LA,"Oakhaven Road, Arcadia, Los Angeles County, California, 91006, United States of America",91006
+34.154154,-118.4571891,LA,"Kester Avenue, Sherman Oaks, Los Angeles, Los Angeles County, California, 91405, United States of America",91405
+34.15486436,-118.4035645,LA,"Hortense Street, Studio City, Valley Village, Los Angeles, Los Angeles County, California, 91604, United States of America",91604
+34.159208,-118.123849,LA,"North Chester Avenue, Pasadena, Los Angeles County, California, 91104, United States of America",91104
+34.15928967,-118.3725197,LA,"Huston Street, La Paco, North Hollywood, Los Angeles, Los Angeles County, California, 91601, United States of America",91601
+34.16115875,-118.4703475,LA,"Ventura Freeway, Sherman Oaks, Los Angeles, Los Angeles County, California, 91403-1530, United States of America",-1530
+34.16176849,-118.3594015,LA,"Strohm Avenue, La Paco, North Hollywood, Los Angeles, Los Angeles County, California, 91601, United States of America",91601
+34.16223911,-118.4305179,LA,"Buffalo Avenue, Sherman Oaks, Los Angeles, Los Angeles County, California, 91401, United States of America",91401
+34.16263259,-118.3630567,LA,"Willowcrest Avenue, La Paco, North Hollywood, Los Angeles, Los Angeles County, California, 91601, United States of America",91601
+34.16329973,-118.1633747,LA,"North Arroyo Boulevard, Pasadena, Los Angeles County, California, 91105, United States of America",91105
+34.16530839,-118.3635987,LA,"Magnolia Boulevard, La Paco, North Hollywood, Los Angeles, Los Angeles County, California, 91601, United States of America",91601
+34.1656502,-118.5189771,LA,"Magnolia Boulevard, Encino, Los Angeles, Los Angeles County, California, 91316, United States of America",91316
+34.16743415,-118.3930373,LA,"Weddington Street, Garnsey, Valley Village, Los Angeles, Los Angeles County, California, 91607, United States of America",91607
+34.16746863,-118.3760371,LA,"Panera Bread, Chandler Boulevard, La Paco, North Hollywood, Los Angeles, Los Angeles County, California, 91401, United States of America",91401
+34.16902176,-118.17516,LA,"Banyan Street, Pasadena, Los Angeles County, California, 91103, United States of America",91103
+34.16992763,-118.1659999,LA,"North Arroyo Boulevard, Pasadena, Los Angeles County, California, 91103, United States of America",91103
+34.17199006,-118.6453792,LA,"Valley Circle Boulevard, West Hills, Los Angeles, Los Angeles County, California, 91307, United States of America",91307
+34.17204989,-118.6474277,LA,"El Canon Avenue, West Hills, Los Angeles, Los Angeles County, California, 91367, United States of America",91367
+34.17439311,-118.1246311,LA,"East Topeka Street, Pasadena, Los Angeles County, California, 91104, United States of America",91104
+34.17670481,-118.5199592,LA,"Hatteras Street, Encino, Los Angeles, Los Angeles County, California, 91316, United States of America",91316
+34.17760362,-118.506917,LA,"Ostrom Avenue, Encino, Los Angeles, Los Angeles County, California, 91316, United States of America",91316
+34.17943819,-118.4105028,LA,"Oxnard Street, Garnsey, Valley Village, Los Angeles, Los Angeles County, California, 91411, United States of America",91411
+34.18315456,-118.4527982,LA,"Kingdom Hall of Jehovahs Witnesses, 11601, Cedros Avenue, North Sherman Way, Van Nuys, Los Angeles, Los Angeles County, California, 91405, United States of America",91405
+34.18319591,-118.3784554,LA,"Erwin Street, Hewitt, North Hollywood, Los Angeles, Los Angeles County, California, 91606, United States of America",91606
+34.18322064,-118.4143521,LA,"Coldwater Canyon Avenue, Garnsey, Valley Village, Los Angeles, Los Angeles County, California, 91605, United States of America",91605
+34.18422244,-118.4026414,LA,"Debby Street, Garnsey, Valley Village, Los Angeles, Los Angeles County, California, 91606, United States of America",91606
+34.18465625,-118.6532831,LA,"Victory Boulevard, West Hills, Los Angeles, Los Angeles County, California, 91307, United States of America",91307
+34.18492625,-118.5183862,LA,"White Oak Avenue, Reseda, Los Angeles, Los Angeles County, California, 91325, United States of America",91325
+34.18520519,-118.5970147,LA,"Blue Shield of California (Trillium West), 6300, Canoga Avenue, Warner Center, Los Angeles, Los Angeles County, California, 91303, United States of America",91303
+34.18634837,-118.3712356,LA,"Victory Boulevard, North Hollywood, Los Angeles, Los Angeles County, California, 91606, United States of America",91606
+34.18701161,-118.4100891,LA,"91606; 91605, Charlesworth Avenue, Valley Village, Los Angeles, Los Angeles County, California, 91606; 91605, United States of America",91605
+34.18785441,-118.4430747,LA,"Gilmore Street, North Sherman Way, Van Nuys, Los Angeles, Los Angeles County, California, 91411, United States of America",91411
+34.19115404,-118.1320417,LA,"Rite Aid, East Pine Street, Altadena, Los Angeles County, California, 91001, United States of America",91001
+34.19219441,-118.3991289,LA,"Archwood Street, Hewitt, North Hollywood, Los Angeles, Los Angeles County, California, 91606, United States of America",91606
+34.19261712,-118.1367941,LA,"Saint James Place, Altadena, Los Angeles County, California, 91001, United States of America",91001
+34.19313335,-118.4732956,LA,"Aqueduct Avenue, Van Nuys, Los Angeles, Los Angeles County, California, 91406, United States of America",91406
+34.19577568,-118.6429727,LA,"Highlander Road, West Hills, Los Angeles, Los Angeles County, California, 91307, United States of America",91307
+34.19591172,-118.4563492,LA,"Bevis Avenue, North Sherman Way, Van Nuys, Los Angeles, Los Angeles County, California, 91405, United States of America",91405
+34.20598036,-118.3827997,LA,"Camellia Elementary School, 11601, Camellia Avenue, Hewitt, North Hollywood, Los Angeles, Los Angeles County, California, 91605, United States of America",91605
+34.20785007,-118.6232445,LA,"Fallbrook Avenue, West Hills, Los Angeles, Los Angeles County, California, 91304, United States of America",91304
+34.21884782,-118.3609605,LA,"Cantara Street, Sun Valley, North Hollywood, Los Angeles, Los Angeles County, California, 91352, United States of America",91352
+34.24724822,-118.546313,LA,"Topeka Drive, Northridge, Los Angeles, Los Angeles County, California, 91324, United States of America",91324
+34.25085992,-118.3529975,LA,"Kalua Drive, Shadow Hills, Los Angeles, Los Angeles County, California, 91040, United States of America",91040
+34.26085525,-118.510796,LA,"Louise Avenue, Granada Hills, Northridge, Los Angeles, Los Angeles County, California, 91344, United States of America",91344
+34.30112778,-118.5056178,LA,"Dorina Place, Los Angeles, Los Angeles County, California, 91344, United States of America",91344
+34.38225273,-118.549926,LA,"Avenida Rondel, Newhall, Santa Clarita, Los Angeles County, California, 91355, United States of America",91355
+34.43754896,-118.4040232,LA,"Violetlane Way, Santa Clarita, Los Angeles County, California, 91387, United States of America",91387
+34.55620284,-118.0305128,LA,"Alder Street, Palmdale, Los Angeles County, California, 93552, United States of America",93552
+34.69539647,-118.1524784,LA,"West Lumber Street, Lancaster, Los Angeles County, California, 93534, United States of America",93534
+37.71358053,-122.4373564,SF,"Broken Record, Geneva Avenue, Crocker-Amazon, San Francisco, San Francisco City and County, California, 94112, United States of America",94112
+37.72566578,-122.4186315,SF,"Cambridge Street, San Francisco, San Francisco City and County, California, 94134, United States of America",94134
+37.7277411,-122.3932767,SF,"McDonald's, Yosemite Avenue, Bayview District, San Francisco, San Francisco City and County, California, 94124, United States of America",94124
+37.74143657,-122.4110501,SF,"Powhattan Avenue, San Francisco, San Francisco City and County, California, 94110, United States of America",94110
+37.74260516,-122.4289086,SF,"1654A, Sanchez Street, Noe Valley, San Francisco, San Francisco City and County, California, 94131, United States of America",94131
+37.74268028,-122.4358041,SF,"Diamond Street, Noe Valley, San Francisco, San Francisco City and County, California, 94131, United States of America",94131
+37.74463493,-122.4086256,SF,"Samoset Street, Mission District, San Francisco, San Francisco City and County, California, 94110, United States of America",94110
+37.74600377,-122.4748262,SF,"18th Avenue, Forest Hill, San Francisco, San Francisco City and County, California, 94116, United States of America",94116
+37.74685202,-122.4264959,SF,"277, 27th Street, Noe Valley, San Francisco, San Francisco City and County, California, 94131, United States of America",94131
+37.74951467,-122.4412642,SF,"25th Street, Noe Valley, San Francisco, San Francisco City and County, California, 94114, United States of America",94114
+37.74956449,-122.4338946,SF,"Castro St and 25th St, Castro Street, Noe Valley, San Francisco, San Francisco City and County, California, 94131, United States of America",94131
+37.7499466,-122.4426576,SF,"Grand View Avenue, Noe Valley, San Francisco, San Francisco City and County, California, 94114, United States of America",94114
+37.75114724,-122.4255647,SF,"14, Jersey Street, Noe Valley, San Francisco, San Francisco City and County, California, 94114, United States of America",94114
+37.75463183,-122.452759,SF,"KBHK-TV (San Francisco), La Avanzada Street, Cole Valley, San Francisco, San Francisco City and County, California, 94131, United States of America",94131
+37.76194322,-122.4802331,SF,"1701, Judah Street, Sunset District, San Francisco, San Francisco City and County, California, 94122, United States of America",94122
+37.76276202,-122.506234,SF,"S F Swatow Christian Church, 4508, Irving Street, Sunset District, San Francisco, San Francisco City and County, California, 94122, United States of America",94122
+37.76332743,-122.5017127,SF,"1294, 42nd Avenue, Sunset District, San Francisco, San Francisco City and County, California, 94122, United States of America",94122
+37.76450721,-122.422749,SF,"Delirium, 3141, 16th Street, Mission District, San Francisco, San Francisco City and County, California, 94114, United States of America",94114
+37.76497364,-122.4645192,SF,"1251, 7th Avenue, Inner Sunset, San Francisco, San Francisco City and County, California, 94122, United States of America",94122
+37.76753421,-122.4218769,SF,"Valencia Street Muscle, 333, Valencia Street, Mission District, San Francisco, San Francisco City and County, California, 94103, United States of America",94103
+37.76779802,-122.4373224,SF,"Alpine Terrace, Castro District, San Francisco, San Francisco City and County, California, 94117, United States of America",94117
+37.76996814,-122.3925761,SF,"Gene Friend Way, Mission Bay, San Francisco, San Francisco City and County, California, 94143, United States of America",94143
+37.77040966,-122.4366376,SF,"SF Fire Department, Waller Street, Castro District, San Francisco, San Francisco City and County, California, 94117, United States of America",94117
+37.77042647,-122.4481584,SF,"Clayton Street Post Office, 554, Clayton Street, Haight-Ashbury, San Francisco, San Francisco City and County, California, 94117-9991, United States of America",-9991
+37.77191661,-122.4435415,SF,"Central Avenue, Haight-Ashbury, San Francisco, San Francisco City and County, California, 94117, United States of America",94117
+37.77238379,-122.4524908,SF,"Shrader & Hayes, Shrader Street, Haight-Ashbury, San Francisco, San Francisco City and County, California, 94117, United States of America",94117
+37.77259746,-122.4540458,SF,"Stanyan Street, Haight-Ashbury, San Francisco, San Francisco City and County, California, 94114, United States of America",94114
+37.77330573,-122.412615,SF,"Contech Auto Service Center, 1398, Folsom Street, West SoMa, San Francisco, San Francisco City and County, California, 94103, United States of America",94103
+37.77346553,-122.4111267,SF,"Heavybit Industries, 325, 9th Street, West SoMa, San Francisco, San Francisco City and County, California, 94103, United States of America",94103
+37.77369044,-122.4151378,SF,"Metric Motors, 1480, Howard Street, West SoMa, San Francisco, San Francisco City and County, California, 94103, United States of America",94103
+37.77374157,-122.3915027,SF,"Venue, 1155, 4th Street, Mission Bay, San Francisco, San Francisco City and County, California, 94158, United States of America",94158
+37.77413293,-122.4002213,SF,"Clear Channel Outdoor, Townsend Street, Mission Creek, San Francisco, San Francisco City and County, California, 94107, United States of America",94107
+37.77456069,-122.4192004,SF,"San Francisco Honda, 10, South Van Ness Avenue, West SoMa, San Francisco, San Francisco City and County, California, 94103, United States of America",94103
+37.77519305,-122.4184302,SF,"1, South Van Ness Avenue, West SoMa, San Francisco, San Francisco City and County, California, 94103, United States of America",94103
+37.77546877,-122.4183063,SF,"Muni, 11th Street, West SoMa, San Francisco, San Francisco City and County, California, 94103, United States of America",94103
+37.77631679,-122.4371174,SF,"Alouis Auto Radiator, 650, Divisadero Street, North of Panhandle, San Francisco, San Francisco City and County, California, 94117, United States of America",94117
+37.77649919,-122.4423046,SF,"chile pies (& ice cream), 601, Baker Street, North of Panhandle, San Francisco, San Francisco City and County, California, 94115, United States of America",94115
+37.77660678,-122.4170113,SF,"Market Square, 1355, Market Street, West SoMa, San Francisco, San Francisco City and County, California, 94103, United States of America",94103
+37.77671517,-122.4722185,SF,"Muni, Balboa Street, Richmond District, San Francisco, San Francisco City and County, California, 94121, United States of America",94121
+37.77695515,-122.4413025,SF,"USPS, Baker Street, North of Panhandle, San Francisco, San Francisco City and County, California, 94115, United States of America",94115
+37.77794411,-122.4799253,SF,"21st Avenue, Richmond District, San Francisco, San Francisco City and County, California, 94121, United States of America",94121
+37.77868902,-122.4695625,SF,"11th Avenue, Richmond District, San Francisco, San Francisco City and County, California, 94118, United States of America",94118
+37.7800005,-122.4036334,SF,"Avant Housing, 900, Folsom Street, West SoMa, San Francisco, San Francisco City and County, California, 94107, United States of America",94107
+37.7827483,-122.399022,SF,"360, 3rd Street, South of Market, San Francisco, San Francisco City and County, California, 94107, United States of America",94107
+37.78382126,-122.428723,SF,"Galilee Lane, Japantown, San Francisco, San Francisco City and County, California, 94115, United States of America",94115
+37.78390503,-122.4119145,SF,"Advance Auto Repair, 265, Eddy Street, West SoMa, San Francisco, San Francisco City and County, California, 94102, United States of America",94102
+37.78401048,-122.4384712,SF,"Divisadero Street, Lower Pacific Heights, San Francisco, San Francisco City and County, California, 94115, United States of America",94115
+37.78413677,-122.4142411,SF,"USPS, Eddy Street, West SoMa, San Francisco, San Francisco City and County, California, 94102, United States of America",94102
+37.7841902,-122.3898224,SF,"1 Bayside Village, 1, Bayside Village Place, Bayside Village, San Francisco, San Francisco City and County, California, 94107, United States of America",94107
+37.78432131,-122.46922,SF,"California Street, Richmond District, San Francisco, San Francisco City and County, California, 94121, United States of America",94121
+37.78570003,-122.4446506,SF,"Bush Street, Lower Pacific Heights, San Francisco, San Francisco City and County, California, 94115, United States of America",94115
+37.78658506,-122.3897617,SF,"Beale Street, South Beach, San Francisco, San Francisco City and County, California, 94105, United States of America",94105
+37.78692908,-122.4250486,SF,"hotel majestic, Gough Street, Japantown, San Francisco, San Francisco City and County, California, 94123, United States of America",94123
+37.78723947,-122.3960788,SF,"Consulate General of Mexico, San Francisco, 532, Folsom Street, Financial District, San Francisco, San Francisco City and County, California, 94105, United States of America",94105
+37.78772267,-122.4126959,SF,"Avis, 675, Post Street, Nob Hill, San Francisco, San Francisco City and County, California, 94115, United States of America",94115
+37.7880506,-122.416072,SF,"Vertigo, 940, Sutter Street, Nob Hill, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.78840393,-122.41255,SF,"Le Colonial, 20, Cosmo Place, Nob Hill, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.78861484,-122.4149282,SF,"Cup A Joe, 896, Sutter Street, Nob Hill, San Francisco, San Francisco City and County, California, 94115, United States of America",94115
+37.78987079,-122.4690077,SF,"CA 1, Presidio Terrace, San Francisco, San Francisco City and County, California, 94129, United States of America",94129
+37.79022397,-122.4032203,SF,"Hallidie Building, 130-150, Sutter Street, Financial District, San Francisco, San Francisco City and County, California, 94108, United States of America",94108
+37.79124176,-122.4181094,SF,"Kitty's Nails, 1436, California Street, Nob Hill, San Francisco, San Francisco City and County, California, 94121, United States of America",94121
+37.79179956,-122.4322354,SF,"Seventh Day Adventist Japanese Church, Washington Street, Pacific Heights, San Francisco, San Francisco City and County, California, 94115, United States of America",94115
+37.79183524,-122.4190525,SF,"Larkin Corner Market, 1496, Larkin Street, Nob Hill, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.7919198,-122.417154,SF,"Wreck Room, 1390, California Street, Nob Hill, San Francisco, San Francisco City and County, California, 94121, United States of America",94121
+37.79246434,-122.4217798,SF,"Washington & Polk (on-street), Clay Street, Nob Hill, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.79287365,-122.4244475,SF,"Haas-Lilienthal House, 2007, Franklin Street, Japantown, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.79490538,-122.4275927,SF,"94109; 94115, Broadway, Pacific Heights, San Francisco, San Francisco City and County, California, 94109; 94115, United States of America",94115
+37.79508167,-122.4117796,SF,"Cable Car Barn and Museum, 1201, Mason Street, Nob Hill, San Francisco, San Francisco City and County, California, 94133, United States of America",94133
+37.79516611,-122.4037532,SF,"655, Montgomery Street, Chinatown, San Francisco, San Francisco City and County, California, 94111, United States of America",94111
+37.79530271,-122.4112131,SF,"Jackson Street, Nob Hill, San Francisco, San Francisco City and County, California, 94118, United States of America",94118
+37.795371,-122.4246068,SF,"Saint Brigid School, Franklin Street, Japantown, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.79750257,-122.400251,SF,"Saybrook Graduate School and Research Center, Pacific Avenue, Northeast Waterfront Historic District, San Francisco, San Francisco City and County, California, 94118, United States of America",94118
+37.79760553,-122.4226227,SF,"1435, Green Street, Russian Hill, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.79945662,-122.4281005,SF,"Filbert Street, Cow Hollow, San Francisco, San Francisco City and County, California, 94123, United States of America",94123
+37.80191584,-122.4231919,SF,"1320, Lombard Street, Russian Hill, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.80244118,-122.4089967,SF,"San Francisco Fire Station 28, Greenwich Street, North Beach, San Francisco, San Francisco City and County, California, 94123, United States of America",94123
+37.80275728,-122.4240683,SF,"Van Ness Inn Hotel, 2850, Van Ness Avenue, Russian Hill, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.80333071,-122.439625,SF,"Mallorca Way, Marina District, San Francisco, San Francisco City and County, California, 94123, United States of America",94123
+37.80356512,-122.4133781,SF,"Wash This!, Chestnut Street, Russian Hill, San Francisco, San Francisco City and County, California, 94109, United States of America",94109
+37.80424408,-122.4361975,SF,"Beach Street, Marina District, San Francisco, San Francisco City and County, California, 94123, United States of America",94123
+37.80477953,-122.4409978,SF,"Avila Street, Marina District, San Francisco, San Francisco City and County, California, 94123, United States of America",94123
+38.84038664,-77.00371063,DC,"3500, Savannah Street Southeast, Congress Heights, Washington, District of Columbia, 20032, United States of America",20032
+38.86235214,-76.98730348,DC,"2319, High Street Southeast, Anacostia, Washington, District of Columbia, 20020, United States of America",20020
+38.87703867,-76.9638343,DC,"3032, M Place Southeast, Twining, Capitol Hill, Washington, District of Columbia, 20019, United States of America",20019
+38.88006682,-77.00582465,DC,"Axiom at Capitol Yards, 100, I Street Southeast, Near Southeast, Capitol Hill, Washington, District of Columbia, 20003, United States of America",20003
+38.88128888,-77.02380591,DC,"819, G Street Southwest, Southwest/Waterfront, Penn Quarter, Washington, District of Columbia, 20024, United States of America",20024
+38.88145461,-77.01692872,DC,"301, G Street Southwest, Southwest/Waterfront, Penn Quarter, Washington, District of Columbia, 20024, United States of America",20024
+38.88250695,-76.99838542,DC,"504, 6th Street Southeast, Capitol Hill, Washington, District of Columbia, 20003, United States of America",20003
+38.88296303,-77.02051221,DC,"630, E Street Southwest, Southwest Employment Area, Penn Quarter, Washington, District of Columbia, 20024, United States of America",20024
+38.88595879,-76.98424274,DC,"231, 15th Street Southeast, Hill East, Capitol Hill, Washington, District of Columbia, 20003, United States of America",20003
+38.88604623,-77.00036054,DC,"335, C Street Southeast, Capitol Hill, Washington, District of Columbia, 20003, United States of America",20003
+38.88938673,-77.00234409,DC,"Folger Shakespeare Library, 201, East Capitol Street Northeast, Capitol Hill, Washington, District of Columbia, 20003, United States of America",20003
+38.8899081,-76.98740895,DC,"1326, East Capitol Street Northeast, Capitol Hill, Washington, District of Columbia, 20003, United States of America",20003
+38.88993712,-76.99586656,DC,"704, East Capitol Street Northeast, Capitol Hill, Washington, District of Columbia, 20003, United States of America",20003
+38.89081609,-76.98344298,DC,"31, 15th Street Northeast, Carver, Washington, District of Columbia, 20002, United States of America",20002
+38.89095099,-76.99022786,DC,"121, 12th Street Northeast, Capitol Hill, Washington, District of Columbia, 20002, United States of America",20002
+38.89810063,-76.98270282,DC,"1519, Gales Street Northeast, Kingman Park, Capitol Hill, Washington, District of Columbia, 20002, United States of America",20002
+38.898388,-77.04736354,DC,"Monroe Hall, 2115, G Street Northwest, Foggy Bottom, Washington, District of Columbia, 20037, United States of America",20037
+38.89951137,-77.01550777,DC,"300, Massachusetts Avenue Northwest, Chinatown, Washington, District of Columbia, 20001, United States of America",20001
+38.90052968,-76.99041739,DC,"808, 12th Street Northeast, Stanton Park, Capitol Hill, Washington, District of Columbia, 20002, United States of America",20002
+38.90089464,-76.99382916,DC,"812, 9th Street Northeast, Near Northeast, Washington, District of Columbia, 20002, United States of America",20002
+38.90176411,-76.9860931,DC,"1119, Orren Street Northeast, Trinidad, Washington, District of Columbia, 20002, United States of America",20002
+38.90309881,-77.00420994,DC,"L Street Northeast, Near Northeast, Washington, District of Columbia, 20002, United States of America",20002
+38.90358719,-77.02593739,DC,"PEPCO Substation 52, 1025, 10th Street Northwest, Mount Vernon Square, Logan Circle, Washington, District of Columbia, 20001, United States of America",20001
+38.90518544,-77.00098252,DC,"1163, Abbey Place Northeast, Near Northeast, Washington, District of Columbia, 20002, United States of America",20002
+38.90565937,-77.06047533,DC,"Colonial Parking, M Street Northwest, Georgetown, Washington, District of Columbia, 20007, United States of America",20007
+38.90681821,-77.06506339,DC,"3254, N Street Northwest, Georgetown, Washington, District of Columbia, 20007, United States of America",20007
+38.90682819,-77.03778954,DC,"1615, Rhode Island Avenue Northwest, Dupont Circle, Washington, District of Columbia, 20036, United States of America",20036
+38.90687686,-76.97994217,DC,"1257, 16th Street Northeast, Trinidad, Washington, District of Columbia, 20002, United States of America",20002
+38.90731059,-77.06135756,DC,"1312, 31st Street Northwest, Georgetown, Washington, District of Columbia, 20007, United States of America",20007
+38.90801638,-77.03884192,DC,"1708, Massachusetts Avenue Northwest, Dupont Circle, Washington, District of Columbia, 20036, United States of America",20036
+38.90921452,-77.03158349,DC,"1323, Rhode Island Avenue Northwest, Logan Circle/Shaw, Logan Circle, Washington, District of Columbia, 20005, United States of America",20005
+38.90958552,-77.02726278,DC,"1426, 11th Street Northwest, Logan Circle/Shaw, Logan Circle, Washington, District of Columbia, 20001, United States of America",20001
+38.91002333,-77.06558416,DC,"3223, Volta Place Northwest, Georgetown, Washington, District of Columbia, 20007, United States of America",20007
+38.91097015,-77.08699571,DC,"4527, Q Lane Northwest, Foxhall Village, Glover Park, Washington, District of Columbia, 20007, United States of America",20007
+38.91113459,-77.02239695,DC,"Dacha Beer Garden, Q Street Northwest, Chinatown, Washington, District of Columbia, 20001, United States of America",20001
+38.91173754,-77.01174836,DC,"1621, 1st Street Northwest, Truxton Circle, Chinatown, Washington, District of Columbia, 20001, United States of America",20001
+38.91198205,-77.05390123,DC,"Rock Creek Trail, Georgetown, Washington, District of Columbia, 20037, United States of America",20037
+38.91263083,-77.06133395,DC,"1680, Avon Place Northwest, Georgetown, Washington, District of Columbia, 20007, United States of America",20007
+38.9130207,-77.0321768,DC,"1702, 14th Street Northwest, Logan Circle/Shaw, Logan Circle, Washington, District of Columbia, 20010, United States of America",20010
+38.91317857,-77.01919606,DC,"1708, 5th Street Northwest, Logan Circle/Shaw, Chinatown, Washington, District of Columbia, 20001, United States of America",20001
+38.91467936,-77.04100348,DC,"1754, Swann Street Northwest, Dupont Circle, Washington, District of Columbia, 20009, United States of America",20009
+38.91534561,-77.01738502,DC,"1832, 4th Street Northwest, Le Droit Park, Logan Circle, Washington, District of Columbia, 20059, United States of America",20059
+38.91789589,-77.023082,DC,"Atlantic Plumbing, 2112, 8th Street Northwest, Cardozo/Shaw, Logan Circle, Washington, District of Columbia, 20001, United States of America",20001
+38.91796789,-77.0270994,DC,"Lincoln Condominiums, 12th Street Northwest, Cardozo/Shaw, Logan Circle, Washington, District of Columbia, 20009, United States of America",20009
+38.91886472,-77.01443361,DC,"2121, 2nd Street Northwest, Columbia Heights, Washington, District of Columbia, 20001, United States of America",20001
+38.91935764,-77.02604685,DC,"927, W Street Northwest, Cardozo/Shaw, Columbia Heights, Washington, District of Columbia, 20009, United States of America",20009
+38.91944259,-77.07992116,DC,"2204, 40th Place Northwest, Glover Park, Washington, District of Columbia, 20007, United States of America",20007
+38.92035921,-77.04373577,DC,"1868, Columbia Road Northwest, Adams Morgan, Dupont Circle, Washington, District of Columbia, 20009, United States of America",20009
+38.92170888,-77.04566416,DC,"1869, Mintwood Place Northwest, Adams Morgan, Woodley Park, Washington, District of Columbia, 20009, United States of America",20009
+38.92199238,-77.04750977,DC,"2444, 20th Street Northwest, Adams Morgan, Woodley Park, Washington, District of Columbia, 20009, United States of America",20009
+38.92230981,-77.03462505,DC,"Park Square, 2407, 15th Street Northwest, Columbia Heights, Washington, District of Columbia, 20009, United States of America",20009
+38.92302199,-77.0386581,DC,"1660, Euclid Street Northwest, Adams Morgan, Columbia Heights, Washington, District of Columbia, 20009, United States of America",20009
+38.92316389,-76.97579221,DC,"2521, 20th Street Northeast, Langdon, University Heights, Washington, District of Columbia, 20018, United States of America",20018
+38.92318687,-77.04319046,DC,"1814, Adams Mill Road Northwest, Woodley Park, Washington, District of Columbia, 20009, United States of America",20009
+38.92359293,-77.042389,DC,"1777, Columbia Road Northwest, Woodley Park, Washington, District of Columbia, 20009, United States of America",20009
+38.92398535,-77.00158755,DC,"315, Evarts Street Northeast, Edgewood, University Heights, Washington, District of Columbia, 20002, United States of America",20002
+38.92408999,-77.04575264,DC,"Walter Pierce Park, Calvert Street Northwest, Woodley Park, Washington, District of Columbia, 20008, United States of America",20008
+38.9241659,-77.07313666,DC,"2619, Wisconsin Avenue Northwest, Glover Park, Washington, District of Columbia, 20007, United States of America",20007
+38.924472,-77.03256472,DC,"1400, Fairmont Street Northwest, Columbia Heights, Washington, District of Columbia, 20009, United States of America",20009
+38.92728622,-76.99720219,DC,"625, Hamlin Street Northeast, Edgewood, University Heights, Washington, District of Columbia, 20017, United States of America",20017
+38.92773598,-77.03086403,DC,"1307, Columbia Road Northwest, Columbia Heights, Washington, District of Columbia, 20009, United States of America",20009
+38.92805092,-77.02253881,DC,"662, Columbia Road Northwest, Pleasant Plains, Columbia Heights, Washington, District of Columbia, 20001, United States of America",20001
+38.92871521,-77.02228929,DC,"642, Irving Street Northwest, Pleasant Plains, Columbia Heights, Washington, District of Columbia, 20010, United States of America",20010
+38.92886929,-77.03603494,DC,"Bell Multicultural Senior High School, 3101, 16th Street Northwest, Columbia Heights, Washington, District of Columbia, 20012, United States of America",20012
+38.93096654,-77.0375166,DC,"1627, Lamont Street Northwest, Mount Pleasant, Columbia Heights, Washington, District of Columbia, 20010, United States of America",20010
+38.93136245,-77.02393178,DC,"Mohamed's Barber Shop, 3310, Georgia Avenue Northwest, Columbia Heights, Washington, District of Columbia, 20012, United States of America",20012
+38.93181717,-77.04541095,DC,"1939, Lamont Street Northwest, Mount Pleasant, Woodley Park, Washington, District of Columbia, 20010, United States of America",20010
+38.9324196,-77.02702692,DC,"3408, Sherman Avenue Northwest, Columbia Heights, Washington, District of Columbia, 20010, United States of America",20010
+38.93253536,-76.96346585,DC,"3129, Monroe Street Northeast, Woodridge, Washington, District of Columbia, 20018, United States of America",20018
+38.93347527,-77.03844767,DC,"1667, Monroe Street Northwest, Mount Pleasant, Columbia Heights, Washington, District of Columbia, 20010, United States of America",20010
+38.9353408,-77.05783868,DC,"3427, Connecticut Avenue Northwest, Cleveland Park, Washington, District of Columbia, 20008, United States of America",20008
+38.9357498,-77.06085189,DC,"3501, 30th Street Northwest, Cleveland Park, Washington, District of Columbia, 20008, United States of America",20008
+38.93683753,-76.99354823,DC,"3746, 10th Street Northeast, University Heights, Washington, District of Columbia, 20017, United States of America",20017
+38.93873169,-77.06009376,DC,"3801, Connecticut Avenue Northwest, Cleveland Park, Washington, District of Columbia, 20015, United States of America",20015
+38.93970834,-76.99411326,DC,"University Heights, United States of America",20016
+38.94177363,-77.02313142,DC,"Petworth, United States of America",worth
+38.94240619,-77.03321148,DC,"4214, 14th Street Northwest, Columbia Heights, Washington, District of Columbia, 20010, United States of America",20010
+38.94326897,-77.02516067,DC,"4314, 9th Street Northwest, Petworth, Columbia Heights, Washington, District of Columbia, 20012, United States of America",20012
+38.94362327,-77.02507842,DC,"4300, Kansas Avenue Northwest, Petworth, Columbia Heights, Washington, District of Columbia, 20011, United States of America",20011
+38.94952835,-77.0251606,DC,"4829, 9th Street Northwest, Petworth, Columbia Heights, Washington, District of Columbia, 20011, United States of America",20011
+38.95344567,-77.01875962,DC,"427, Hamilton Street Northwest, Brightwood Park, Lamond Riggs, Washington, District of Columbia, 20011, United States of America",20011
+38.95487167,-77.03523919,DC,"5308, Colorado Avenue Northwest, 16th Street Heights, Columbia Heights, Washington, District of Columbia, 20011, United States of America",20011
+40.57583894,-73.96840656,NYC,"3101, Ocean Parkway, West Brighton, Kings County, New York City, New York, 11235, United States of America",11235
+40.57788352,-73.96904987,NYC,"Trump Village Apartments, 3000, Ocean Parkway, Gravesend, Kings County, New York City, New York, 11224, United States of America",11224
+40.58660311,-73.81257692,NYC,"86-15, Rockaway Beach Boulevard, Hammels, Rockaway Beach, Queens County, New York City, New York, 11693, United States of America",11693
+40.59483935,-73.96587008,NYC,"511, Gravesend Neck Road, Gravesend, Kings County, New York City, New York, 11223, United States of America",11223
+40.59729661,-74.07132597,NYC,"90, Sand Lane, Arrochar, Todt Hill, Richmond County, New York City, New York, 10305, United States of America",10305
+40.59733133,-73.99898485,NYC,"8814, Bay Parkway, Bensonhurst, Kings County, New York City, New York, 11214, United States of America",11214
+40.59964731,-73.95338171,NYC,"2071, East 18th Street, Sheepshead Bay, Kings County, New York City, New York, 11229, United States of America",11229
+40.61293008,-73.96510972,NYC,"1478, East 9th Street, Midwood, Brooklyn, Kings County, New York City, New York, 11230, United States of America",11230
+40.63110092,-74.00445178,NYC,"1061, 61st Street, Bay Ridge, Kings County, New York City, New York, 11219, United States of America",11219
+40.63527207,-74.00677078,NYC,"874, 58th Street, Borough Park, Kings County, New York City, New York, 11220, United States of America",11220
+40.63964427,-73.95628885,NYC,"430, East 23rd Street, Ditmas Park, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.64025101,-74.01734529,NYC,"437, 60th Street, Bay Ridge, Kings County, New York City, New York, 11220, United States of America",11220
+40.64346787,-73.99267246,NYC,"1034, 40th Street, Borough Park, Brooklyn, Kings County, New York City, New York, 11219, United States of America",11219
+40.64348169,-73.96410319,NYC,"284, East 16th Street, Ditmas Park, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.64786221,-73.96063712,NYC,"622, Ocean Avenue, Flatbush, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.64809232,-73.96769793,NYC,"58, Argyle Road, Ditmas Park, Brooklyn, Kings County, New York City, New York, 11218, United States of America",11218
+40.65018188,-73.96362406,NYC,"50, East 18th Street, Flatbush, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.65067989,-73.96282892,NYC,"130, Saint Paul Place, Flatbush, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.65072823,-73.96360915,NYC,"20, East 18th Street, Flatbush, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.65137218,-73.96084222,NYC,"465, Ocean Avenue, Flatbush, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.65236746,-73.95878181,NYC,"5, Linden Boulevard, Flatbush, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.65251487,-73.96324802,NYC,"57, Crooke Avenue, Flatbush, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.65266297,-73.96395362,NYC,"48, Saint Paul Place, Flatbush, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.65336799,-73.94855103,NYC,"287, Linden Boulevard, Brooklyn Community Board 17 Neighborhoods, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.65511767,-73.95741754,NYC,"69, Clarkson Avenue, Flatbush, Brooklyn, Kings County, New York City, New York, 11226, United States of America",11226
+40.65606197,-73.9590166,NYC,"263, Parkside Avenue, Flatbush, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.65633546,-73.95846243,NYC,"48, Winthrop Street, Flatbush, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.65914561,-73.96004238,NYC,"11, Rutland Road, Crown Heights, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.65920615,-73.95806926,NYC,"77, Rutland Road, Crown Heights, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.66069537,-73.96167738,NYC,"37, Lincoln Road, Flatbush, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.66085305,-73.89893223,NYC,"430, Newport Street, Marcus Garvey Village, Kings County, New York City, New York, 11207, United States of America",11207
+40.66092001,-73.95400589,NYC,"207, Maple Street, Crown Heights, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.66099478,-73.96082576,NYC,"1141, Washington Avenue, Flatbush, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.66123485,-73.93428033,NYC,"499, Schenectady Avenue, Rutland Plaza, Brooklyn, Kings County, New York City, New York, 11203, United States of America",11203
+40.66185109,-73.95975224,NYC,"41, Lefferts Avenue, Crown Heights, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.66267675,-73.84055371,NYC,"New Park Pizza, 156-57, Cross Bay Boulevard, Howard Beach, Queens County, New York City, New York, 11414, United States of America",11414
+40.66289983,-73.99004695,NYC,"272, 17th Street, South Slope, Brooklyn, Kings County, New York City, New York, 11215, United States of America",11215
+40.66476603,-73.99516431,NYC,"140, 18th Street, South Slope, Brooklyn, Kings County, New York City, New York, 11215, United States of America",11215
+40.6648889,-73.99345981,NYC,"610, 4th Avenue, South Slope, Brooklyn, Kings County, New York City, New York, 11215, United States of America",11215
+40.66569239,-73.97999585,NYC,"500, 9th Street, Park Slope, Brooklyn, Kings County, New York City, New York, 11215, United States of America",11215
+40.66593051,-73.95082323,NYC,"897, Nostrand Avenue, Crown Heights, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.66687413,-73.956194,NYC,"145, Crown Street, Crown Heights, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.66721191,-73.93861939,NYC,"1508, President Street, Crown Heights, Brooklyn, Kings County, New York City, New York, 11213, United States of America",11213
+40.66902581,-73.97707905,NYC,"513, 4th Street, Park Slope, Brooklyn, Kings County, New York City, New York, 11215, United States of America",11215
+40.66922622,-73.98133735,NYC,"448, 6th Street, Park Slope, Brooklyn, Kings County, New York City, New York, 11215, United States of America",11215
+40.66930978,-73.9362747,NYC,"Ebenezer Seventh Day Adventist School, Eastern Parkway Service Road, Crown Heights, Brooklyn, Kings County, New York City, New York, 11225, United States of America",11225
+40.67061056,-73.93150926,NYC,"1415, Saint Johns Place, Eastern Parkway, Brooklyn, Kings County, New York City, New York, 11213, United States of America",11213
+40.67201749,-73.98530534,NYC,"310, 5th Street, Park Slope, Brooklyn, Kings County, New York City, New York, 11215, United States of America",11215
+40.67407536,-73.9552908,NYC,"677, Park Place, Crown Heights, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.67412971,-73.964974,NYC,"395, Saint Johns Place, Prospect Heights, Brooklyn, Kings County, New York City, New York, 11238, United States of America",11238
+40.67498311,-73.95953077,NYC,"CenterLight Health System, 727, Classon Avenue, Adelphi, Brooklyn, Kings County, New York City, New York, 11238, United States of America",11238
+40.67603036,-73.98239282,NYC,"618, President Street, Park Slope, Brooklyn, Kings County, New York City, New York, 11215, United States of America",11215
+40.67615201,-73.94925604,NYC,"1100 Bergen Street Community Garden, Bergen Street, Crown Heights, Brooklyn, Kings County, New York City, New York, 11213, United States of America",11213
+40.67621415,-73.9699961,NYC,"Public School 111, 227, Sterling Place, Prospect Heights, Brooklyn, Kings County, New York City, New York, 11238, United States of America",11238
+40.67633694,-73.99919635,NYC,"514, Court Street, Carroll Gardens, Kings County, New York City, New York, 11231, United States of America",11231
+40.67716819,-74.00410997,NYC,"749, Hicks Street, Red Hook, Kings County, New York City, New York, 11231, United States of America",11231
+40.67852152,-73.94376949,NYC,"1389, Atlantic Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.67947627,-73.99986073,NYC,"498, Clinton Street, Cobble Hill Historic District, Kings County, New York City, New York, 11231, United States of America",11231
+40.67973818,-73.96660983,NYC,"712, Dean Street, Prospect Heights, Brooklyn, Kings County, New York City, New York, 11238, United States of America",11238
+40.68015019,-73.93550009,NYC,"58, Bainbridge Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11233, United States of America",11233
+40.68041901,-73.9477274,NYC,"26, Verona Place, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.68118466,-73.96126053,NYC,"469, Grand Avenue, Adelphi, Brooklyn, Kings County, New York City, New York, 11238, United States of America",11238
+40.68167625,-73.94629148,NYC,"Junior High School 258, 141, Macon Street, BEDFORD STUYVESANT/ EXPANDED STUYVEVSANT HEIGHTS HISTORIC DISTRICT, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.68228403,-73.94644568,NYC,"171, Halsey Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.68263962,-73.94238194,NYC,"288, Halsey Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.68350577,-73.93224045,NYC,"328, Stuyvesant Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11233, United States of America",11233
+40.68364279,-73.92638135,NYC,"210, Patchen Avenue, Bushwick, Brooklyn, Kings County, New York City, New York, 11233, United States of America",11233
+40.68367724,-73.9611031,NYC,"70, Downing Street, Adelphi, Brooklyn, Kings County, New York City, New York, 11238, United States of America",11238
+40.68369889,-73.93324617,NYC,"487, Halsey Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11233, United States of America",11233
+40.68371262,-73.96461481,NYC,"489, Washington Avenue, Clinton Hill, Brooklyn, Kings County, New York City, New York, 11238, United States of America",11238
+40.68389048,-73.93436825,NYC,"457, Halsey Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11233, United States of America",11233
+40.68476938,-73.96756523,NYC,"450, Clinton Avenue, Clinton Hill, Brooklyn, Kings County, New York City, New York, 11238, United States of America",11238
+40.68480158,-73.92672462,NYC,"186, Patchen Avenue, Bushwick, Brooklyn, Kings County, New York City, New York, 11233, United States of America",11233
+40.68498404,-73.91112828,NYC,"1010, Decatur Street, Bushwick, Kings County, New York City, New York, 11207, United States of America",11207
+40.68511632,-73.95029192,NYC,"373, Nostrand Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.68522824,-73.95702497,NYC,"254, Gates Avenue, Adelphi, Brooklyn, Kings County, New York City, New York, 11238, United States of America",11238
+40.6853136,-73.92709681,NYC,"701, Hancock Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11221, United States of America",11221
+40.68543519,-73.92457079,NYC,"774, Hancock Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11233, United States of America",11233
+40.68591135,-74.00164256,NYC,"60 Tiffany Place, 60, Tiffany Place, Columbia Street Waterfront District, Kings County, New York City, New York, 11231, United States of America",11231
+40.68604845,-73.97516531,NYC,"109, South Elliott Place, Fort Greene, Brooklyn, Kings County, New York City, New York, 11217, United States of America",11217
+40.68636036,-73.80692366,NYC,"109-31, Van Wyck Expressway East, Jamaica, Queens County, New York City, New York, 11435, United States of America",11435
+40.68656583,-73.94071583,NYC,"Public School 44, 432, Monroe Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11221, United States of America",11221
+40.68718244,-73.94027497,NYC,"620, Gates Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11221, United States of America",11221
+40.68722543,-73.95477989,NYC,"1098, Bedford Avenue, Clinton Hill, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.68724762,-73.93068293,NYC,"659, Madison Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11221, United States of America",11221
+40.68742284,-73.92197709,NYC,"977, Putnam Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11221, United States of America",11221
+40.68756202,-74.00413363,NYC,"Columbia Street Greenway, Columbia Street Waterfront District, Kings County, New York City, New York, 11231, United States of America",11231
+40.687691,-73.95253993,NYC,"247, Lexington Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.68816461,-73.95363807,NYC,"431, Greene Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.6884561,-73.91770133,NYC,"1122, Putnam Avenue, Bushwick, Kings County, New York City, New York, 11221, United States of America",11221
+40.68883617,-73.94158835,NYC,"505, Lexington Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11221, United States of America",11221
+40.68924146,-73.96453209,NYC,"293, Lafayette Avenue, Clinton Hill, Brooklyn, Kings County, New York City, New York, 11205, United States of America",11205
+40.68995388,-73.92843703,NYC,"759, Quincy Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11221, United States of America",11221
+40.69047584,-73.84713772,NYC,"96-18, 91st Avenue, Woodhaven, Queens County, New York City, New York, 11421, United States of America",11421
+40.69056921,-73.97182903,NYC,"232, Adelphi Street, Fort Greene, Brooklyn, Kings County, New York City, New York, 11205, United States of America",11205
+40.69072014,-73.99033872,NYC,"Edison ParkFast, 92, Livingston Street, Cobble Hill, Kings County, New York City, New York, 11201, United States of America",11201
+40.6908997,-73.95333232,NYC,"590, DeKalb Avenue, Clinton Hill, Brooklyn, Kings County, New York City, New York, 11205, United States of America",11205
+40.69093309,-73.96507275,NYC,"Pratt Institute Library, Hall Street, Clinton Hill, Brooklyn, Kings County, New York City, New York, 11205, United States of America",11205
+40.69155447,-73.94736059,NYC,"718, DeKalb Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11216, United States of America",11216
+40.69220984,-73.93822869,NYC,"409A, Kosciusko Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11221, United States of America",11221
+40.69246576,-73.95948493,NYC,"290, Willoughby Avenue, Clinton Hill, Brooklyn, Kings County, New York City, New York, 11205, United States of America",11205
+40.69260077,-73.99286115,NYC,"180, Joralemon Street, Brooklyn Heights, Kings County, New York City, New York, 11201, United States of America",11201
+40.69280477,-73.91613975,NYC,"440, Central Avenue, Bushwick, Kings County, New York City, New York, 11221, United States of America",11221
+40.69297186,-73.92447025,NYC,"920, Bushwick Avenue, Bushwick, Brooklyn, Kings County, New York City, New York, 11221, United States of America",11221
+40.69401148,-73.90917105,NYC,"1324, Hancock Street, Bushwick, Kings County, New York City, New York, 11237, United States of America",11237
+40.69402347,-73.99353564,NYC,"123, Remsen Street, Brooklyn Heights, Kings County, New York City, New York, 11201, United States of America",11201
+40.69445186,-73.93828145,NYC,"315, Hart Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11206, United States of America",11206
+40.69485331,-73.95109337,NYC,"29, Vernon Avenue, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11206, United States of America",11206
+40.69511794,-73.92623962,NYC,"314, Evergreen Avenue, Bushwick, Kings County, New York City, New York, 11221, United States of America",11221
+40.69561557,-73.95574834,NYC,"829, Bedford Avenue, Clinton Hill, Brooklyn, Kings County, New York City, New York, 11205, United States of America",11205
+40.69659877,-73.93071773,NYC,"711, Bushwick Avenue, Bushwick, Kings County, New York City, New York, 11221, United States of America",11221
+40.69712061,-73.93054923,NYC,"65, Suydam Street, Bushwick, Kings County, New York City, New York, 11221, United States of America",11221
+40.69734734,-73.93270139,NYC,"1193, Myrtle Avenue, Clinton Hill, Brooklyn, Kings County, New York City, New York, 11206, United States of America",11206
+40.69758108,-73.93493359,NYC,"17, Jefferson Street, Bushwick, Kings County, New York City, New York, 11206, United States of America",11206
+40.69796003,-73.89620744,NYC,"75-20, 60th Place, Fresh Pond Junction, Queens County, New York City, New York, 11385, United States of America",11385
+40.69894879,-73.91356958,NYC,"317, Irving Avenue, Bushwick, Kings County, New York City, New York, 11237, United States of America",11237
+40.69918411,-73.94513261,NYC,"Junior High School 148 (historical), 185, Ellery Street, Bedford-Stuyvesant, Brooklyn, Kings County, New York City, New York, 11206, United States of America",11206
+40.69974285,-73.93379665,NYC,"125, Melrose Street, Bushwick, Kings County, New York City, New York, 11206, United States of America",11206
+40.70030768,-73.92964339,NYC,"100, Central Avenue, Bushwick, Kings County, New York City, New York, 11206, United States of America",11206
+40.70043647,-73.93909096,NYC,"339, Ellery Street, Bedford-Stuyvesant, Kings County, New York City, New York, 11206, United States of America",11206
+40.70050021,-73.91815592,NYC,"330, Harman Street, Kings County, New York City, New York, 11237, United States of America",11237
+40.70171411,-73.82788123,NYC,"86-16, 123rd Street, Richmond Hill, Queens County, New York City, New York, 11418, United States of America",11418
+40.70277883,-73.92672931,NYC,"241, Troutman Street, Bushwick, Kings County, New York City, New York, 11237, United States of America",11237
+40.70296232,-73.92919052,NYC,"37, Wilson Avenue, Bushwick, Kings County, New York City, New York, 11237, United States of America",11237
+40.70326131,-73.92922092,NYC,"124, George Street, Bushwick, Kings County, New York City, New York, 11237, United States of America",11237
+40.70352323,-73.93721341,NYC,"393, Bushwick Avenue, Bedford-Stuyvesant, Kings County, New York City, New York, 11206, United States of America",11206
+40.70402575,-73.95532928,NYC,"220, Penn Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.70457622,-73.92031255,NYC,"Key Food Supermarket, 72, Wyckoff Avenue, Kings County, New York City, New York, 11237, United States of America",11237
+40.70465526,-73.9352965,NYC,"229, Moore Street, Bushwick, Kings County, New York City, New York, 11206, United States of America",11206
+40.70468493,-74.00722467,NYC,"99 Wall Street, 99, Wall Street, Southbridge Towers, Manhattan, New York County, New York City, New York, 10005, United States of America",10005
+40.70499253,-73.92536301,NYC,"26, Irving Avenue, Bushwick, Kings County, New York City, New York, 11237, United States of America",11237
+40.70580162,-73.96794982,NYC,"Roberto Clemente Ballfield, Division Avenue, Brooklyn Navy Yard, Kings County, New York City, New York, 11211, United States of America",11211
+40.70583498,-73.94109544,NYC,"130, Humboldt Street, Williamsburg, Kings County, New York City, New York, 11206, United States of America",11206
+40.70644616,-74.00781865,NYC,"70 Pine Street, Pine Street, Southbridge Towers, Manhattan, New York County, New York City, New York, 10005, United States of America",10005
+40.70645419,-73.90578234,NYC,"658, Fairview Avenue, Ridgewood, Queens County, New York City, New York, 11385, United States of America",11385
+40.70662163,-74.01268665,NYC,"One Exchange Plaza, 39, Broadway, Battery Park City, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.70695995,-73.9358761,NYC,"310, Johnson Avenue, Williamsburg, Kings County, New York City, New York, 11206, United States of America",11206
+40.70704377,-73.93762508,NYC,"270, Johnson Avenue, Williamsburg, Kings County, New York City, New York, 11206, United States of America",11206
+40.70726022,-74.00599007,NYC,"116 John Street, 116, John Street, Southbridge Towers, Manhattan, New York County, New York City, New York, 10038, United States of America",10038
+40.70745411,-73.94306903,NYC,"168, Graham Avenue, Williamsburg, Kings County, New York City, New York, 11206, United States of America",11206
+40.70747011,-74.01443095,NYC,"81, Washington Street, Battery Park City, Manhattan, New York County, New York City, New York, 10006, United States of America",10006
+40.70777754,-73.9488362,NYC,"39, Meserole Street, Williamsburg, Kings County, New York City, New York, 11206, United States of America",11206
+40.70780991,-74.01440305,NYC,"Greenwich Club Residences, Rector Street, Battery Park City, Manhattan, New York County, New York City, New York, 10006, United States of America",10006
+40.70788997,-74.00760563,NYC,"84, William Street, Southbridge Towers, Manhattan, New York County, New York City, New York, 10038, United States of America",10038
+40.70795913,-74.01236901,NYC,"Trinity Church, Trinity Place, Battery Park City, Manhattan, New York County, New York City, New York, 10006, United States of America",10006
+40.70823368,-73.96081264,NYC,"323, Roebling Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.70856812,-74.01005321,NYC,"Marine Midland Building, 140, Broadway, Battery Park City, Manhattan, New York County, New York City, New York, 10005, United States of America",10005
+40.70868599,-74.00684576,NYC,"110 William Street, 110, William Street, Southbridge Towers, Manhattan, New York County, New York City, New York, 10038, United States of America",10038
+40.70928784,-74.01093921,NYC,"Zuccotti Park, Cedar Street, Battery Park City, Manhattan, New York County, New York City, New York, 10006, United States of America",10006
+40.70943924,-73.94838431,NYC,"418, Lorimer Street, Williamsburg, Kings County, New York City, New York, 11206, United States of America",11206
+40.70971976,-73.94124205,NYC,"215, Stagg Walk, Williamsburg Houses, Kings County, New York City, New York, 11206, United States of America",11206
+40.70986855,-73.94120802,NYC,"215, Stagg Walk, Williamsburg Houses, Kings County, New York City, New York, 11206, United States of America",11206
+40.71014446,-73.95871091,NYC,"239, South 4th Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71034873,-73.95331844,NYC,"384, Keap Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71050158,-73.94693056,NYC,"90, Maujer Street, Williamsburg, Kings County, New York City, New York, 11206, United States of America",11206
+40.71064395,-73.96496979,NYC,"95, Broadway, Williamsburg, Kings County, New York City, New York, 11249, United States of America",11249
+40.71080412,-73.99890624,NYC,"15, Saint James Place, Southbridge Towers, Manhattan, New York County, New York City, New York, 10038, United States of America",10038
+40.71110989,-73.91689355,NYC,"1884, Starr Street, Bushwick, Kings County, New York City, New York, 11385, United States of America",11385
+40.71120727,-74.00725703,NYC,"7, Theater Alley, Southbridge Towers, Manhattan, New York County, New York City, New York, 10038, United States of America",10038
+40.71189462,-73.9628222,NYC,"349, Bedford Avenue, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71197622,-73.96114385,NYC,"Bistro Petit, 774, Driggs Avenue, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71248267,-74.00527846,NYC,"City Hall, 260, Broadway, Tribeca, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.7125087,-73.96243362,NYC,"331, Bedford Avenue, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.7125414,-73.93806028,NYC,"904, Grand Street, Williamsburg, Kings County, New York City, New York, 11206, United States of America",11206
+40.71263673,-73.94291345,NYC,"187, Powers Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71287892,-73.93688286,NYC,"937, Grand Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71311998,-73.96335516,NYC,"105, South 3rd Street, Williamsburg, Kings County, New York City, New York, 11249, United States of America",11249
+40.71319342,-74.00493791,NYC,"Tweed Courthouse, 52, Chambers Street, Tribeca, Manhattan, New York County, New York City, New York, 10007, United States of America",10007
+40.71323163,-73.94865572,NYC,"70, Devoe Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71327644,-74.00506643,NYC,"Tweed Courthouse, 52, Chambers Street, Tribeca, Manhattan, New York County, New York City, New York, 10007, United States of America",10007
+40.71327722,-74.00486628,NYC,"Tweed Courthouse, 52, Chambers Street, Tribeca, Manhattan, New York County, New York City, New York, 10007, United States of America",10007
+40.71341662,-73.94803191,NYC,"84, Devoe Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71349881,-74.006852,NYC,"259, Broadway, Tribeca, Manhattan, New York County, New York City, New York, 10007, United States of America",10007
+40.71351502,-73.99574825,NYC,"49, East Broadway, Chinatown, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71356822,-74.00489665,NYC,"Emigrant Industrial Savings Bank Building, 51, Chambers Street, Tribeca, Manhattan, New York County, New York City, New York, 10007, United States of America",10007
+40.71389747,-74.00620893,NYC,"Duane Reade, Chambers Street, Tribeca, Manhattan, New York County, New York City, New York, 10007, United States of America",10007
+40.71390781,-74.00488861,NYC,"Emigrant Industrial Savings Bank Building, 51, Chambers Street, Tribeca, Manhattan, New York County, New York City, New York, 10007, United States of America",10007
+40.71399135,-73.94756135,NYC,"288, Leonard Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71452977,-73.94392782,NYC,"752, Metropolitan Avenue, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71459367,-73.96170627,NYC,"160, Grand Street, Williamsburg, Kings County, New York City, New York, 11249, United States of America",11249
+40.71462734,-73.99658046,NYC,"Confucius Plaza, 40, Division Street, Chinatown, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71546164,-73.98906917,NYC,"Seward Park, pedestrian, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71551504,-74.00748949,NYC,"176, Church Street, Tribeca, Manhattan, New York County, New York City, New York, 10013, United States of America",10013
+40.7155847,-73.94880717,NYC,"71, Skillman Avenue, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71584449,-73.99189098,NYC,"34, Allen Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71590204,-73.99058859,NYC,"Public School 42, 71, Hester Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71602241,-73.99292686,NYC,"50, Eldridge Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71605105,-73.95180109,NYC,"520, Union Avenue, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71672251,-73.9966614,NYC,"40, Elizabeth Street, Little Italy, Manhattan, New York County, New York City, New York, 10013, United States of America",10013
+40.71676538,-73.94963158,NYC,"270, Meeker Avenue, Greenpoint, Kings County, New York City, New York, 11211, United States of America",11211
+40.71722027,-73.99645697,NYC,"54, Elizabeth Street, Little Italy, Manhattan, New York County, New York City, New York, 10013, United States of America",10013
+40.717595,-73.94387604,NYC,"193, Withers Street, Greenpoint, Kings County, New York City, New York, 11211, United States of America",11211
+40.7176478,-73.9624042,NYC,"234, Wythe Avenue, Williamsburg, Kings County, New York City, New York, 11249, United States of America",11249
+40.71767389,-73.95707077,NYC,"171, North 7th Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71780126,-73.98503674,NYC,"176, Delancey Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71789792,-73.98931314,NYC,"350, Grand Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71837729,-73.8449868,NYC,"11, Greenway Terrace, Forest Hills Gardens, Queens County, New York City, New York, 11375, United States of America",11375
+40.71869302,-73.99310062,NYC,"313, Broome Street, Chinatown, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71888532,-73.95795639,NYC,"140, North 8th Street, Williamsburg, Kings County, New York City, New York, 11249, United States of America",11249
+40.71890838,-73.9909502,NYC,"99, Allen Street, Chinatown, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71920729,-73.98900387,NYC,"101, Ludlow Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.71955309,-73.96048798,NYC,"83, North 7th Street, Williamsburg, Kings County, New York City, New York, 11249, United States of America",11249
+40.71964401,-73.95538343,NYC,"117, Bedford Avenue, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.71975229,-73.98608157,NYC,"Lower East Side Preparatory High School, 145, Stanton Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.7199731,-73.95945312,NYC,"93, North 8th Street, Williamsburg, Kings County, New York City, New York, 11249, United States of America",11249
+40.72052357,-73.96239332,NYC,"The Edge North Tower, 34, North 7th Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.72052569,-73.9855549,NYC,"Lower East Side Preparatory High School, 145, Stanton Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.72056692,-73.9833968,NYC,"155, Attorney Street, Alphabet City, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.72056756,-73.9626633,NYC,"The Edge North Tower, 34, North 7th Street, Williamsburg, Kings County, New York City, New York, 11211, United States of America",11211
+40.7206374,-73.99628908,NYC,"San Lorenzo Ruiz Chapel, 378, Broome Street, Little Italy, Manhattan, New York County, New York City, New York, 10012, United States of America",10012
+40.72069042,-73.95453292,NYC,"Citi Bike - N 12 St & Bedford Ave, North 12th Street, Greenpoint, Kings County, New York City, New York, 11211, United States of America",11211
+40.72076562,-73.8148494,NYC,"147-36, 78th Avenue, Queens, Queens County, New York City, New York, 11367, United States of America",11367
+40.72086959,-73.97951706,NYC,"302, East 3rd Street, Alphabet City, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.72092041,-73.98849066,NYC,"158, Orchard Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.7210399,-73.98297504,NYC,"319, East Houston Street, Alphabet City, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.72136525,-73.94220697,NYC,"585, Meeker Avenue, Greenpoint, Kings County, New York City, New York, 11222, United States of America",11222
+40.72137549,-73.98376827,NYC,"297, East Houston Street, Alphabet City, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.72155962,-73.98866145,NYC,"86, Stanton Street, Lower East Side, Manhattan, New York County, New York City, New York, 10002, United States of America",10002
+40.72176107,-73.99520826,NYC,"21, Spring Street, SoHo, Manhattan, New York County, New York City, New York, 10012, United States of America",10012
+40.72206783,-74.00232008,NYC,"78, Grand Street, Little Italy, Manhattan, New York County, New York City, New York, 10013, United States of America",10013
+40.72206955,-73.95697356,NYC,"94, North 13th Street, Greenpoint, Kings County, New York City, New York, 11249, United States of America",11249
+40.72233241,-74.00991693,NYC,"426, Greenwich Street, Tribeca, Manhattan, New York County, New York City, New York, 10013, United States of America",10013
+40.72248307,-73.98316295,NYC,"30, Avenue B, Alphabet City, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.72271141,-73.99517695,NYC,"233, Mott Street, Little Italy, Manhattan, New York County, New York City, New York, 10012, United States of America",10012
+40.72318045,-74.00223127,NYC,"484, Broome Street, SoHo, Manhattan, New York County, New York City, New York, 10012, United States of America",10012
+40.72401226,-73.72900559,NYC,"237-28, 93rd Avenue, Queens Village, Queens County, New York City, New York, 11426, United States of America",11426
+40.72406832,-73.98628235,NYC,"126, East 3rd Street, Alphabet City, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.724109,-73.99081788,NYC,"16, 2nd Avenue, NoHo, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.72457353,-73.98842336,NYC,"82, East 3rd Street, Alphabet City, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.7253494,-73.99659503,NYC,"600, Broadway, SoHo, Manhattan, New York County, New York City, New York, 10012, United States of America",10012
+40.72563259,-73.72698378,NYC,"92-23, 241st Street, Queens Village, Queens County, New York City, New York, 11426, United States of America",11426
+40.72572144,-73.98143607,NYC,"Tompkins Square Park, East 9th Street, Alphabet City, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.72601454,-73.97673661,NYC,"706, East 11th Street, East Village, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.72636366,-73.98231355,NYC,"Tompkins Square Park, East 9th Street, Alphabet City, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.72646796,-73.98378826,NYC,"117, Avenue A, Alphabet City, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.7268116,-73.98400893,NYC,"120, Saint Mark's Place, East Village, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.72700567,-73.98625852,NYC,"84, East 7th Street, Alphabet City, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.72715564,-74.00320204,NYC,"1, Charlton Street, Greenwich Village, Manhattan, New York County, New York City, New York, 10014, United States of America",10014
+40.72732318,-73.98094855,NYC,"321, East 10th Street, Alphabet City, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.72735654,-73.98983123,NYC,"225, East 5th Street, East Village, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.72757201,-73.98461991,NYC,"95, Saint Mark's Place, East Village, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.7282285,-73.98558078,NYC,"346, East 9th Street, East Village, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.72865637,-73.8750294,NYC,"84-35, 60th Road, Middle Village, Queens County, New York City, New York, 11379, United States of America",11379
+40.72883586,-73.99920795,NYC,"214, Thompson Street, University Village, Manhattan, New York County, New York City, New York, 10012, United States of America",10012
+40.72920646,-74.00127804,NYC,"188, Bleecker Street, Washington Square Village, Manhattan, New York County, New York City, New York, 10012, United States of America",10012
+40.7294738,-73.97849922,NYC,"542, East 14th Street, Alphabet City, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.72972275,-73.95519993,NYC,"151, Milton Street, Greenpoint, Kings County, New York City, New York, 11222, United States of America",11222
+40.72978856,-74.00305466,NYC,"17, Downing Street, Greenwich Village, Manhattan, New York County, New York City, New York, 10014, United States of America",10014
+40.73032597,-73.98741838,NYC,"129, East 10th Street, East Village, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.73074579,-74.00232672,NYC,"11, Carmine Street, Greenwich Village, Manhattan, New York County, New York City, New York, 10014, United States of America",10014
+40.73113095,-73.98295127,NYC,"231, 1st Avenue, East Village, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.73125724,-73.9814855,NYC,"405, East 14th Street, East Village, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.73171681,-73.98460435,NYC,"New York Eye and Ear Infirmary, East 14th Street, East Village, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.73235461,-73.95105912,NYC,"218, India Street, Greenpoint, Kings County, New York City, New York, 11222, United States of America",11222
+40.73327995,-73.98094495,NYC,"288, 1st Avenue, East Village, Manhattan, New York County, New York City, New York, 10009, United States of America",10009
+40.73334243,-73.994162,NYC,"24, East 11th Street, Washington Square Village, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.73356765,-73.95438654,NYC,"1014, Manhattan Avenue, Greenpoint, Kings County, New York City, New York, 11222, United States of America",11222
+40.73389108,-73.99334934,NYC,"22, East 12th Street, East Village, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.73395768,-73.99498013,NYC,"39, 5th Avenue, Washington Square Village, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.73400813,-73.86805351,NYC,"LongHorn Steakhouse, 92-30, 59th Avenue, Elmhurst, Queens County, New York City, New York, 11373, United States of America",11373
+40.73488848,-73.98542612,NYC,"206, East 17th Street, East Village, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.73515999,-74.0022675,NYC,"25, Charles Street, Greenwich Village, Manhattan, New York County, New York City, New York, 10014, United States of America",10014
+40.73518615,-74.00225044,NYC,"25, Charles Street, Greenwich Village, Manhattan, New York County, New York City, New York, 10014, United States of America",10014
+40.73522211,-73.86681254,NYC,"94-11, 59th Avenue, Elmhurst, Queens County, New York City, New York, 11373, United States of America",11373
+40.73522309,-73.99709791,NYC,"55, West 11th Street, Washington Square Village, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.73580556,-73.9539239,NYC,"Parish School of Saints Cyril and Methodius, 150, Dupont Street, Greenpoint, Kings County, New York City, New York, 11222, United States of America",11222
+40.73607187,-73.99027265,NYC,"Union Square Park, East 15th Street, Flatiron, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.73608021,-74.00197642,NYC,"Saint John's Church, 224, Waverly Place, Greenwich Village, Manhattan, New York County, New York City, New York, 10014, United States of America",10014
+40.73694012,-74.00346957,NYC,"39 1/2, Bank Street, Greenwich Village, Manhattan, New York County, New York City, New York, 10014, United States of America",10014
+40.73694778,-74.00572157,NYC,"Abingdon Square, West 12th Street, Chelsea, Manhattan, New York County, New York City, New York, 10014, United States of America",10014
+40.73728946,-73.98730473,NYC,"108, East 19th Street, Rose Hill, Manhattan, New York County, New York City, New York, 10003, United States of America",10003
+40.73741631,-73.98218903,NYC,"234, East 22nd Street, Rose Hill, Manhattan, New York County, New York City, New York, 10010, United States of America",10010
+40.73844497,-73.99261928,NYC,"4, West 18th Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.73875263,-73.98683216,NYC,"Calvary Church, 273, Park Avenue South, Flatiron, Manhattan, New York County, New York City, New York, 10016, United States of America",10016
+40.73897067,-74.00180284,NYC,"240, West 14th Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.7398383,-74.00187176,NYC,"80, 8th Avenue, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74023397,-74.00269702,NYC,"New York Savings Bank Building, West 14th Street, Chelsea, Manhattan, New York County, New York City, New York, 10014, United States of America",10014
+40.7404057,-74.00141168,NYC,"259, West 15th Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74071489,-74.0022764,NYC,"Chase, West 15th Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74138018,-73.99875285,NYC,"218, West 18th Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74157172,-73.99295198,NYC,"53, West 21st Street, Chelsea, Manhattan, New York County, New York City, New York, 10010, United States of America",10010
+40.74202293,-73.78820819,NYC,"58-09, 187th Street, Fresh Meadows, Queens, Queens County, New York City, New York, 11365, United States of America",11365
+40.74239123,-73.98383472,NYC,"114, East 27th Street, Rose Hill, Manhattan, New York County, New York City, New York, 10016, United States of America",10016
+40.74257494,-73.99669043,NYC,"181, 7th Avenue, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74276474,-74.00016922,NYC,"176, 8th Avenue, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74294695,-73.99180376,NYC,"67, West 23rd Street, Flatiron, Manhattan, New York County, New York City, New York, 10010, United States of America",10010
+40.74310776,-73.98286336,NYC,"127, East 28th Street, Rose Hill, Manhattan, New York County, New York City, New York, 10016, United States of America",10016
+40.74329046,-73.86726127,NYC,"96-07, Alstyne Avenue, Corona, Queens County, New York City, New York, 11368, United States of America",11368
+40.74366094,-74.00050404,NYC,"306, West 20th Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74397798,-73.99664319,NYC,"208, West 23rd Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74398721,-73.95321124,NYC,"10-09, 48th Avenue, Long Island City, Queens County, New York City, New York, 11101, United States of America",11101
+40.74417387,-73.94822944,NYC,"46-26, Crane Street, Long Island City, Queens County, New York City, New York, 11101, United States of America",11101
+40.74446378,-73.99908113,NYC,"228, 8th Avenue, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74450084,-73.98339219,NYC,"California Pizza Kitchen, East 30th Street, Rose Hill, Manhattan, New York County, New York City, New York, 10016, United States of America",10016
+40.74475994,-73.98040005,NYC,"Windsor Court, Rose Hill, Manhattan, New York County, New York City, New York, 10016, United States of America",10016
+40.74532788,-73.98853997,NYC,"17, West 28th Street, Penn Station South, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.74538352,-73.92138594,NYC,"41-38, 43rd Street, Sunnyside Gardens, Queens County, New York City, New York, 11104, United States of America",11104
+40.74546579,-73.93184167,NYC,"43-30, 33rd Street, Sunnyside, Queens County, New York City, New York, 11101, United States of America",11101
+40.74552794,-73.99784392,NYC,"271, West 23rd Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74564339,-73.97658267,NYC,"222, East 35th Street, Murray Hill, Manhattan, New York County, New York City, New York, 10016, United States of America",10016
+40.74585388,-73.9949641,NYC,"207, West 25th Street, Chelsea, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.74610922,-74.00013644,NYC,"SVA Theater, 333, West 23rd Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74619616,-73.97706742,NYC,"211, East 35th Street, Murray Hill, Manhattan, New York County, New York City, New York, 10016, United States of America",10016
+40.74727308,-74.00146376,NYC,"400, West 24th Street, Chelsea, Manhattan, New York County, New York City, New York, 10011, United States of America",10011
+40.74734026,-73.98558196,NYC,"320, 5th Avenue, Koreatown, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.74787366,-74.0008828,NYC,"406, West 25th Street, Chelsea, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.74801624,-73.97460577,NYC,"Paramount Tower, 240, East 39th Street, Tudor City, Manhattan, New York County, New York City, New York, 10016, United States of America",10016
+40.74889023,-73.98805905,NYC,"Greeley Square, 6th Avenue, Koreatown, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.74901633,-73.94719723,NYC,"44-14, 21st Street, Long Island City, Queens County, New York City, New York, 11101, United States of America",11101
+40.74957179,-74.00027972,NYC,"Public School 33, 303, 9th Avenue, Chelsea, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.74960806,-73.97845908,NYC,"114, East 39th Street, Murray Hill, Manhattan, New York County, New York City, New York, 10016, United States of America",10016
+40.75005382,-73.99897875,NYC,"317, 9th Avenue, Chelsea, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.75118383,-73.99902468,NYC,"Morgan General Mail Facility, West 29th Street, Chelsea, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.7512566,-73.96945351,NYC,"The Sands, 321, East 45th Street, Tudor City, Manhattan, New York County, New York City, New York, 10017, United States of America",10017
+40.75134185,-73.96807013,NYC,"50 United Nations Plaza, Dag Hammarskjold Plaza, Tudor City, Manhattan, New York County, New York City, New York, 10017, United States of America",10017
+40.75152889,-73.99681221,NYC,"301, West 31st Street, Koreatown, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.75160346,-73.97031763,NYC,"The Delegate, 301, East 45th Street, Tudor City, Manhattan, New York County, New York City, New York, 10017, United States of America",10017
+40.7516357,-74.0014575,NYC,"Abington House, 500, West 30th Street, Chelsea, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.75166347,-73.9950574,NYC,"The Olivia, West 34th Street, Hell's Kitchen, Manhattan, New York County, New York City, New York, 10001, United States of America",10001
+40.75285988,-73.90707004,NYC,"Sports Authority, Northern Boulevard, Woodside, Queens County, New York City, New York, 11377, United States of America",11377
+40.75496778,-73.91765042,NYC,"44-02, 34th Avenue, Sunnyside Gardens, Queens County, New York City, New York, 11101, United States of America",11101
+40.75582866,-73.91839441,NYC,"42-15, 34th Avenue, Sunnyside Gardens, Queens County, New York City, New York, 11103, United States of America",11103
+40.75634254,-73.99185591,NYC,"314, West 40th Street, Koreatown, Manhattan, New York County, New York City, New York, 10018, United States of America",10018
+40.75651159,-73.91484766,NYC,"32-14, 46th Street, Sunnyside Gardens, Queens County, New York City, New York, 11103, United States of America",11103
+40.75657805,-73.86807357,NYC,"33-25, 100th Street, East Elmhurst, Queens County, New York City, New York, 11368, United States of America",11368
+40.75725183,-73.98795806,NYC,"American Airlines Theatre, 227, West 42nd Street, Hell's Kitchen, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.75744731,-73.82141808,NYC,"143-16, Franklin Avenue, Flushing, Queens, Queens County, New York City, New York, 11355, United States of America",11355
+40.75761786,-73.98508729,NYC,"1530, Broadway, Diamond District, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.7580262,-73.97159721,NYC,"135, East 52nd Street, Tudor City, Manhattan, New York County, New York City, New York, 10022, United States of America",10022
+40.75848203,-73.98413664,NYC,"155, West 46th Street, Diamond District, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.75877751,-73.96727217,NYC,"919 Third Avenue, 919, 3rd Avenue, Tudor City, Manhattan, New York County, New York City, New York, 10022, United States of America",10022
+40.75910369,-73.99139266,NYC,"McCaffrey Playground, West 43rd Street, Hell's Kitchen, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.7599492,-73.99436941,NYC,"Manhattan Plaza Apartments II, West 43rd Street, Hell's Kitchen, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.76024143,-73.99286247,NYC,"425, West 44th Street, Hell's Kitchen, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.76072633,-73.9220251,NYC,"34-19, Broadway, Sunnyside Gardens, Queens County, New York City, New York, 11106, United States of America",11106
+40.76075548,-73.92322971,NYC,"33-20, Broadway, Sunnyside Gardens, Queens County, New York City, New York, 11106, United States of America",11106
+40.7612351,-73.98828394,NYC,"322, West 48th Street, Clinton, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.76141468,-73.7210873,NYC,"58-26, 262nd Street, Glen Oaks, Queens County, New York City, New York, 11362, United States of America",11362
+40.76162971,-73.91044166,NYC,"45-18, 30th Avenue, Steinway, Queens County, New York City, New York, 11103, United States of America",11103
+40.76185944,-73.9946969,NYC,"503, West 45th Street, Hell's Kitchen, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.76188557,-73.92250317,NYC,"31-60, 34th Street, Astoria, Queens County, New York City, New York, 11106, United States of America",11106
+40.76217536,-73.98911108,NYC,"359, West 48th Street, Clinton, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76236329,-73.99827293,NYC,"UPS, West 44th Street, Clinton, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.76243776,-73.99137128,NYC,"424, West 48th Street, Clinton, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.76249275,-73.91176019,NYC,"43-19, 30th Avenue, Steinway, Queens County, New York City, New York, 11103, United States of America",11103
+40.76275973,-73.99773094,NYC,"595, 11th Avenue, Clinton, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.76298211,-73.98676335,NYC,"316, West 51st Street, Midtown West, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76302756,-73.9815412,NYC,"Tower 53, West 53rd Street, Diamond District, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76309014,-73.9915472,NYC,"437, West 48th Street, Clinton, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76310162,-73.9859823,NYC,"Hampton Inn, 851, 8th Avenue, Midtown West, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76339592,-73.98869513,NYC,"742, 9th Avenue, Clinton, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76347049,-73.91694677,NYC,"30-40, 38th Street, Sunnyside Gardens, Queens County, New York City, New York, 11103, United States of America",11103
+40.76404192,-73.92536257,NYC,"31-31, 29th Street, Astoria, Queens County, New York City, New York, 11106, United States of America",11106
+40.76418472,-73.91677652,NYC,"30-13, 37th Street, Sunnyside Gardens, Queens County, New York City, New York, 11103, United States of America",11103
+40.76420172,-73.99132516,NYC,"450, West 50th Street, Midtown West, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76424645,-73.98654143,NYC,"331, West 52nd Street, Lincoln Square, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76445579,-73.99564106,NYC,"653, 11th Avenue, Clinton, Manhattan, New York County, New York City, New York, 10036, United States of America",10036
+40.76495832,-73.91169411,NYC,"25-87, 42nd Street, Sunnyside Gardens, Queens County, New York City, New York, 11103, United States of America",11103
+40.76551182,-73.98730422,NYC,"802, 9th Avenue, Midtown West, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76580575,-73.92043494,NYC,"30-16, 33rd Street, Astoria, Queens County, New York City, New York, 11102, United States of America",11102
+40.76582741,-73.91085645,NYC,"25-49, 42nd Street, Sunnyside Gardens, Queens County, New York City, New York, 11103, United States of America",11103
+40.76593343,-73.98120408,NYC,"220, West 57th Street, Diamond District, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76606302,-73.95505874,NYC,"423, East 70th Street, Upper East Side, Manhattan, New York County, New York City, New York, 10021, United States of America",10021
+40.76645946,-73.92847329,NYC,"31-03, 23rd Street, Astoria, Queens County, New York City, New York, 11106, United States of America",11106
+40.76649376,-73.88290434,NYC,"23-26, 87th Street, North Beach, Queens County, New York City, New York, 11369, United States of America",11369
+40.76657824,-73.99334936,NYC,"553, West 51st Street, Midtown West, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76696726,-73.98573746,NYC,"352, West 56th Street, Lincoln Square, Manhattan, New York County, New York City, New York, 10019, United States of America",10019
+40.76720259,-73.96949612,NYC,"15, East 64th Street, Upper East Side, Manhattan, New York County, New York City, New York, 10065, United States of America",10065
+40.76726895,-73.95838528,NYC,"315, East 70th Street, Upper East Side, Manhattan, New York County, New York City, New York, 10021, United States of America",10021
+40.76730437,-73.96042524,NYC,"219, East 69th Street, Upper East Side, Manhattan, New York County, New York City, New York, 10021, United States of America",10021
+40.76767126,-73.8178526,NYC,"148-05, 34th Avenue, Flushing, Queens, Queens County, New York City, New York, 11354, United States of America",11354
+40.76770792,-73.91675268,NYC,"25-80, 35th Street, Astoria, Queens County, New York City, New York, 11103, United States of America",11103
+40.76959915,-73.92693692,NYC,"21-21, 30th Avenue, Astoria, Queens County, New York City, New York, 11102, United States of America",11102
+40.76987919,-73.95124875,NYC,"1440, York Avenue, Upper East Side, Manhattan, New York County, New York City, New York, 10021, United States of America",10021
+40.77298705,-73.92744618,NYC,"18-02, 26th Road, Astoria, Queens County, New York City, New York, 11102, United States of America",11102
+40.77360302,-73.95999855,NYC,"130, East 77th Street, Upper East Side, Manhattan, New York County, New York City, New York, 10021, United States of America",10021
+40.77448689,-73.99027734,NYC,"60, Riverside Boulevard, Midtown West, Manhattan, New York County, New York City, New York, 10069, United States of America",10069
+40.77471961,-73.98322622,NYC,"147, West 66th Street, Lincoln Square, Manhattan, New York County, New York City, New York, 10023, United States of America",10023
+40.77537444,-73.94959044,NYC,"413, East 84th Street, Yorkville, Manhattan, New York County, New York City, New York, 10028, United States of America",10028
+40.77638574,-73.95870157,NYC,"108, East 81st Street, Yorkville, Manhattan, New York County, New York City, New York, 10028, United States of America",10028
+40.77646496,-73.97065885,NYC,"The Gill, Ramble Rustic Bridge, Upper West Side, Manhattan, New York County, New York City, New York, 10024, United States of America",10024
+40.77655675,-73.90993383,NYC,"Steinway Branch Queens Borough Public Library, 21-51, 31st Street, Steinway, Queens County, New York City, New York, 11105, United States of America",11105
+40.77704995,-73.93443073,NYC,"Hellgate Field, 2nd Street, Astoria, Queens County, New York City, New York, 11102, United States of America",11102
+40.77758377,-73.94641966,NYC,"447, East 88th Street, Yorkville, Manhattan, New York County, New York City, New York, 10128, United States of America",10128
+40.77763582,-73.91127893,NYC,"21-58, 29th Street, Steinway, Queens County, New York City, New York, 11105, United States of America",11105
+40.77859797,-73.9855403,NYC,"301, West 70th Street, Midtown West, Manhattan, New York County, New York City, New York, 10023, United States of America",10023
+40.78071807,-73.94964924,NYC,"1740, 2nd Avenue, Yorkville, Manhattan, New York County, New York City, New York, 10128, United States of America",10128
+40.78074154,-73.9523301,NYC,"1585, 3rd Avenue, Yorkville, Manhattan, New York County, New York City, New York, 10128, United States of America",10128
+40.78224678,-73.95362846,NYC,"1364, Lexington Avenue, Yorkville, Manhattan, New York County, New York City, New York, 10128, United States of America",10128
+40.78225553,-73.95332208,NYC,"147, East 90th Street, Yorkville, Manhattan, New York County, New York City, New York, 10128, United States of America",10128
+40.78441926,-73.97113409,NYC,"15, West 84th Street, Upper West Side, Manhattan, New York County, New York City, New York, 10024, United States of America",10024
+40.78458405,-73.97836453,NYC,"The Broadway, West 81st Street, Upper West Side, Manhattan, New York County, New York City, New York, 10024, United States of America",10024
+40.7846906,-73.95027675,NYC,"180, East 95th Street, Washington Houses, Manhattan, New York County, New York City, New York, 10128, United States of America",10128
+40.78521071,-73.95006364,NYC,"1700, 3rd Avenue, Yorkville, Manhattan, New York County, New York City, New York, 10128, United States of America",10128
+40.78715271,-73.94903397,NYC,"1539, Lexington Avenue, East Harlem, Manhattan, New York County, New York City, New York, 10029, United States of America",10029
+40.78749893,-73.9467547,NYC,"1809, 3rd Avenue, Yorkville, Manhattan, New York County, New York City, New York, 10029, United States of America",10029
+40.78829615,-73.95270199,NYC,"Jane B Aron Residence Hall, 50, East 98th Street, Washington Houses, Manhattan, New York County, New York City, New York, 10029, United States of America",10029
+40.79306936,-73.97070107,NYC,"711, Amsterdam Avenue, Park West Village, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.79323317,-73.97266586,NYC,"94 Corner Cafe, 2518, Broadway, Upper West Side, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.79474467,-73.9382952,NYC,"Public School 102, 315, East 113th Street, Thomas Jefferson Houses, Manhattan, New York County, New York City, New York, 10029, United States of America",10029
+40.79487009,-73.96371543,NYC,"4, Manhattan Avenue, Park West Village, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.79530763,-73.97603539,NYC,"224, Riverside Drive, Upper West Side, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.79565924,-73.94403643,NYC,"138, East 112th Street, East Harlem, Manhattan, New York County, New York City, New York, 10029, United States of America",10029
+40.79658887,-73.93501091,NYC,"2269, 1st Avenue, East Harlem, Manhattan, New York County, New York City, New York, 10035, United States of America",10035
+40.79677907,-73.96545402,NYC,"830, Columbus Avenue, Frederick Douglass Houses, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.79720054,-73.97231324,NYC,"300, West 99th Street, Park West Village, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.79772344,-73.96260442,NYC,"53, West 104th Street, Park West Village, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.7977632,-73.9382886,NYC,"236, East 117th Street, East Harlem, Manhattan, New York County, New York City, New York, 10035, United States of America",10035
+40.79914038,-73.95159006,NYC,"26, Malcolm X Boulevard, East Harlem, Manhattan, New York County, New York City, New York, 10026, United States of America",10026
+40.79946537,-73.93958974,NYC,"172, East 118th Street, East Harlem, Manhattan, New York County, New York City, New York, 10035, United States of America",10035
+40.79966888,-73.96251183,NYC,"949, Columbus Avenue, Park West Village, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.8000091,-73.96756366,NYC,"2728, Broadway, Park West Village, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.80073578,-73.9641602,NYC,"Booker T Washington Playground, West 108th Street, Park West Village, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.80102153,-73.9400479,NYC,"1940, Lexington Avenue, East Harlem, Manhattan, New York County, New York City, New York, 10035, United States of America",10035
+40.8015063,-73.96594496,NYC,"207, West 107th Street, Park West Village, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.80387374,-73.96095546,NYC,"401, West 113th Street, Morningside Heights, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.80791695,-73.96728287,NYC,"425, Riverside Drive, Morningside Heights, Manhattan, New York County, New York City, New York, 10025, United States of America",10025
+40.80925167,-73.91752796,NYC,"510, East 141st Street, Mott Haven, Bronx County, New York City, New York, 10454, United States of America",10454
+40.80954211,-73.94227354,NYC,"38, West 129th Street, Harlem, Manhattan, New York County, New York City, New York, 10027, United States of America",10027
+40.81223862,-73.93936549,NYC,"25, West 132nd Street, Harlem, Manhattan, New York County, New York City, New York, 10037, United States of America",10037
+40.81348266,-73.95731608,NYC,"George Bruce Library, 518, West 125th Street, Manhattanville, Manhattan, New York County, New York City, New York, 10027, United States of America",10027
+40.81434878,-73.94587943,NYC,"210, West 133rd Street, Harlem, Manhattan, New York County, New York City, New York, 10027, United States of America",10027
+40.81497104,-73.94780836,NYC,"2475, Frederick Douglass Boulevard, Hamilton Heights, Manhattan, New York County, New York City, New York, 10027, United States of America",10027
+40.81631107,-73.9393301,NYC,"559, Malcolm X Boulevard, Harlem, Manhattan, New York County, New York City, New York, 10030, United States of America",10030
+40.81708738,-73.95345753,NYC,"1463, Amsterdam Avenue, Manhattanville, Manhattan, New York County, New York City, New York, 10027, United States of America",10027
+40.81776721,-73.95752579,NYC,"Columbia University, West 131st Street, Manhattanville, Manhattan, New York County, New York City, New York, 10027, United States of America",10027
+40.82093724,-73.95744782,NYC,"634, West 135th Street, Manhattanville, Manhattan, New York County, New York City, New York, 10031, United States of America",10031
+40.82183238,-73.93780096,NYC,"160, West 146th Street, Hamilton Heights, Manhattan, New York County, New York City, New York, 10039, United States of America",10039
+40.82286511,-73.93899088,NYC,"203, West 146th Street, Hamilton Heights, Manhattan, New York County, New York City, New York, 10039, United States of America",10039
+40.82411069,-73.94404413,NYC,"267, Edgecombe Avenue, Hamilton Heights, Manhattan, New York County, New York City, New York, 10031, United States of America",10031
+40.82514013,-73.95077021,NYC,"531, West 143rd Street, Hamilton Heights, Manhattan, New York County, New York City, New York, 10031, United States of America",10031
+40.82635925,-73.93867097,NYC,"43, Macombs Place, Hamilton Heights, Manhattan, New York County, New York City, New York, 10039, United States of America",10039
+40.82636954,-73.93925351,NYC,"2830, Frederick Douglass Boulevard, Hamilton Heights, Manhattan, New York County, New York City, New York, 10039, United States of America",10039
+40.82648915,-73.94544632,NYC,"408, Convent Avenue, Hamilton Heights, Manhattan, New York County, New York City, New York, 10031, United States of America",10031
+40.82684948,-73.9465772,NYC,"1768, Amsterdam Avenue, Hamilton Heights, Manhattan, New York County, New York City, New York, 10031, United States of America",10031
+40.82736053,-73.95291626,NYC,"Hudson River Greenway, Manhattanville, Manhattan, New York County, New York City, New York, 10031, United States of America",10031
+40.82794855,-73.94359737,NYC,"419, West 150th Street, Hamilton Heights, Manhattan, New York County, New York City, New York, 10031, United States of America",10031
+40.82854145,-73.94569101,NYC,"500, West 150th Street, Hamilton Heights, Manhattan, New York County, New York City, New York, 10031, United States of America",10031
+40.82947691,-73.92363953,NYC,"958, Gerard Avenue, High Bridge, Bronx County, New York City, New York, 10452, United States of America",10452
+40.83153384,-73.94592985,NYC,"540, West 153rd Street, Hamilton Heights, Manhattan, New York County, New York City, New York, 10031, United States of America",10031
+40.83313656,-73.91888306,NYC,"1153, Grand Concourse, High Bridge, Bronx County, New York City, New York, 10452, United States of America",10452
+40.83351633,-73.93729329,NYC,"159-48, Harlem River Drive Greenway, Hamilton Heights, Manhattan, New York County, New York City, New York, 10039, United States of America",10039
+40.83715701,-73.940476,NYC,"530, West 163rd Street, Washington Heights, Manhattan, New York County, New York City, New York, 10032, United States of America",10032
+40.83766454,-73.94047374,NYC,"548, West 164th Street, Washington Heights, Manhattan, New York County, New York City, New York, 10032, United States of America",10032
+40.83896747,-73.86031241,NYC,"1, Metropolitan Oval, Parkchester, Bronx, Bronx County, New York City, New York, 10462, United States of America",10462
+40.8419175,-73.91107891,NYC,"1551, Sheridan Avenue, Tremont, Bronx, Bronx County, New York City, New York, 10457, United States of America",10457
+40.8422328,-73.93912459,NYC,"601, West 170th Street, Washington Heights, Manhattan, New York County, New York City, New York, 10032, United States of America",10032
+40.84549588,-73.94178194,NYC,"725, West 172nd Street, Washington Heights, Manhattan, New York County, New York City, New York, 10032, United States of America",10032
+40.84639657,-73.94046387,NYC,"J Hood Wright Recreational Center, 351, Fort Washington Avenue, Washington Heights, Manhattan, New York County, New York City, New York, 10033, United States of America",10033
+40.85304223,-73.93554636,NYC,"90, Bennett Avenue, Washington Heights, Manhattan, New York County, New York City, New York, 10033, United States of America",10033
+40.86446071,-73.92694241,NYC,"188, Dyckman Street, Inwood, Manhattan, New York County, New York City, New York, 10040, United States of America",10040
+40.86980116,-73.92254787,NYC,"144, Seaman Avenue, Inwood, Manhattan, New York County, New York City, New York, 10034, United States of America",10034
+40.87313465,-73.91662509,NYC,"Baker Athletics Complex, West 218th Street, Inwood, Manhattan, New York County, New York City, New York, 10034, United States of America",10034
+41.77383935,-87.59310631,Chicago,"6636-6638, South Kenwood Avenue, Brookdale, Chicago, Cook County, Illinois, 60637, United States of America",60637
+41.782476,-87.61196112,Chicago,"6149, South Rhodes Avenue, Park Manor, Chicago, Cook County, Illinois, 60637, United States of America",60637
+41.82560027,-87.6052437,Chicago,"3845, South Ellis Avenue, Oakland, Chicago, Cook County, Illinois, 60615, United States of America",60615
+41.83781697,-87.66206722,Chicago,"3041, South Pitney Court, Locks, Chicago, Cook County, Illinois, 60608, United States of America",60608
+41.84770774,-87.61862253,Chicago,"2501-2523, South Calumet Avenue, Douglas, Chicago, Cook County, Illinois, 60616, United States of America",60616
+41.86634953,-87.62470968,Chicago,"1234, South Michigan Avenue, South Loop, Near North Side, Chicago, Cook County, Illinois, 60605, United States of America",60605
+41.87179729,-87.62744589,Chicago,"One Place, 1, East 8th Street, Printer's Row, Near North Side, Chicago, Cook County, Illinois, 60605, United States of America",60605
+41.87954467,-87.69445572,Chicago,"2712, West Wilcox Street, East Garfield Park, Chicago, Cook County, Illinois, 60612, United States of America",60612
+41.88697673,-87.62214909,Chicago,"Park Millennium, Pedway, Streeterville, Near North Side, Chicago, Cook County, Illinois, 60601, United States of America",60601
+41.89020183,-87.77285335,Chicago,"5914, West Race Avenue, Austin, Chicago, Cook County, Illinois, 60644, United States of America",60644
+41.8923704,-87.64061986,Chicago,"River Bend Lofts, 550, North Kingsbury Street, Cabrini-Green, Near North Side, Chicago, Cook County, Illinois, 60654, United States of America",60654
+41.89342698,-87.66776136,Chicago,"1612, West Erie Street, Ukrainian Village, Near North Side, Chicago, Cook County, Illinois, 60612, United States of America",60612
+41.89414213,-87.63060619,Chicago,"70, West Erie Street, Magnificent Mile, Near North Side, Chicago, Cook County, Illinois, 60610, United States of America",60610
+41.89451512,-87.66423063,Chicago,"1446, West Huron Street, Near West Side, Near North Side, Chicago, Cook County, Illinois, 60612, United States of America",60612
+41.89494503,-87.64941633,Chicago,"680, North Green Street, Cabrini-Green, Near North Side, Chicago, Cook County, Illinois, 60622, United States of America",60622
+41.89556253,-87.66046543,Chicago,"740, North Throop Street, Near West Side, Near North Side, Chicago, Cook County, Illinois, 60622, United States of America",60622
+41.89629724,-87.63293169,Chicago,"LaSalle Center, 770, North La Salle Boulevard, Cabrini-Green, Near North Side, Chicago, Cook County, Illinois, 60610, United States of America",60610
+41.89836363,-87.62865255,Chicago,"Chestnut Place Apartments, 848-850, North State Street, Magnificent Mile, Near North Side, Chicago, Cook County, Illinois, 60654, United States of America",60654
+41.89952418,-87.66419685,Chicago,"1443, West Augusta Boulevard, Wicker Park, Near North Side, Chicago, Cook County, Illinois, 60651, United States of America",60651
+41.89959764,-87.67695526,Chicago,"1001, North Damen Avenue, Ukrainian Village, Near North Side, Chicago, Cook County, Illinois, 60625, United States of America",60625
+41.90010403,-87.67399777,Chicago,"1014, North Honore Street, Wicker Park, Near North Side, Chicago, Cook County, Illinois, 60622, United States of America",60622
+41.90398861,-87.63210954,Chicago,"The Sinclair, North Clark Street, Gold Coast, Near North Side, Chicago, Cook County, Illinois, 60614, United States of America",60614
+41.9041616,-87.62943891,Chicago,"1201-1207, North Dearborn Street, Gold Coast, Near North Side, Chicago, Cook County, Illinois, 60610, United States of America",60610
+41.90429208,-87.6767369,Chicago,"1233, North Damen Avenue, Wicker Park, Near North Side, Chicago, Cook County, Illinois, 60625, United States of America",60625
+41.90509457,-87.68649535,Chicago,"1305, North Western Avenue, West Town, Chicago, Cook County, Illinois, 60645, United States of America",60645
+41.90596528,-87.67351153,Chicago,"1826, West Ellen Street, Wicker Park, Near North Side, Chicago, Cook County, Illinois, 60622, United States of America",60622
+41.90681677,-87.67312715,Chicago,"1339, North Wicker Park Avenue, Wicker Park, Near North Side, Chicago, Cook County, Illinois, 60622, United States of America",60622
+41.90863568,-87.6728755,Chicago,"1450, North Wood Street, Wicker Park, Near North Side, Chicago, Cook County, Illinois, 60614, United States of America",60614
+41.91485609,-87.70615892,Chicago,"3122, West Moffat Street, Simons, Chicago, Cook County, Illinois, 60647, United States of America",60647
+41.92278046,-87.71089556,Chicago,"3311-3313, West Belden Avenue, Simons, Chicago, Cook County, Illinois, 60647, United States of America",60647
+41.92300168,-87.69209343,Chicago,"2244, North Maplewood Avenue, Maplewood, Chicago, Cook County, Illinois, 60647, United States of America",60647
+41.92810841,-87.63572776,Chicago,"North Cannon Drive, Mid-North District, Near North Side, Chicago, Cook County, Illinois, 60614, United States of America",60614
+41.93017122,-87.71884138,Chicago,"2700, North Monticello Avenue, Beat 2524, Chicago, Cook County, Illinois, 60647, United States of America",60647
+41.93431381,-87.69589864,Chicago,"2909, North Fairfield Avenue, Maplewood, Chicago, Cook County, Illinois, 60618, United States of America",60618
+41.94512307,-87.64415329,Chicago,"561, West Stratford Place, Pine Grove, Chicago, Cook County, Illinois, 60657, United States of America",60657
+41.95604242,-87.65051653,Chicago,"814-816, West Cuyler Avenue, Buena Park, Uptown, Chicago, Cook County, Illinois, 60613, United States of America",60613
+41.96211903,-87.66289613,Chicago,"4414-4416, North Malden Street, Sunnyside, Uptown, Chicago, Cook County, Illinois, 60640, United States of America",60640
+41.96399318,-87.65310064,Chicago,"4504-4510, North Hazel Street, Buena Park, Uptown, Chicago, Cook County, Illinois, 60613, United States of America",60613
+41.96920293,-87.69312131,Chicago,"2540, West Lawrence Avenue, West Ravenswood, Uptown, Chicago, Cook County, Illinois, 60618, United States of America",60618
+41.97046649,-87.68396979,Chicago,"4857, North Leavitt Street, West Ravenswood, Chicago, Cook County, Illinois, 60625, United States of America",60625
+41.97798897,-87.74852596,Chicago,"5300, North Cicero Avenue, Montrose, Chicago, Cook County, Illinois, 60630, United States of America",60630
+41.99672946,-87.66259538,Chicago,"6311, North Lakewood Avenue, Edgewater Glen, Chicago, Cook County, Illinois, 60626, United States of America",60626
+42.28797398,-71.12977111,Boston,"Citizens Bank (Roslindale), 777, South Street, Roslindale, West Roxbury, Boston, Suffolk County, Massachusetts, 02131-3025, United States of America",-3025
+42.30034332,-71.11276471,Boston,"Greenier Print Shop Inc., 3702, Washington Street, Forest Hills, Jamaica Plain, Boston, Suffolk County, Massachusetts, 02130, United States of America",02130
+42.30399226,-71.07041842,Boston,"Bowdoin St @ Eunice St, Bowdoin Street, Mount Bowdoin, Dorchester, Boston, Suffolk County, Massachusetts, 02122, United States of America",02122
+42.30877911,-71.05104588,Boston,"Denny Street, Savin Hill, South Boston, Boston, Suffolk County, Massachusetts, 02125, United States of America",02125
+42.31377538,-71.0551617,Boston,"Elton Street, Savin Hill, South Boston, Boston, Suffolk County, Massachusetts, 02125, United States of America",02125
+42.315062,-71.09757186,Boston,"Columbus Ave @ Weld  Ave, Columbus Avenue, Roxbury Crossing, Roxbury, Boston, Suffolk County, Massachusetts, 02119, United States of America",02119
+42.31781669,-71.09135484,Boston,"Henry L Higginson School, Harrishof Street, Roxbury Crossing, Roxbury, Boston, Suffolk County, Massachusetts, 02119, United States of America",02119
+42.33214299,-71.04048895,Boston,"Brewster Street, Dorchester Heights, South Boston, Boston, Suffolk County, Massachusetts, 02127, United States of America",02127
+42.33417278,-71.10022573,Boston,"Smith Street, Roxbury Crossing, Roxbury, Boston, Suffolk County, Massachusetts, 02120, United States of America",02120
+42.33618514,-71.07342146,Boston,"91  E Concord St, East Concord Street, Chinatown, South End, Boston, Suffolk County, Massachusetts, 02118, United States of America",02118
+42.34329095,-71.14245218,Boston,"7-Eleven, Washington Street, Aberdeen, Brighton, Boston, Suffolk County, Massachusetts, 02135, United States of America",02135
+42.3438738,-71.08789069,Boston,"Westland Avenue, Roxbury Crossing, Fenway, Boston, Suffolk County, Massachusetts, 02115, United States of America",02115
+42.34460122,-71.07397574,Boston,"5, Dartmouth Place, Chinatown, South End, Boston, Suffolk County, Massachusetts, 02116, United States of America",02116
+42.34594735,-71.08066545,Boston,"Brasserie JO, 120, Huntington Avenue, Chinatown, Back Bay, Boston, Suffolk County, Massachusetts, 02116, United States of America",02116
+42.35066562,-71.07915282,Boston,"Exeter Street Theatre, Public Alley 434, Chinatown, Back Bay, Boston, Suffolk County, Massachusetts, 02116, United States of America",02116
+42.3512408,-71.07382934,Boston,"Hubway - Boylston St / Berkeley St, Boylston Street, Chinatown, Back Bay, Boston, Suffolk County, Massachusetts, 02116, United States of America",02116
+42.35124773,-71.08697023,Boston,"New England College of Optometry, Beacon Street, Riverway, Back Bay, Boston, Suffolk County, Massachusetts, 02116, United States of America",02116
+42.35634334,-71.1495482,Boston,"New Balance Factory Store, North Beacon Street, North Brighton, Brighton, Boston, Suffolk County, Massachusetts, 02135, United States of America",02135
+42.35997472,-71.06635012,Boston,"Coburns Gaming House, Phillips Street, Downtown Crossing, Beacon Hill, Boston, Suffolk County, Massachusetts, 02114, United States of America",02114
+42.36104657,-71.06727329,Boston,"Supercuts, 250, Cambridge Street, Downtown Crossing, Beacon Hill, Boston, Suffolk County, Massachusetts, 02114, United States of America",02114
+42.36582858,-71.03528527,Boston,"Samuel Adams School, Webster Street, Jeffries Point, East Boston, Boston, Suffolk County, Massachusetts, 02128, United States of America",02128
+42.36690547,-71.05365031,Boston,"Charter St Playground, Belgravia Place, Dock Square, North End, Boston, Suffolk County, Massachusetts, 02113, United States of America",02113
+42.368614,-71.03764261,Boston,"Sumner St @ Orleans St, Sumner Street, Jeffries Point, East Boston, Boston, Suffolk County, Massachusetts, 02109, United States of America",02109
+42.36970192,-71.032283,Boston,"Geneva Street, Jeffries Point, East Boston, Boston, Suffolk County, Massachusetts, 02128, United States of America",02128
+42.37056494,-71.03941521,Boston,"Maverick Square, Jeffries Point, East Boston, Boston, Suffolk County, Massachusetts, 02109, United States of America",02109
+42.37972786,-71.03424236,Boston,"Trenton Street, Jeffries Point, East Boston, Boston, Suffolk County, Massachusetts, 02128, United States of America",02128
