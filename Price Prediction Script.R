@@ -103,7 +103,7 @@ train_df$longitude<-round(train_df$longitude, 5)
 train_merge<- merge(train_df, new_zip2, by = c("latitude", "longitude"), all.x = TRUE)
 
 #fix some columns:
-train_merge <- train_merge[ , -which(names(train_merge) %in% c("city.y","zip", "Address"))] #remove unnecessary columns
+train_merge <- train_merge[ , -which(names(train_merge) %in% c("city.y","Zip", "Address"))] #remove unnecessary columns
 names(train_merge)[names(train_merge) == 'city.x'] <- 'city'
 train_df <- train_merge
 
