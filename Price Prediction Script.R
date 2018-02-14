@@ -93,7 +93,8 @@ train_df[,24:ncol(train_df)][is.na(train_df[,24:ncol(train_df)])]<-0
 
 
 #used google reverse geocode to impute missing zip codes:
-new_zip2 <- read.csv(paste0(path,"new_zip2.csv"), header = T, stringsAsFactors = F)
+path2 <- "~/Airbnb-price-prediction/"
+new_zip2 <- read.csv(paste0(path2,"new_zip2.csv"), header = T, stringsAsFactors = F)
 
 # Struggling to figure out merge, so just merged via excel - zipcode is now accurate and no NAs
 new_zip2$latitude<-round(new_zip2$latitude, 5)
@@ -107,9 +108,9 @@ train_merge <- train_merge[ , -which(names(train_merge) %in% c("city.y","Zip", "
 names(train_merge)[names(train_merge) == 'city.x'] <- 'city'
 train_df <- train_merge
 
-# Use lat/long to estimate bathroom, bedrooms, and beds; 
 
-#use mice package
+
+#use mice package to estimate:
 
 #bathrooms, bedrooms, beds:
 imputed_bathrooms <- mice(as.data.frame(train_df[,c("bathrooms", "bedrooms", "beds", "id")], m=5, maxit = 50, method = 'pmm', seed = 500))
@@ -125,13 +126,15 @@ names(train_df)[names(train_df) == 'beds.x'] <- 'beds'
 
 
 # reviews scores -> new tag, fix NA's
-# 
+# https://github.com/samuelklam/airbnb-pricing-prediction/blob/master/data-cleaning/data-cleaning-listings.ipynb
+# convert into buckets/categorical variable
 
+train_df$review_scores_rating <- as.numeric(train_df$review_scores_rating)
+train_df$ReviewCategory <- train_df$review_scores_rating %>% cut(train_df$review_scores_rating, breaks=c(0, 10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, Inf), 
+                                                                  labels=c("0-9","10-19","20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-84", "85-89", "90-94", "95-100"))
 
-
-
-
-
+train_df$ReviewCategory <- as.character(train_df$ReviewCategory)
+train_df$ReviewCategory[is.na(train_df$ReviewCategory)] <- "No Reviews" # turn NaN scores with 0 reviews into 'No Reviews'
 
 
 
@@ -166,7 +169,8 @@ train_df$diff_first_last_review <- difftime(train_df$last_review, train_df$first
 # make a nchar(name) column
 train_df$namelength <- as.numeric(nchar(train_df$name))
 
-
+# make zipcode trimmed to 5 digits only
+train_df$zipcleaned <- substr(train_df$zipcode, 0, 5)
 
 ### EDA and Histograms ###
 
