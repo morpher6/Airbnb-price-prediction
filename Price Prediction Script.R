@@ -14,26 +14,23 @@ library(randomForest)
 library(magrittr)
 library(dplyr)
 library(lubridate)
+library(zipcode)
 
 ### Step 2: Load data ###
 
 path = "C:/Users/spnelson/SF/Personal Folders/Airbnb/"
 train <- read.csv(paste0(path,"train.csv"), header = T, stringsAsFactors = F)
 test <- read.csv(paste0(path,"test.csv"), header = T, stringsAsFactors = F)
-ids = test$id
+#ids = test$id
 test$log_price <- NA
 
-all_data <- rbind(train,test)
-train_set = 1:nrow(train)
-test_set <- (nrow(train)+1):(nrow(train) + nrow(test))
+#all_data <- rbind(train,test)
+#train_set = 1:nrow(train)
+#test_set <- (nrow(train)+1):(nrow(train) + nrow(test))
 
-# Select a subset of the data
+sapply(X = train, FUN = function(x) sum(is.na(x))) # number of missing values by column
 
-keep_cols <- c('property_type','room_type','bed_type','cancellation_policy','city',
-               'accommodates','bathrooms','latitude','longitude',
-               'number_of_reviews','review_scores_rating','log_price')
 
-all_data <- all_data[,keep_cols]
 
 ### Exploratory Questions ###
 
@@ -44,11 +41,60 @@ all_data <- all_data[,keep_cols]
 # - do amenities affect price? If so, binary values can be used by creating one column per amenity (see code below)
 
 
+
+
+### Data transformation ###
+
+#transform data
+#do amenities effect price? If so, binary values can be used by creating one column per amenity (see code below)
+#remove extra characters
+train_sub<-train[,-c(12,13,17,19,22,26)]
+amenities<-strsplit(train$amenities, ",")
+amenities<-unlist(amenities)
+amenities<-gsub("[{]","", amenities)
+amenities<-gsub("[}]","", amenities)
+amenities<-gsub("[^A-Za-z0-9,;._-]"," ", amenities)
+amenities<-trimws(amenities)
+
+#create a data frame with new attributes
+col_name<-names(sort(table(amenities), decreasing = T))
+col_name[c(17, 20, 23, 26, 40, 54, 67, 68, 75, 89, 103, 110, 115, 121)]<- c("Family/kid friendly", "translation missing: en.hosting_amenity_50", "translation missing: en.hosting_amenity_49", 
+                                                                            "Buzzer/wireless intercom", "Dog(s)", "Cat(s)", "Childrenâ€™s books and toys", "Pack â€™n Play/travel crib", 
+                                                                            "Childrenâ€™s dinnerware", "Other pet(s)", "Wide clearance to shower & toilet", "Fixed grab bars for shower & toilet",
+                                                                            "Washer,Dryer", "Ski in/Ski out")
+col_name<-trimws(col_name)
+
+temp_df<-data.frame(matrix(ncol = 131, nrow = nrow(train)))
+colnames(temp_df) <- col_name
+train_df<-cbind(train_sub, temp_df)
+
+#populate binary values for new amenities columns
+for(i in 24:ncol(train_df)){
+  rownums <- grep(names(train_df)[i], train_df$amenities)
+  train_df[rownums,i]<- 1
+}
+
+#sort(sapply(train_df, FUN = function(x) sum(is.na(x))))
+train_df[,24:ncol(train_df)][is.na(train_df[,24:ncol(train_df)])]<-0
+
 ### Treating NAs ###
 
-#large NA: bathrooms (convert to Not Specified), reviews_scores_rating, bedrooms, beds 
+# fill missing zip codes using the 'zipcode' package and joining the data:
+data("zipcode")
+str(zipcode)
+zipcode$zip <- as.numeric(zipcode$zip)
+train_df$zipcode <- as.numeric(train_df$zipcode)
+
+trainzip <- train_df[,c("latitude", "longitude", "zipcode")]
+trainzipna <- trainzip[is.na(trainzip$zipcode),] #keep just na zips
+new_zip <- left_join(zipcode, trainzipna, c('zip' = 'zipcode'))
 
 
+# Use lat/long to estimate bathroom, bedrooms, and beds; for zipcode as well
+
+
+# reviews scores -> new tag, fix NA's
+# 
 
 # Impute missing values with 0
 
@@ -62,22 +108,6 @@ numeric_type <- !(col_type %in% c("character","factor"))
 all_data[,numeric_type] <- sapply(all_data[,numeric_type], fillna)
 
 
-
-
-### Data transformation ###
-
-#transform data
-amenities<-strsplit(train$amenities, ",")
-a<-unlist(amenities)
-a<-gsub("[{]","", a)
-a<-gsub("[}]","", a)
-a<-gsub("[^A-Za-z0-9,;._-]"," ", a)
-a<-trimws(a)
-b<-sort(table(a), decreasing = T)
-col_name<-names(b)
-temp_df<-data.frame(matrix(ncol = 131, nrow = nrow(train)))
-colnames(temp_df) <- col_name
-train_df<-cbind(train, temp_df)
 
 ### Cleanse Data ###
 
@@ -107,6 +137,8 @@ train_df$diff_first_last_review <- difftime(train_df$last_review, train_df$first
 
 # make a nchar(name) column
 train_df$namelength <- as.numeric(nchar(train_df$name))
+
+
 
 ### EDA and Histograms ###
 
