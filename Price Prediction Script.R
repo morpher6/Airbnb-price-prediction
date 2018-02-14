@@ -91,14 +91,21 @@ train_df[,24:ncol(train_df)][is.na(train_df[,24:ncol(train_df)])]<-0
 # new_zip <- left_join(trainzipna, zipcode, c('latitude' = 'latitude', 'longitude' = 'longitude'))
 #write.csv(new_zip, "new_zip.csv")
 
-#used website to impute missing zip codes:
-new_zip2 <- read.csv("~/Airbnb-price-prediction/new_zip2.csv")
+
+#used google reverse geocode to impute missing zip codes:
+new_zip2 <- read.csv(paste0(path,"new_zip2.csv"), header = T, stringsAsFactors = F)
 
 # Struggling to figure out merge, so just merged via excel - zipcode is now accurate and no NAs
+new_zip2$latitude<-round(new_zip2$latitude, 5)
+new_zip2$longitude<-round(new_zip2$longitude, 5)
+train_df$latitude<-round(train_df$latitude, 5)
+train_df$longitude<-round(train_df$longitude, 5)
+train_merge<- merge(train_df, new_zip2, by = c("latitude", "longitude"), all.x = TRUE)
 
-
-
-
+#fix some columns:
+train_merge <- train_merge[ , -which(names(train_merge) %in% c("city.y","zip", "Address"))] #remove unnecessary columns
+names(train_merge)[names(train_merge) == 'city.x'] <- 'city'
+train_df <- train_merge
 
 # Use lat/long to estimate bathroom, bedrooms, and beds; 
 
