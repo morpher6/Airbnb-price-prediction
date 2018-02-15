@@ -16,6 +16,7 @@ library(dplyr)
 library(lubridate)
 library(zipcode)
 library(mice)
+library(ggplot2)
 
 ### Step 2: Load data ###
 
@@ -45,6 +46,33 @@ sapply(X = train, FUN = function(x) sum(is.na(x))) # number of missing values by
 
 
 ### Data transformation ###
+
+### Cleanse Data ###
+
+# convert cleaning fee to boolean
+train$cleaning_fee <- as.integer(as.logical((train$cleaning_fee)))
+
+# convert first_review to date format CHANGE
+train$first_review <- as.Date(train$first_review, format = "%Y-%m-%d")
+
+# convert host_has profile pic to boolean 
+
+train$host_has_profile_pic = ifelse(train$host_has_profile_pic =="t",1,0)
+
+# convert host_identity_verified to boolean 
+train$host_identity_verified = ifelse(train$host_identity_verified =="t",1,0)
+
+# convert host_since to date CHANGE
+train$host_since <- as.Date(train$host_since, format = "%Y-%m-%d")
+
+# convert instant_bookable to boolean CHANGE
+train$instant_bookable = ifelse(train$instant_bookable =="t",1,0)
+
+# convert last_review to date CHANGE
+train$last_review <- as.Date(train$last_review, format = "%Y-%m-%d")
+
+# difference between first review and last review (measured in days) CHANGE
+train$diff_first_last_review <- difftime(train$last_review, train$first_review, units = "days")
 
 #transform data
 #do amenities effect price? If so, binary values can be used by creating one column per amenity (see code below)
@@ -96,7 +124,7 @@ train_df[,24:ncol(train_df)][is.na(train_df[,24:ncol(train_df)])]<-0
 path2 <- "~/Airbnb-price-prediction/"
 new_zip2 <- read.csv(paste0(path2,"new_zip2.csv"), header = T, stringsAsFactors = F)
 
-# Struggling to figure out merge, so just merged via excel - zipcode is now accurate and no NAs
+#round lat and long to make merge effective
 new_zip2$latitude<-round(new_zip2$latitude, 5)
 new_zip2$longitude<-round(new_zip2$longitude, 5)
 train_df$latitude<-round(train_df$latitude, 5)
@@ -109,9 +137,7 @@ names(train_merge)[names(train_merge) == 'city.x'] <- 'city'
 train_df <- train_merge
 
 
-
-#use mice package to estimate:
-
+#use mice package to estimate
 #bathrooms, bedrooms, beds:
 imputed_bathrooms <- mice(as.data.frame(train_df[,c("bathrooms", "bedrooms", "beds", "id")], m=5, maxit = 50, method = 'pmm', seed = 500))
 completeData <- complete(imputed_bathrooms,2)
@@ -123,11 +149,8 @@ names(train_df)[names(train_df) == 'bedrooms.x'] <- 'bedrooms'
 names(train_df)[names(train_df) == 'beds.x'] <- 'beds'
 
 
-
-
-# reviews scores -> new tag, fix NA's
+# Fix reviews_scores_rating by making it categorical and binning
 # https://github.com/samuelklam/airbnb-pricing-prediction/blob/master/data-cleaning/data-cleaning-listings.ipynb
-# convert into buckets/categorical variable
 
 train_df$review_scores_rating <- as.numeric(train_df$review_scores_rating)
 train_df$ReviewCategory <- train_df$review_scores_rating %>% cut(train_df$review_scores_rating, breaks=c(0, 10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, Inf), 
@@ -140,42 +163,36 @@ train_df$ReviewCategory[is.na(train_df$ReviewCategory)] <- "No Reviews" # turn N
 
 
 
-### Cleanse Data ###
-
-# convert cleaning fee to boolean
-train_df$cleaning_fee <- as.logical(train_df$cleaning_fee)
-
-# convert first_review to date format
-train_df$first_review <- as.Date(train_df$first_review, format = "%Y-%m-%d")
-
-# convert host_has profile pic to boolean
-train_df$host_has_profile_pic <- as.logical(train_df$host_has_profile_pic)
-
-# convert host_identity_verified to boolean
-train_df$host_identity_verified <- as.logical(train_df$host_identity_verified)
-
-# convert host_since to date
-train_df$host_since <- as.Date(train_df$host_since, format = "%Y-%m-%d")
-
-# convert instant_bookable to boolean
-train_df$instant_bookable <- as.logical(train_df$instant_bookable)
-
-# convert last_review to date
-train_df$last_review <- as.Date(train_df$last_review, format = "%Y-%m-%d")
-
-# difference between first review and last review (measured in days)
-train_df$diff_first_last_review <- difftime(train_df$last_review, train_df$first_review, units = "days")
-
-# make a nchar(name) column
-train_df$namelength <- as.numeric(nchar(train_df$name))
-
 # make zipcode trimmed to 5 digits only
 train_df$zipcleaned <- substr(train_df$zipcode, 0, 5)
 
 ### EDA and Histograms ###
 
+table(train_df$ReviewCategory)
+table(train_df$property_type)
+table(train_df$room_type)
+table(train_df$city)
+table(train_df$host_response_rate)
+table(train_df$neighbourhood)
 
 
+# visualize distribution of log price (target variable)
+p1 <- ggplot(train_df) 
+p1 + geom_histogram(aes(x = log_price))
+
+#visualize beds
+p1 + geom_bar(aes(x = beds))
+
+#visualize 
+p1 + geom_bar(aes(ReviewCategory))
+p1 + geom_bar(aes(bathrooms))
+p1 + geom_bar(aes(bedrooms))
+p1 + geom_bar(aes(beds))
+p1 + geom_bar(aes(accommodates))
+p1 + geom_bar(aes(room_type))
+p1 + geom_bar(aes(cancellation_policy))
+p1 + geom_bar(aes(cleaning_fee))
+p1 + geom_bar(aes(city))
 
 
 
