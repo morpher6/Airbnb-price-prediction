@@ -5,6 +5,7 @@
 # - fit initial model
 # - feature engineering
 # - more modeling
+# DUE MARCH 2ND
 
 ### Step 1:  Load libraries ###
 
@@ -21,7 +22,7 @@ library(ggplot2)
 ### Step 2: Load data ###
 
 path = "C:/Users/spnelson/SF/Personal Folders/Airbnb/"
-train <- read.csv(paste0(path,"train.csv"), header = T, stringsAsFactors = F)
+train <- read.csv(paste0(path,"trainCleanZip.csv"), header = T, stringsAsFactors = F)
 test <- read.csv(paste0(path,"test.csv"), header = T, stringsAsFactors = F)
 #ids = test$id
 test$log_price <- NA
@@ -33,7 +34,6 @@ test$log_price <- NA
 sapply(X = train, FUN = function(x) sum(is.na(x))) # number of missing values by column
 
 
-
 ### Exploratory Questions ###
 
 # - Break up amenities into dummy vars?
@@ -41,8 +41,6 @@ sapply(X = train, FUN = function(x) sum(is.na(x))) # number of missing values by
 # - how do we handle missing values?
 # - should we remove description because it adds little value?
 # - do amenities affect price? If so, binary values can be used by creating one column per amenity (see code below)
-
-
 
 
 ### Data transformation ###
@@ -73,11 +71,13 @@ train$last_review <- as.Date(train$last_review, format = "%Y-%m-%d")
 
 # difference between first review and last review (measured in days) CHANGE
 train$diff_first_last_review <- difftime(train$last_review, train$first_review, units = "days")
+train_df$number_of_reviews <- as.numeric(train_df$number_of_reviews )
+
 
 #transform data
 #do amenities effect price? If so, binary values can be used by creating one column per amenity (see code below)
 #remove extra characters
-train_sub<-train[,-c(12,13,17,19,22,26)]
+train_sub<-train[,-c(12,13,17,19,22,26)] 
 amenities<-strsplit(train$amenities, ",")
 amenities<-unlist(amenities)
 amenities<-gsub("[{]","", amenities)
@@ -124,17 +124,27 @@ train_df[,24:ncol(train_df)][is.na(train_df[,24:ncol(train_df)])]<-0
 path2 <- "~/Airbnb-price-prediction/"
 new_zip2 <- read.csv(paste0(path2,"new_zip2.csv"), header = T, stringsAsFactors = F)
 
-#round lat and long to make merge effective
-new_zip2$latitude<-round(new_zip2$latitude, 5)
-new_zip2$longitude<-round(new_zip2$longitude, 5)
-train_df$latitude<-round(train_df$latitude, 5)
-train_df$longitude<-round(train_df$longitude, 5)
-train_merge<- merge(train_df, new_zip2, by = c("latitude", "longitude"), all.x = TRUE)
+# #round lat and long to make merge effective
+# new_zip2$latitude<-round(new_zip2$latitude, 5)
+# new_zip2$longitude<-round(new_zip2$longitude, 5)
+# train_df$latitude<-round(train_df$latitude, 5)
+# train_df$longitude<-round(train_df$longitude, 5)
+# train_merge<- merge(train_df, new_zip2, by = c("latitude", "longitude"), all.x = TRUE)
+# 
+# #replace NA values in zipcode with valid values from Zip
+# train_merge$Zip<-as.numeric(as.character(train_merge$Zip))
+# train_merge$zipcode<-as.numeric(as.character(train_merge$zipcode))
+# for(i in 1:nrow(train_merge)){
+#   train_merge[i,21]<-ifelse(is.na(train_merge[i,21])==TRUE, train_merge[i,157], train_merge[i,21])
+# }
+
+
+#train_df$zipcode <- substr(train_df$zipcode, 0, 5) # make zipcode trimmed to 5 digits only
 
 #fix some columns:
-train_merge <- train_merge[ , -which(names(train_merge) %in% c("city.y","Zip", "Address"))] #remove unnecessary columns
-names(train_merge)[names(train_merge) == 'city.x'] <- 'city'
-train_df <- train_merge
+# train_merge <- train_merge[ , -which(names(train_merge) %in% c("city.y","Zip", "Address"))] #remove unnecessary columns
+# names(train_merge)[names(train_merge) == 'city.x'] <- 'city'
+# train_df <- train_merge
 
 
 #use mice package to estimate
@@ -160,11 +170,21 @@ train_df$ReviewCategory <- as.character(train_df$ReviewCategory)
 train_df$ReviewCategory[is.na(train_df$ReviewCategory)] <- "No Reviews" # turn NaN scores with 0 reviews into 'No Reviews'
 
 
+### Variables to get rid of ###
+# amenities, latitude, longitude, neighborhood, diff_first_last_review, review_score_category
+train_df <- train_df[ , -which(names(train_df) %in% c("latitude", "longitude", "neighborhood", "diff_first_last_review", "review_scores_rating"))] 
 
+# check for correlation between numeric predictions
+train_df$bathrooms <- as.numeric(train_df$bathrooms)
+train_df$beds <- as.numeric(train_df$beds)
+train_df$accommodates <- as.numeric(train_df$accommodates)
 
+numerical <- train_df[ , which(names(train_df) %in% c("bathroooms", "bedrooms", "beds", "accommodates", "number_of_reviews"))] 
 
-# make zipcode trimmed to 5 digits only
-train_df$zipcleaned <- substr(train_df$zipcode, 0, 5)
+descrCor <-  cor(numerical)
+highCorr <- sum(abs(descrCor[upper.tri(descrCor)]) > .9) #no high corr
+highCorr
+
 
 ### EDA and Histograms ###
 
@@ -193,8 +213,7 @@ p1 + geom_bar(aes(room_type))
 p1 + geom_bar(aes(cancellation_policy))
 p1 + geom_bar(aes(cleaning_fee))
 p1 + geom_bar(aes(city))
-
-
+p1 + geom_bar(aes(ReviewCategory))
 
 
 
@@ -206,7 +225,7 @@ p1 + geom_bar(aes(city))
   
 # Train a Random Forest model with cross-validation
 
-cv_folds <- sample(1:3, size = nrow(train), replace = TRUE)
+cv_folds <- sample(1:3, size = nrow(train_df), replace = TRUE)
 
 for(i in 1:3) {
   # Train the model using the training sets
