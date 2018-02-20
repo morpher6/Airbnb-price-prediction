@@ -24,7 +24,7 @@ library(ggplot2)
 path = "C:/Users/spnelson/SF/Personal Folders/Airbnb/"
 train <- read.csv(paste0(path,"trainCleanZip.csv"), header = T, stringsAsFactors = F)
 test <- read.csv(paste0(path,"test.csv"), header = T, stringsAsFactors = F)
-#ids = test$id
+ids = test$id
 test$log_price <- NA
 
 #all_data <- rbind(train,test)
@@ -87,9 +87,9 @@ amenities<-trimws(amenities)
 #create a data frame with new attributes
 col_name<-names(sort(table(amenities), decreasing = T))
 col_name[c(17, 20, 23, 26, 40, 54, 67, 68, 75, 89, 103, 110, 115, 121)]<- c("Family/kid friendly", "translation missing: en.hosting_amenity_50", "translation missing: en.hosting_amenity_49", 
-                                                                             "Buzzer/wireless intercom", "Dog(s)", "Cat(s)", "Childrenâ€™s books and toys", "Pack â€™n Play/travel crib", 
-                                                                             "Childrenâ€™s dinnerware", "Other pet(s)", "Wide clearance to shower & toilet", "Fixed grab bars for shower & toilet",
-                                                                             "Washer,Dryer", "Ski in/Ski out")
+                                                                            "Buzzer/wireless intercom", "Dog(s)", "Cat(s)", "Children????Ts books and toys", "Pack ????Tn Play/travel crib", 
+                                                                            "Children????Ts dinnerware", "Other pet(s)", "Wide clearance to shower & toilet", "Fixed grab bars for shower & toilet",
+                                                                            "Washer,Dryer", "Ski in/Ski out")
 col_name<-trimws(col_name)
 
 temp_df<-data.frame(matrix(ncol = 131, nrow = nrow(train)))
@@ -121,8 +121,8 @@ amenities<-trimws(amenities)
 #create a data frame with new attributes
 col_name<-names(sort(table(amenities), decreasing = T))
 col_name[c(17, 20, 23, 26, 40, 54, 67, 68, 75, 89, 103, 110, 115, 121)]<- c("Family/kid friendly", "translation missing: en.hosting_amenity_50", "translation missing: en.hosting_amenity_49", 
-                                                                            "Buzzer/wireless intercom", "Dog(s)", "Cat(s)", "Childrenâ€™s books and toys", "Pack â€™n Play/travel crib", 
-                                                                            "Childrenâ€™s dinnerware", "Other pet(s)", "Wide clearance to shower & toilet", "Fixed grab bars for shower & toilet",
+                                                                            "Buzzer/wireless intercom", "Dog(s)", "Cat(s)", "Children????Ts books and toys", "Pack ????Tn Play/travel crib", 
+                                                                            "Children????Ts dinnerware", "Other pet(s)", "Wide clearance to shower & toilet", "Fixed grab bars for shower & toilet",
                                                                             "Washer,Dryer", "Ski in/Ski out")
 col_name<-trimws(col_name)
 
@@ -191,6 +191,9 @@ new_zip2 <- read.csv(paste0(path2,"new_zip2.csv"), header = T, stringsAsFactors 
 # train_df <- train_merge
 
 
+ 
+
+
 #use mice package to estimate
 #bathrooms, bedrooms, beds:
 imputed_bathrooms <- mice(as.data.frame(train_df[,c("bathrooms", "bedrooms", "beds", "id")], m=5, maxit = 50, method = 'pmm', seed = 500))
@@ -208,7 +211,7 @@ names(train_df)[names(train_df) == 'beds.x'] <- 'beds'
 
 train_df$review_scores_rating <- as.numeric(train_df$review_scores_rating)
 train_df$ReviewCategory <- train_df$review_scores_rating %>% cut(train_df$review_scores_rating, breaks=c(0, 10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, Inf), 
-                                                                  labels=c("0-9","10-19","20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-84", "85-89", "90-94", "95-100"))
+                                                                 labels=c("0-9","10-19","20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-84", "85-89", "90-94", "95-100"))
 
 train_df$ReviewCategory <- as.character(train_df$ReviewCategory)
 train_df$ReviewCategory[is.na(train_df$ReviewCategory)] <- "No Reviews" # turn NaN scores with 0 reviews into 'No Reviews'
@@ -216,7 +219,7 @@ train_df$ReviewCategory[is.na(train_df$ReviewCategory)] <- "No Reviews" # turn N
 
 ### Variables to get rid of ###
 # amenities, latitude, longitude, neighborhood, diff_first_last_review, review_score_category
-train_df <- train_df[ , -which(names(train_df) %in% c("latitude", "longitude", "neighbourhood", "diff_first_last_review", "review_scores_rating", 'amenities'))] 
+train_df <- train_df[ , -which(names(train_df) %in% c("latitude", "longitude", "neighbourhood", "diff_first_last_review", "review_scores_rating", 'amenities', 'host_response_rate'))] 
 
 # check for correlation between numeric predictions
 train_df$bathrooms <- as.numeric(train_df$bathrooms)
@@ -247,7 +250,7 @@ names(test_df)[names(test_df) == 'beds.x'] <- 'beds'
 
 test_df$review_scores_rating <- as.numeric(test_df$review_scores_rating)
 test_df$ReviewCategory <- test_df$review_scores_rating %>% cut(test_df$review_scores_rating, breaks=c(0, 10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, Inf), 
-                                                                 labels=c("0-9","10-19","20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-84", "85-89", "90-94", "95-100"))
+                                                               labels=c("0-9","10-19","20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-84", "85-89", "90-94", "95-100"))
 
 test_df$ReviewCategory <- as.character(test_df$ReviewCategory)
 test_df$ReviewCategory[is.na(test_df$ReviewCategory)] <- "No Reviews" # turn NaN scores with 0 reviews into 'No Reviews'
@@ -255,7 +258,7 @@ test_df$ReviewCategory[is.na(test_df$ReviewCategory)] <- "No Reviews" # turn NaN
 
 ### Variables to get rid of ###
 # amenities, latitude, longitude, neighborhood, diff_first_last_review, review_score_category
-test_df <- test_df[ , -which(names(test_df) %in% c("latitude", "longitude", "neighbourhood", "diff_first_last_review", "review_scores_rating", 'amenities'))] 
+test_df <- test_df[ , -which(names(test_df) %in% c("latitude", "longitude", "neighbourhood", "diff_first_last_review", "review_scores_rating", 'amenities', 'host_response_rate'))] 
 
 # check for correlation between numeric predictions
 test_df$bathrooms <- as.numeric(test_df$bathrooms)
@@ -310,10 +313,10 @@ train_df_small <-  sample_frac(train_df, size = .2, replace = FALSE)
 
 m1 <- lm(log_price ~ bathrooms + bedrooms + beds + property_type + room_type  + accommodates + 
            bed_type + cancellation_policy + cleaning_fee + host_has_profile_pic + host_identity_verified + instant_bookable + 
-           host_response_rate + number_of_reviews + zipcode + ReviewCategory, data=train_df_small)
+            number_of_reviews + zipcode + ReviewCategory, data=train_df_small)
 summary(m1)
 
-  
+
 
 ### XGBosst ###
 # for xgboost, we need to work with only numerical variables. Thus, for categorical variables, we will do one-hot encoding
@@ -329,10 +332,10 @@ train_xg <- train_df
 train_xg_small <-  sample_frac(train_xg, size = .1, replace = FALSE)
 
 train_xg_small = as.data.frame(train_xg_small)
-ohe_feats = c('property_type', 'room_type', 'bed_type', 'cancellation_policy', 'city', 'host_response_rate', 'zipcode', 'ReviewCategory')
-dummies = dummyVars(~ property_type+ bed_type+ cancellation_policy+ city+ host_response_rate+ zipcode+ ReviewCategory+ room_type, data = train_xg_small)
-df_all_ohe <- as.data.frame(predict(dummies, newdata = train_xg_small))
-df_all_combined <- cbind(train_xg_small[,-c(which(colnames(train_xg_small) %in% ohe_feats))],df_all_ohe)
+# ohe_feats = c('property_type', 'room_type', 'bed_type', 'cancellation_policy', 'city', 'host_response_rate', 'zipcode', 'ReviewCategory')
+# dummies = dummyVars(~ property_type+ bed_type+ cancellation_policy+ city+ host_response_rate+ zipcode+ ReviewCategory+ room_type, data = train_xg_small)
+# df_all_ohe <- as.data.frame(predict(dummies, newdata = train_xg_small))
+# df_all_combined <- cbind(train_xg_small[,-c(which(colnames(train_xg_small) %in% ohe_feats))],df_all_ohe)
 
 train_xg_small = as.data.table(df_all_combined)
 
@@ -341,41 +344,116 @@ test_xg <- test_df
 test_xg_small <-  sample_frac(test_xg, size = .1, replace = FALSE)
 
 test_xg_small = as.data.frame(test_xg_small)
-ohe_feats = c('property_type', 'room_type', 'bed_type', 'cancellation_policy', 'city', 'host_response_rate', 'zipcode', 'ReviewCategory')
-dummies = dummyVars(~ property_type+ bed_type+ cancellation_policy+ city+ host_response_rate+ zipcode+ ReviewCategory+ room_type, data = test_xg_small)
-df_all_ohe <- as.data.frame(predict(dummies, newdata = test_xg_small))
-df_all_combined <- cbind(test_xg_small[,-c(which(colnames(test_xg_small) %in% ohe_feats))],df_all_ohe)
+# ohe_feats = c('property_type', 'room_type', 'bed_type', 'cancellation_policy', 'city', 'host_response_rate', 'zipcode', 'ReviewCategory')
+# dummies = dummyVars(~ property_type+ bed_type+ cancellation_policy+ city+ host_response_rate+ zipcode+ ReviewCategory+ room_type, data = test_xg_small)
+# df_all_ohe <- as.data.frame(predict(dummies, newdata = test_xg_small))
+# df_all_combined <- cbind(test_xg_small[,-c(which(colnames(test_xg_small) %in% ohe_feats))],df_all_ohe)
+
+# Numeric Variables
+Num<-sapply(train_xg_small,is.numeric)
+Num<-train_xg_small[,Num]
+
+for(i in 1:77){
+  if(is.factor(train_xg_small[,i])){
+    train_xg_small[,i]<-as.integer(train_xg_small[,i])
+  }
+}
+
 
 test_xg_small = as.data.table(df_all_combined)
 #now that we have only numerical, we can start using the xgboost package.
 
 
+train_xg_small<- as.matrix(train_xg_small, rownames.force=NA)
+test_xg_small<- as.matrix(test_xg_small, rownames.force=NA)
+train_xg_small <- as(train_xg_small, "sparseMatrix")
+test_xg_small <- as(test_xg_small, "sparseMatrix")
+# Never forget to exclude objective variable in 'data option'
+train_xg_small <- xgb.DMatrix(data = train_xg_small[,-1], label = train[,"log_price"])
+
+xgb <- xgboost(data = data.matrix(train_xg_small[,-1]), 
+               #booster = "gblinear", 
+               objective = "binary:logistic", 
+               max.depth = 5, 
+               nround = 2, 
+               lambda = 0, 
+               lambda_bias = 0, 
+               alpha = 0)
 
 
 
 
 
-# Train a Random Forest model with cross-validation
 
-cv_folds <- sample(1:3, size = nrow(train_df), replace = TRUE)
+#boost
+library(gbm)
+train_gbm <- train_df
+boost.airbnb=gbm(log_price ~ bathrooms + bedrooms + beds + as.factor(property_type) + as.factor(room_type)  + accommodates + 
+                   as.factor(bed_type) + as.factor(cancellation_policy) + cleaning_fee + host_has_profile_pic + host_identity_verified + instant_bookable + 
+                   number_of_reviews + as.factor(zipcode) + as.factor(ReviewCategory), data=train_gbm,distribution="gaussian",n.trees=500,interaction.depth=4)
+summary(boost.airbnb)
+# As usual, predict and evaluate on the test set
+test.pred.gbm <- predict(boost.airbnb,test_df)
+RMSE.forest <- sqrt(mean((test.pred.forest-tes_xg_smallt$log_price)^2))
+RMSE.forest
 
-for(i in 1:3) {
-  # Train the model using the training sets
-  fit <- randomForest(log_price ~ .,
-                      data = all_data[train_set[cv_folds !=i],],
-                      ntree = 10)
-  
-  # Make predictions using the testing set
-  preds <- predict(fit, all_data[train_set[cv_folds == i],])
-  
-  # Calculate RMSE for current cross-validation split
-  print(mean((preds - all_data[train_set[cv_folds == i],'log_price'])^2)^.5)
-}
+
+
+
+# random forest
+train_rf <- train_df
+test_rf <- test_df
+train_rf$isTest <- rep(1,nrow(train_rf))
+test_rf$isTest <- rep(0,nrow(test_rf))
+fullSet <- rbind(train_rf,test_rf)
+
+
+
+train_rf$property_type <- as.factor(train_rf$property_type)
+train_rf$room_type <- as.factor(train_rf$room_type)
+train_rf$bed_type <- as.factor(train_rf$bed_type)
+train_rf$cancellation_policy <- as.factor(train_rf$cancellation_policy)
+train_rf$city <- as.factor(train_rf$city)
+train_rf$zipcode <- as.factor(train_rf$zipcode)
+train_rf$ReviewCategory <- as.factor(train_rf$ReviewCategory)
+
+
+train_rf_small <-  sample_frac(train_rf, size = .1, replace = FALSE)
+# Num<-sapply(train_rf_small,is.numeric)
+# Num<-train_rf_small[,Num]
+# 
+# for(i in 1:77){
+#   if(is.factor(train_rf_small[,i])){
+#     train_rf_small[,i]<-as.integer(train_rf_small[,i])
+#   }
+# }
+
+
+library(randomForest)
+# Create a random forest with 1000 trees
+
+rf <- randomForest(log_price ~ bathrooms + bedrooms + beds + property_type + room_type  + accommodates + 
+                     bed_type + cancellation_policy + cleaning_fee + host_has_profile_pic + host_identity_verified + instant_bookable + 
+                     number_of_reviews + ReviewCategory, data = train_rf, importance = TRUE, ntree=100)
+# How many trees are needed to reach the minimum error estimate? 
+# This is a simple problem; it appears that about 100 trees would be enough. 
+which.min(rf$mse)
+# Using the importance()  function to calculate the importance of each variable
+imp <- as.data.frame(sort(importance(rf)[,1],decreasing = TRUE),optional = T)
+names(imp) <- "% Inc MSE"
+imp
+
+# As usual, predict and evaluate on the test set
+test.pred.forest <- predict(rf,test_rf)
+RMSE.forest <- sqrt(mean((test.pred.forest-tes_xg_smallt$log_price)^2))
+RMSE.forest
+
+#do xgboost using same formula as RF
+#convert factors to numeric
+
+
 
 # Create submission file
-
-fit <- randomForest(log_price ~ ., data = all_data[train_set,], ntree = 1)
-prediction <- predict(fit, all_data[test_set,])
 
 sample_submission <- data.frame(id = ids, log_price = prediction)
 write.csv(sample_submission, "sample_submission.csv", row.names = FALSE)
