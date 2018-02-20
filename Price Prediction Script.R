@@ -26,8 +26,8 @@ train <- read.csv(paste0(path,"trainCleanZip.csv"), header = T, stringsAsFactors
 test <- read.csv(paste0(path,"test.csv"), header = T, stringsAsFactors = F)
 
 ## Save the ID column so that we can drop it from merged dataset (combi)
-train_ID = train$Id
-test_ID = test$Id
+train_ID = train$id
+test_ID = test$id
 test$log_price <- NA
 
 test$isTest <- rep(1,nrow(test))
@@ -380,6 +380,8 @@ set.seed(222)
 inTrain <- createDataPartition(y = train.xg$log_price, p = 0.7, list = FALSE)
 Training <- train.xg[inTrain, ]
 Validation <- train.xg[-inTrain, ]
+training <- train.xg
+testing <- test.xg
 
 
 ### LASSO Model ###
@@ -431,25 +433,54 @@ xgbFit = xgboost(data = as.matrix(Training[, -1]), nfold = 5, label = as.matrix(
                  #min_child_weight = 1.7817, 
                  subsample = 0.5213, colsample_bytree = 0.4603)
 ## print(xgbFit)
+xgb.importance(colnames(Training[, -1]), model = xgbFit)
 
 ## Predictions
 preds2 <- predict(xgbFit, newdata = as.matrix(Validation[, -1]))
 rmse(Validation$log_price, preds2)
 
+
+
 #RMSE score for simple average of 3 models
-rmse(Validation$log_price, (preds + preds1 + preds2)/3)
+rmse(Validation$log_price, (preds + preds2)/2)
 #weigted average RMSE (adjust)
-rmse(Validation$log_price, (0.6 * preds + 0.1 * preds1 + 0.3 * preds2))
+rmse(Validation$log_price, (0.4 * preds  + 0.6 * preds2))
+
+# retaining on whole dataset
+
+#LASSO
+set.seed(123)
+cv_lasso = cv.glmnet(as.matrix(training[, -1]), training[, 1])
+
+## Predictions
+preds = data.frame(exp(predict(cv_lasso, newx = as.matrix(testing[, -1]), 
+                               s = "lambda.min")) - 1)
 
 
+#XGB
+set.seed(123)
+xgbFit = xgboost(data = as.matrix(training[, -1]), nfold = 5, label = as.matrix(training$log_price), 
+                 nrounds = 2200, verbose = FALSE, objective = "reg:linear", eval_metric = "rmse", 
+                 nthread = 8, eta = 0.01, gamma = 0.0468, max_depth = 6, min_child_weight = 1.7817, 
+                 subsample = 0.5213, colsample_bytree = 0.4603)
+## print(xgbFit)
+
+## Predictions
+preds2 <- exp(predict(xgbFit, newdata = as.matrix(testing[, -1]))) - 1
+
+#write final submission (KEY: take log of pred, make sure column names are id and log_price)
+df <- data.frame(id = test_ID, log_price = 0.3 * log(preds$X1) + 
+                   0.7 * log(preds2))
+write.csv(df, "submission_1_XG_Lasso.csv", row.names = FALSE)
 
 
+## Hyperparam tuning
 
 
+## implement ElasticNet, RidgeRegression (these first 2 you do by changing alpha in glmnet), SVR(kernal = "linear), SVR(kernal = "rbf), EnsembleRegressors
 
 
-
-# Create submission file
+# Create submission file: note: do submission on full dataset otherwise columns will differ
 
 sample_submission <- data.frame(id = ids, log_price = test.pred.forest)
 write.csv(sample_submission, "sample_submission.csv", row.names = FALSE)
