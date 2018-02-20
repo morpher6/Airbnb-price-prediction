@@ -7,7 +7,7 @@
 # - more modeling
 # DUE MARCH 2ND
 
-### Step 1:  Load libraries ###
+### Step 1:  Load libraries  ###
 
 debug(utils:::unpackPkgZip) #get past firewall (click 103 times)
 
@@ -19,12 +19,15 @@ library(zipcode)
 library(mice)
 library(ggplot2)
 
-### Step 2: Load data ###
+########## Load data ########## 
 
 path = "C:/Users/spnelson/SF/Personal Folders/Airbnb/"
 train <- read.csv(paste0(path,"trainCleanZip.csv"), header = T, stringsAsFactors = F)
 test <- read.csv(paste0(path,"test.csv"), header = T, stringsAsFactors = F)
-ids = test$id
+
+## Save the ID column so that we can drop it from merged dataset (combi)
+train_ID = train$Id
+test_ID = test$Id
 test$log_price <- NA
 
 test$isTest <- rep(1,nrow(test))
@@ -33,6 +36,8 @@ fullSet <- rbind(train,test)
 
 # test.new <- fullSet[fullSet$isTest==1,]
 # train.new <- fullSet[fullSet$isTest==0,]
+
+
 
 sapply(X = fullSet, FUN = function(x) sum(is.na(x))) # number of missing values by column
 
@@ -127,8 +132,8 @@ fullSet[,24:ncol(fullSet)][is.na(fullSet[,24:ncol(fullSet)])]<-0
 
 
 #used google reverse geocode to impute missing zip codes:
-path2 <- "~/Airbnb-price-prediction/"
-new_zip2 <- read.csv(paste0(path2,"new_zip2.csv"), header = T, stringsAsFactors = F)
+# path2 <- "~/Airbnb-price-prediction/"
+# new_zip2 <- read.csv(paste0(path2,"new_zip2.csv"), header = T, stringsAsFactors = F)
 
 # #round lat and long to make merge effective
 # new_zip2$latitude<-round(new_zip2$latitude, 5)
@@ -158,35 +163,57 @@ new_zip2 <- read.csv(paste0(path2,"new_zip2.csv"), header = T, stringsAsFactors 
 
 #use mice package to estimate
 #bathrooms, bedrooms, beds:
-imputed_bathrooms <- mice(as.data.frame(fullSet[,c("bathrooms", "bedrooms", "beds", "id")], m=5, maxit = 50, method = 'pmm', seed = 500))
-completeData <- complete(imputed_bathrooms,2)
-fullSet <- merge(completeData, fullSet, by = "id")
+# imputed_bathrooms <- mice(as.data.frame(fullSet[,c("bathrooms", "bedrooms", "beds", "id")], m=5, maxit = 50, method = 'pmm', seed = 500))
+# completeData <- complete(imputed_bathrooms,2)
+# fullSet <- merge(completeData, fullSet, by = "id")
+# 
+# fullSet <- fullSet[ , -which(names(fullSet) %in% c("bathrooms.y","bedrooms.y", "beds.y"))] #remove duplicate columns
+# names(fullSet)[names(fullSet) == 'bathrooms.x'] <- 'bathrooms'
+# names(fullSet)[names(fullSet) == 'bedrooms.x'] <- 'bedrooms'
+# names(fullSet)[names(fullSet) == 'beds.x'] <- 'beds'
 
-fullSet <- fullSet[ , -which(names(fullSet) %in% c("bathrooms.y","bedrooms.y", "beds.y"))] #remove duplicate columns
-names(fullSet)[names(fullSet) == 'bathrooms.x'] <- 'bathrooms'
-names(fullSet)[names(fullSet) == 'bedrooms.x'] <- 'bedrooms'
-names(fullSet)[names(fullSet) == 'beds.x'] <- 'beds'
+
+
+# fill in missing value by the median
+# for bathrooms, bedrooms, beds
+
+library(zoo)
+fullSet$bathrooms <- na.aggregate(fullSet$bathrooms, FUN = median)
+fullSet$bedrooms <- na.aggregate(fullSet$bedrooms, FUN = median)
+fullSet$beds <- na.aggregate(fullSet$beds, FUN = median)
+fullSet$accommodates <- na.aggregate(fullSet$accommodates, FUN = median)
+
+
+
+
+
 
 
 # Fix reviews_scores_rating by making it categorical and binning
 # https://github.com/samuelklam/airbnb-pricing-prediction/blob/master/data-cleaning/data-cleaning-listings.ipynb
 
+# fullSet$review_scores_rating <- as.numeric(fullSet$review_scores_rating)
+# fullSet$ReviewCategory <- fullSet$review_scores_rating %>% cut(fullSet$review_scores_rating, breaks=c(0, 10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, Inf), 
+#                                                                  labels=c("0-9","10-19","20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-84", "85-89", "90-94", "95-100"))
+# 
+# fullSet$ReviewCategory <- as.character(fullSet$ReviewCategory)
+# fullSet$ReviewCategory[is.na(fullSet$ReviewCategory)] <- "No Reviews" # turn NaN scores with 0 reviews into 'No Reviews'
 fullSet$review_scores_rating <- as.numeric(fullSet$review_scores_rating)
-fullSet$ReviewCategory <- fullSet$review_scores_rating %>% cut(fullSet$review_scores_rating, breaks=c(0, 10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, Inf), 
-                                                                 labels=c("0-9","10-19","20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-84", "85-89", "90-94", "95-100"))
+fullSet$review_scores_rating[is.na(fullSet$review_scores_rating)] <- 0
+fullSet$number_of_reviews[is.na(fullSet$number_of_reviews)] <- 0
+fullSet$cleaning_fee[is.na(fullSet$cleaning_fee)] <- 0
 
-fullSet$ReviewCategory <- as.character(fullSet$ReviewCategory)
-fullSet$ReviewCategory[is.na(fullSet$ReviewCategory)] <- "No Reviews" # turn NaN scores with 0 reviews into 'No Reviews'
+
 
 
 ### Variables to get rid of ###
 # amenities, latitude, longitude, neighborhood, diff_first_last_review, review_score_category
-fullSet <- fullSet[ , -which(names(fullSet) %in% c("latitude", "longitude", "neighbourhood", "diff_first_last_review", "review_scores_rating", 'amenities', 'host_response_rate'))] 
+fullSet <- fullSet[ , -which(names(fullSet) %in% c("latitude", "longitude", "neighbourhood", 'amenities', 'host_response_rate'))] 
 
 # check for correlation between numeric predictions
-fullSet$bathrooms <- as.numeric(fullSet$bathrooms)
-fullSet$beds <- as.numeric(fullSet$beds)
-fullSet$accommodates <- as.numeric(fullSet$accommodates)
+# fullSet$bathrooms <- as.numeric(fullSet$bathrooms)
+# fullSet$beds <- as.numeric(fullSet$beds)
+# fullSet$accommodates <- as.numeric(fullSet$accommodates)
 
 numerical <- fullSet[ , which(names(fullSet) %in% c("bathroooms", "bedrooms", "beds", "accommodates", "number_of_reviews"))] 
 
@@ -196,46 +223,48 @@ highCorr #no high correlation vars
 
 
 
-df['lat_center']=df.apply(lambda row: lat_center(row), axis=1)
-df['long_center']=df.apply(lambda row: long_center(row), axis=1)
-
-lat_center <- function(row){
-  if (row['city']=='NYC')
-    return 40.72
-}
-
-long_center <- function(row){
-  if (row['city']=='NYC')
-    return -74
-}
-
-fullSet$lat_center <- apply(lat_center(row),1)
-fullSet$long_center <- apply(long_center(row),1)
-
-df$distance_to_center = sqrt((fullSet$lat_center]-fullSet$latitude)**2+(fullSet['long_center']-fullSet['longitude'])**2)
+# 
+# 
+# df['lat_center']=df.apply(lambda row: lat_center(row), axis=1)
+# df['long_center']=df.apply(lambda row: long_center(row), axis=1)
+# 
+# lat_center <- function(row){
+#   if (row['city']=='NYC')
+#     return 40.72
+# }
+# 
+# long_center <- function(row){
+#   if (row['city']=='NYC')
+#     return -74
+# }
+# 
+# fullSet$lat_center <- apply(lat_center(row),1)
+# fullSet$long_center <- apply(long_center(row),1)
+# 
+# df$distance_to_center = sqrt((fullSet$lat_center]-fullSet$latitude)**2+(fullSet['long_center']-fullSet['longitude'])**2)
 
 
 #resplit model
-test.new <- fullSet[fullSet$isTest==1,]
-train.new <- fullSet[fullSet$isTest==0,]
+# test.new <- fullSet[fullSet$isTest==1,]
+# train.new <- fullSet[fullSet$isTest==0,]
 
 ### EDA and Histograms ###
 
-table(train.new$ReviewCategory)
-table(train.new$property_type)
-table(train.new$room_type)
-table(train.new$city)
+table(fullSet$review_scores_rating)
+table(fullSet$property_type)
+table(fullSet$room_type)
+table(fullSet$city)
 
 
 # visualize distribution of log price (target variable)
-p1 <- ggplot(train.new) 
+p1 <- ggplot(fullSet) 
 p1 + geom_histogram(aes(x = log_price))
 
 #visualize beds
 p1 + geom_bar(aes(x = beds))
 
 #visualize 
-p1 + geom_bar(aes(ReviewCategory))
+p1 + geom_bar(aes(review_scores_rating))
 p1 + geom_bar(aes(bathrooms))
 p1 + geom_bar(aes(bedrooms))
 p1 + geom_bar(aes(beds))
@@ -254,34 +283,17 @@ p1 + geom_bar(aes(ReviewCategory))
 
 # Initial Linear model
 #reduce size of train_df for initial modelleling
-train_df_small <-  sample_frac(train.new, size = .2, replace = FALSE)
-
-m1 <- lm(log_price ~ bathrooms + bedrooms + beds + property_type + room_type  + accommodates + 
-           bed_type + cancellation_policy + cleaning_fee + host_has_profile_pic + host_identity_verified + instant_bookable + 
-            number_of_reviews + zipcode + ReviewCategory, data=train_df_small)
-summary(m1)
-
-
+# train_df_small <-  sample_frac(train.new, size = .2, replace = FALSE)
+# 
+# m1 <- lm(log_price ~ bathrooms + bedrooms + beds + property_type + room_type  + accommodates + 
+#            bed_type + cancellation_policy + cleaning_fee + host_has_profile_pic + host_identity_verified + instant_bookable + 
+#             number_of_reviews + zipcode + ReviewCategory, data=train_df_small)
+# summary(m1)
 
 
 
 
-#boost
-library(gbm)
-train_gbm <- train_df
-boost.airbnb=gbm(log_price ~ bathrooms + bedrooms + beds + as.factor(property_type) + as.factor(room_type)  + accommodates + 
-                   as.factor(bed_type) + as.factor(cancellation_policy) + cleaning_fee + host_has_profile_pic + host_identity_verified + instant_bookable + 
-                   number_of_reviews + as.factor(zipcode) + as.factor(ReviewCategory), data=train_gbm,distribution="gaussian",n.trees=500,interaction.depth=4)
-summary(boost.airbnb)
-# As usual, predict and evaluate on the test set
-test.pred.gbm <- predict(boost.airbnb,test_df)
-RMSE.forest <- sqrt(mean((test.pred.forest-tes_xg_smallt$log_price)^2))
-RMSE.forest
-
-
-
-
-# random forest
+################## random forest
 
 fullSet_rf <- fullSet
 
@@ -334,64 +346,100 @@ test.pred.forest <- predict(rf,test.rf[,-5])
 submission1_RF <- data.frame(id = ids, log_price = test.pred.forest)
 
 
-#do xgboost using same formula as RF
-#convert factors to numeric
 
 
-### XGBosst ###
-# for xgboost, we need to work with only numerical variables. Thus, for categorical variables, we will do one-hot encoding
-# since we are recoding variables, let's call the dataset something else
-set.seed(123)
-library(xgboost)
-library(Matrix)
+
+##########Dummy encoding ##########
+
+# first get data type for each feature
+feature_classes <- sapply(names(fullSet), function(x) {
+  class(fullSet[[x]])
+})
+fullSet$id <- as.numeric(fullSet$id)
+fullSet$accommodates <- as.numeric(fullSet$accommodates)
+numeric_feats <- names(feature_classes[feature_classes == "numeric"])
+
+# get names of categorical features
+categorical_feats <- names(feature_classes[feature_classes == "character"])
+
+# use caret dummyVars function for hot one encoding for categorical
+# features
 library(caret)
-library(data.table)
-library(stringr)
-library(car)
-train_xg <- train_df
-train_xg_small <-  sample_frac(train_xg, size = .1, replace = FALSE)
-
-train_xg_small = as.data.frame(train_xg_small)
-# ohe_feats = c('property_type', 'room_type', 'bed_type', 'cancellation_policy', 'city', 'host_response_rate', 'zipcode', 'ReviewCategory')
-# dummies = dummyVars(~ property_type+ bed_type+ cancellation_policy+ city+ host_response_rate+ zipcode+ ReviewCategory+ room_type, data = train_xg_small)
-# df_all_ohe <- as.data.frame(predict(dummies, newdata = train_xg_small))
-# df_all_combined <- cbind(train_xg_small[,-c(which(colnames(train_xg_small) %in% ohe_feats))],df_all_ohe)
-
-train_xg_small = as.data.table(df_all_combined)
+dummies <- dummyVars(~., fullSet[categorical_feats])
+categorical_1_hot <- predict(dummies, fullSet[categorical_feats])
 
 
-# Numeric Variables
-Num<-sapply(train_xg_small,is.numeric)
-Num<-train_xg_small[,Num]
+fullSet <- cbind(fullSet[numeric_feats], categorical_1_hot)
 
-for(i in 1:77){
-  if(is.factor(train_xg_small[,i])){
-    train_xg_small[,i]<-as.integer(train_xg_small[,i])
-  }
-}
+test.xg <- fullSet[fullSet$isTest==1,]
+train.xg <- fullSet[fullSet$isTest==0,]
+train.xg$log_price <- na.aggregate(train.xg$log_price, FUN = mean)
 
+set.seed(222)
 
-test_xg_small = as.data.table(df_all_combined)
-#now that we have only numerical, we can start using the xgboost package.
+inTrain <- createDataPartition(y = train.xg$log_price, p = 0.7, list = FALSE)
+Training <- train.xg[inTrain, ]
+Validation <- train.xg[-inTrain, ]
 
 
-train_xg_small<- as.matrix(train_xg_small, rownames.force=NA)
-test_xg_small<- as.matrix(test_xg_small, rownames.force=NA)
-train_xg_small <- as(train_xg_small, "sparseMatrix")
-test_xg_small <- as(test_xg_small, "sparseMatrix")
-# Never forget to exclude objective variable in 'data option'
-train_xg_small <- xgb.DMatrix(data = train_xg_small[,-1], label = train[,"log_price"])
+### LASSO Model ###
 
-xgb <- xgboost(data = data.matrix(train_xg_small[,-1]), 
-               #booster = "gblinear", 
-               objective = "binary:logistic", 
-               max.depth = 5, 
-               nround = 2, 
-               lambda = 0, 
-               lambda_bias = 0, 
-               alpha = 0)
+library(glmnet)
+library(Metrics)
+set.seed(123)
+cv_lasso = cv.glmnet(as.matrix(Training[, -1]), Training[, 1])
+
+## Predictions
+preds <- predict(cv_lasso, newx = as.matrix(Validation[, -1]), s = "lambda.min")
+rmse(Validation$log_price, preds)
 
 
+
+### GBM Model ###
+
+library(iterators)
+library(parallel)
+library(caret)
+#library(doMC)
+set.seed(222)
+## detectCores() returns 16 cpus
+#registerDoMC(16)
+## Set up caret model training parameters
+CARET.TRAIN.CTRL <- trainControl(method = "repeatedcv", number = 5, repeats = 5, 
+                                 verboseIter = FALSE, allowParallel = TRUE)
+
+gbmFit <- train(log_price ~ ., method = "gbm", metric = "RMSE", maximize = FALSE, 
+                trControl = CARET.TRAIN.CTRL, tuneGrid = expand.grid(n.trees = (4:10) * 
+                                                                       50, interaction.depth = c(5), shrinkage = c(0.05), n.minobsinnode = c(10)), 
+                data = Training, verbose = FALSE)
+
+## print(gbmFit)
+
+## Predictions
+preds1 <- predict(gbmFit, newdata = Validation)
+rmse(Validation$log_price, preds1)
+
+
+### XGBOOST model
+
+library(xgboost)
+set.seed(123)
+## Model parameters trained using xgb.cv function
+xgbFit = xgboost(data = as.matrix(Training[, -1]), nfold = 5, label = as.matrix(Training$log_price), 
+                 nrounds = 2200, verbose = FALSE, objective = "reg:linear", eval_metric = "rmse", 
+                 nthread = 8, eta = 0.01, gamma = 0.0468, max_depth = 6, 
+                 #min_child_weight = 1.7817, 
+                 subsample = 0.5213, colsample_bytree = 0.4603)
+## print(xgbFit)
+
+## Predictions
+preds2 <- predict(xgbFit, newdata = as.matrix(Validation[, -1]))
+rmse(Validation$log_price, preds2)
+
+#RMSE score for simple average of 3 models
+rmse(Validation$log_price, (preds + preds1 + preds2)/3)
+#weigted average RMSE (adjust)
+rmse(Validation$log_price, (0.6 * preds + 0.1 * preds1 + 0.3 * preds2))
 
 
 
