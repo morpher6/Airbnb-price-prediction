@@ -16,10 +16,17 @@ library(magrittr)
 library(dplyr)
 library(lubridate)
 library(zipcode)
-library(mice)
 library(ggplot2)
+library(randomForest)
+library(Metrics)
+library(caret)
+library(glmnet)
+library(iterators)
+library(parallel)
+library(xgboost)
+library(zoo)
 
-########## Load data ########## 
+#### Load data ########## 
 
 path = "C:/Users/spnelson/SF/Personal Folders/Airbnb/"
 train <- read.csv(paste0(path,"trainCleanZip.csv"), header = T, stringsAsFactors = F)
@@ -158,34 +165,15 @@ fullSet[,24:ncol(fullSet)][is.na(fullSet[,24:ncol(fullSet)])]<-0
 # train_df <- train_merge
 
 
- 
-
-
-#use mice package to estimate
-#bathrooms, bedrooms, beds:
-# imputed_bathrooms <- mice(as.data.frame(fullSet[,c("bathrooms", "bedrooms", "beds", "id")], m=5, maxit = 50, method = 'pmm', seed = 500))
-# completeData <- complete(imputed_bathrooms,2)
-# fullSet <- merge(completeData, fullSet, by = "id")
-# 
-# fullSet <- fullSet[ , -which(names(fullSet) %in% c("bathrooms.y","bedrooms.y", "beds.y"))] #remove duplicate columns
-# names(fullSet)[names(fullSet) == 'bathrooms.x'] <- 'bathrooms'
-# names(fullSet)[names(fullSet) == 'bedrooms.x'] <- 'bedrooms'
-# names(fullSet)[names(fullSet) == 'beds.x'] <- 'beds'
-
-
 
 # fill in missing value by the median
-# for bathrooms, bedrooms, beds
+# for bathrooms, bedrooms, beds, accommodates
 
-library(zoo)
+
 fullSet$bathrooms <- na.aggregate(fullSet$bathrooms, FUN = median)
 fullSet$bedrooms <- na.aggregate(fullSet$bedrooms, FUN = median)
 fullSet$beds <- na.aggregate(fullSet$beds, FUN = median)
 fullSet$accommodates <- na.aggregate(fullSet$accommodates, FUN = median)
-
-
-
-
 
 
 
@@ -204,24 +192,12 @@ fullSet$number_of_reviews[is.na(fullSet$number_of_reviews)] <- 0
 fullSet$cleaning_fee[is.na(fullSet$cleaning_fee)] <- 0
 
 
-
-
 ### Variables to get rid of ###
 # amenities, latitude, longitude, neighborhood, diff_first_last_review, review_score_category
 fullSet <- fullSet[ , -which(names(fullSet) %in% c("latitude", "longitude", "neighbourhood", 'amenities', 'host_response_rate'))] 
 
-# check for correlation between numeric predictions
-# fullSet$bathrooms <- as.numeric(fullSet$bathrooms)
-# fullSet$beds <- as.numeric(fullSet$beds)
-# fullSet$accommodates <- as.numeric(fullSet$accommodates)
 
-numerical <- fullSet[ , which(names(fullSet) %in% c("bathroooms", "bedrooms", "beds", "accommodates", "number_of_reviews"))] 
-
-descrCor <-  cor(numerical)
-highCorr <- sum(abs(descrCor[upper.tri(descrCor)]) > .9) #no high corr
-highCorr #no high correlation vars
-
-
+# creating distance from center variable from Zipcode
 
 # 
 # 
@@ -281,67 +257,75 @@ p1 + geom_bar(aes(ReviewCategory))
 
 #################### Model Running ###
 
-# Initial Linear model
+#Initial Linear model
 #reduce size of train_df for initial modelleling
 # train_df_small <-  sample_frac(train.new, size = .2, replace = FALSE)
-# 
-# m1 <- lm(log_price ~ bathrooms + bedrooms + beds + property_type + room_type  + accommodates + 
-#            bed_type + cancellation_policy + cleaning_fee + host_has_profile_pic + host_identity_verified + instant_bookable + 
-#             number_of_reviews + zipcode + ReviewCategory, data=train_df_small)
-# summary(m1)
+test.lm <- fullSet[fullSet$isTest==1,]
+train.lm <- fullSet[fullSet$isTest==0,]
+train.lm$log_price <- na.aggregate(train.lm$log_price, FUN = mean)
 
+set.seed(222)
 
+inTrain <- createDataPartition(y = train.lm$log_price, p = 0.7, list = FALSE)
+Training <- train.lm[inTrain, ]
+Validation <- train.lm[-inTrain, ]
+training <- train.lm
+testing <- train.lm
+
+lm_fit_1 <- lm(log_price ~ bathrooms + bedrooms + beds + property_type + room_type  + accommodates +
+           bed_type + cancellation_policy + cleaning_fee + host_has_profile_pic + host_identity_verified + instant_bookable +
+            number_of_reviews + zipcode + review_scores_rating, data=Training)
+summary(lm_fit_1)
+
+preds_lm_1 <- predict(lm_fit_1, Validation[, -2])
+rmse(Validation$log_price, preds_lm_1)
 
 
 ################## random forest
 
-fullSet_rf <- fullSet
+fullRF <- fullSet
 
 
-fullSet$property_type <- as.factor(fullSet$property_type)
-fullSet$room_type <- as.factor(fullSet$room_type)
-fullSet$bed_type <- as.factor(fullSet$bed_type)
-fullSet$cancellation_policy <- as.factor(fullSet$cancellation_policy)
-fullSet$city <- as.factor(fullSet$city)
-fullSet$zipcode <- as.factor(fullSet$zipcode)
-fullSet$ReviewCategory <- as.factor(fullSet$ReviewCategory)
+fullRF$property_type <- as.factor(fullRF$property_type)
+fullRF$room_type <- as.factor(fullRF$room_type)
+fullRF$bed_type <- as.factor(fullRF$bed_type)
+fullRF$cancellation_policy <- as.factor(fullRF$cancellation_policy)
+fullRF$city <- as.factor(fullRF$city)
+fullRF$zipcode <- as.factor(fullRF$zipcode)
+fullRF$ReviewCategory <- as.factor(fullRF$ReviewCategory)
 
-#split to train and test
+test.rf <- fullSet[fullRF$isTest==1,]
+train.rf <- fullSet[fullRF$isTest==0,]
+train.rf$log_price <- na.aggregate(train.rf$log_price, FUN = mean)
 
-test.rf <- fullSet[fullSet$isTest==1,]
-train.rf <- fullSet[fullSet$isTest==0,]
-
-
-training <- train.rf[1:37064, ]
-testing <- train.rf[37065:74129, ]
 set.seed(222)
-inTrain <- createDataPartition(y = training$log_price, p = 0.7, list = FALSE)
-Training <- training[inTrain, ]
-Validation <- training[-inTrain, ]
 
-#train_rf_small <-  sample_frac(train.rf, size = .1, replace = FALSE)
+inTrain <- createDataPartition(y = train.rf$log_price, p = 0.7, list = FALSE)
+Training <- train.rf[inTrain, ]
+Validation <- train.rf[-inTrain, ]
+training <- train.rf
+testing <- test.rf
 
-library(randomForest)
-library(Metrics)
+
 # Create a random forest with 1000 trees
 
-rf <- randomForest(log_price ~ bathrooms + bedrooms + beds + property_type + room_type  + accommodates + 
+rf_fit_1 <- randomForest(log_price ~ bathrooms + bedrooms + beds + property_type + room_type  + accommodates + 
                      bed_type + cancellation_policy + cleaning_fee + host_has_profile_pic + host_identity_verified + instant_bookable + 
-                     number_of_reviews + ReviewCategory, data = train.rf, importance = TRUE, ntree=100)
+                     number_of_reviews + ReviewCategory, data = Training, importance = TRUE, ntree=100)
 # How many trees are needed to reach the minimum error estimate? 
 # This is a simple problem; it appears that about 100 trees would be enough. 
-which.min(rf$mse)
+which.min(rf_fit_1$mse)
 # Using the importance()  function to calculate the importance of each variable
-imp <- as.data.frame(sort(importance(rf)[,1],decreasing = TRUE),optional = T)
+imp <- as.data.frame(sort(importance(rf_fit_1)[,1],decreasing = TRUE),optional = T)
 names(imp) <- "% Inc MSE"
 imp
 
 # As usual, predict and evaluate on the test set
-test.pred.forest <- predict(rf,train.rf[,-5])
-RMSE.forest <- sqrt(mean((test.pred.forest-train.rf$log_price)^2))
+test.pred.forest <- predict(rf_fit_1,train.rf[,-5]) #check that -5 is right
+RMSE.forest <- rmse(Validation$log_price, test.pred.forest)
 RMSE.forest
 
-test.pred.forest <- predict(rf,test.rf[,-5])
+test.pred.forest <- predict(rf_fit_1,Validation[,1])
 
 submission1_RF <- data.frame(id = ids, log_price = test.pred.forest)
 
@@ -364,7 +348,7 @@ categorical_feats <- names(feature_classes[feature_classes == "character"])
 
 # use caret dummyVars function for hot one encoding for categorical
 # features
-library(caret)
+
 dummies <- dummyVars(~., fullSet[categorical_feats])
 categorical_1_hot <- predict(dummies, fullSet[categorical_feats])
 
@@ -386,8 +370,7 @@ testing <- test.xg
 
 ### LASSO Model ###
 
-library(glmnet)
-library(Metrics)
+
 set.seed(123)
 cv_lasso = cv.glmnet(as.matrix(Training[, -1]), Training[, 1])
 
@@ -396,35 +379,100 @@ preds <- predict(cv_lasso, newx = as.matrix(Validation[, -1]), s = "lambda.min")
 rmse(Validation$log_price, preds)
 
 
+### Ridge Model ###
+set.seed(123)
+cv_ridge = cv.glmnet(as.matrix(Training[, -1]), Training[, 1],family = "gaussian", alpha = 0)
 
-### GBM Model ###
+## Predictions
+preds_ridge <- predict(cv_ridge, newx = as.matrix(Validation[, -1]), s = "lambda.min")
 
-library(iterators)
-library(parallel)
-library(caret)
+rmse(Validation$log_price, preds_ridge)
+
+
+### Elastic Net ###
+
+cv_elnet <- cv.glmnet(as.matrix(Training[, -1]), Training[, 1],family = "gaussian", alpha = 0.5)
+## Predictions
+preds_elnet <- predict(cv_elnet, newx = as.matrix(Validation[, -1]), s = "lambda.min")
+rmse(Validation$log_price, preds_elnet)
+
+####### 10-fold Cross validation for each alpha = 0, 0.1, ... , 0.9, 1.0 #######
+# (For plots on Right)
+for (i in 0:10) {
+  assign(paste("fit", i, sep=""), cv.glmnet(as.matrix(Training[, -1]), Training[, 1], type.measure="mse", 
+                                            alpha=i/10,family="gaussian"))
+}
+
+# Plot solution paths:
+par(mfrow=c(3,2))
+# For plotting options, type '?plot.glmnet' in R console
+plot(fit.lasso, xvar="lambda")
+plot(fit10, main="LASSO")
+
+plot(fit.ridge, xvar="lambda")
+plot(fit0, main="Ridge")
+
+plot(fit.elnet, xvar="lambda")
+plot(fit5, main="Elastic Net")
+
+yhat0 <- predict(fit0, s=fit0$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat1 <- predict(fit1, s=fit1$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat2 <- predict(fit2, s=fit2$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat3 <- predict(fit3, s=fit3$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat4 <- predict(fit4, s=fit4$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat5 <- predict(fit5, s=fit5$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat6 <- predict(fit6, s=fit6$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat7 <- predict(fit7, s=fit7$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat8 <- predict(fit8, s=fit8$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat9 <- predict(fit9, s=fit9$lambda.1se, newx=as.matrix(Validation[, -1]))
+yhat10 <- predict(fit10, s=fit10$lambda.1se, newx=as.matrix(Validation[, -1]))
+
+mse0 <- mean((Validation$log_price - yhat0)^2)
+mse1 <- mean((Validation$log_price - yhat1)^2)
+mse2 <- mean((Validation$log_price - yhat2)^2)
+mse3 <- mean((Validation$log_price - yhat3)^2)
+mse4 <- mean((Validation$log_price - yhat4)^2)
+mse5 <- mean((Validation$log_price - yhat5)^2)
+mse6 <- mean((Validation$log_price - yhat6)^2)
+mse7 <- mean((Validation$log_price - yhat7)^2)
+mse8 <- mean((Validation$log_price - yhat8)^2)
+mse9 <- mean((Validation$log_price - yhat9)^2)
+mse10 <- mean((Validation$log_price - yhat10)^2)
+
+alphas <- (c(0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1))
+MSEs <- (c(mse0, mse1, mse2, mse3, mse4, mse5, mse6, mse7, mse8, mse9, mse10))
+whichReg <- cbind(alphas, MSEs)
+whichReg #best alpha = 0
+
+
+
+# ### GBM Model ###
+#
+
+
 #library(doMC)
-set.seed(222)
-## detectCores() returns 16 cpus
-#registerDoMC(16)
-## Set up caret model training parameters
-CARET.TRAIN.CTRL <- trainControl(method = "repeatedcv", number = 5, repeats = 5, 
-                                 verboseIter = FALSE, allowParallel = TRUE)
+ set.seed(222)
+ ## detectCores() returns 16 cpus
+ #registerDoMC(16)
+ ## Set up caret model training parameters
+ CARET.TRAIN.CTRL <- trainControl(method = "repeatedcv", number = 5, repeats = 5,
+                                  verboseIter = FALSE, allowParallel = TRUE)
 
-gbmFit <- train(log_price ~ ., method = "gbm", metric = "RMSE", maximize = FALSE, 
-                trControl = CARET.TRAIN.CTRL, tuneGrid = expand.grid(n.trees = (4:10) * 
-                                                                       50, interaction.depth = c(5), shrinkage = c(0.05), n.minobsinnode = c(10)), 
-                data = Training, verbose = FALSE)
+ gbmFit <- train(log_price ~ ., method = "gbm", metric = "RMSE", maximize = FALSE,
+                 trControl = CARET.TRAIN.CTRL, tuneGrid = expand.grid(n.trees = (4:10) *
+                                                                       50, interaction.depth = c(5), shrinkage = c(0.05), n.minobsinnode = c(10)),
+                 data = Training, verbose = FALSE)
 
 ## print(gbmFit)
 
-## Predictions
-preds1 <- predict(gbmFit, newdata = Validation)
-rmse(Validation$log_price, preds1)
+
+
+
 
 
 ### XGBOOST model
 
-library(xgboost)
+
 set.seed(123)
 ## Model parameters trained using xgb.cv function
 xgbFit = xgboost(data = as.matrix(Training[, -1]), nfold = 5, label = as.matrix(Training$log_price), 
@@ -432,12 +480,34 @@ xgbFit = xgboost(data = as.matrix(Training[, -1]), nfold = 5, label = as.matrix(
                  nthread = 8, eta = 0.01, gamma = 0.0468, max_depth = 6, 
                  #min_child_weight = 1.7817, 
                  subsample = 0.5213, colsample_bytree = 0.4603)
+
+xgbFit = xgb.cv(data = as.matrix(Training[, -1]), 
+                 nfold = 5, 
+                 label = as.matrix(Training$log_price), 
+                 nrounds = 2200, 
+                 verbose = FALSE, 
+                 objective = "reg:linear", 
+                 eval_metric = "rmse", 
+                 nthread = 8, 
+                 eta = 0.01, 
+                 #gamma = 0.0468, 
+                 #max_depth = 6, 
+                 #min_child_weight = 1.7817, 
+                 #subsample = 0.5213, 
+                 #colsample_bytree = 0.4603
+                )
 ## print(xgbFit)
-xgb.importance(colnames(Training[, -1]), model = xgbFit)
+importance_matrix <- xgb.importance(colnames(Training[, -1]), model = xgbFit)
+print(importance_matrix[1:10])
+
+xgb.plot.importance(importance_matrix[1:10])
 
 ## Predictions
 preds2 <- predict(xgbFit, newdata = as.matrix(Validation[, -1]))
 rmse(Validation$log_price, preds2)
+
+
+
 
 
 
@@ -477,10 +547,10 @@ write.csv(df, "submission_1_XG_Lasso.csv", row.names = FALSE)
 ## Hyperparam tuning
 
 
-## implement ElasticNet, RidgeRegression (these first 2 you do by changing alpha in glmnet), SVR(kernal = "linear), SVR(kernal = "rbf), EnsembleRegressors
-
-
-# Create submission file: note: do submission on full dataset otherwise columns will differ
-
-sample_submission <- data.frame(id = ids, log_price = test.pred.forest)
-write.csv(sample_submission, "sample_submission.csv", row.names = FALSE)
+# ## implement SVR(kernal = "linear), SVR(kernal = "rbf), EnsembleRegressors
+# library(e1071)
+# # Use Sparse Model Matrices
+# 
+# gamma.best <- 1e-5; cost.best <- 1e+4; epsilon.best <- 0.01
+# svm_fit <- svm(x = as.matrix(Training[, -1]), y = Training[, 1], type = "eps-regression",
+#                cost = cost.best, gamma = gamma.best, epsilon = epsilon.best)
