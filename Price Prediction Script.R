@@ -683,15 +683,15 @@ bestTrain
 
 params <- list(objective = "reg:linear", 
                #booster = "gbtree", 
-               eta = bestTrain$ETA, 
-               gamma = bestTrain$Gamma, 
-               max_depth = bestTrain$MaxDepth, 
-               min_child_weight = bestTrain$MinChildWgt, 
-               subsample = bestTrain$SubSampleRate, 
-               colsample_bytree = bestTrain$ColSampleRate
+               eta = 0.1, 
+               gamma = 0, 
+               max_depth = 6
+               #min_child_weight = 1, 
+               #subsample = bestTrain$SubSampleRate, 
+               #colsample_bytree = bestTrain$ColSampleRate
 )
 
-xgmodel <- xgboost(params = params, data = as.matrix(Training[, -1]), label = as.matrix(Training$log_price), nround = bestTrain$Iteration)
+xgmodel <- xgboost(params = params, data = as.matrix(Training[, -1]), label = as.matrix(Training$log_price), nround = 3500)
 
 xgBoostValidation <- predict(xgmodel,as.matrix(Validation[, -1])) 
 predicted <- data.frame(SalePrice=Validation$log_price, Prediction=xgBoostValidation)
@@ -708,6 +708,14 @@ xgb.plot.importance (importance_matrix = mat[1:20])
 
 rmse(Validation$log_price, xgBoostValidation) #
 
+
+xgmodel_tuned <- xgboost(params = params, data = as.matrix(training[, -1]), label = as.matrix(training$log_price), nround = 3500)
+## Predictions
+pred_xgb_3 <- predict(xgmodel_tuned, newdata = as.matrix(testing[, -1]))
+
+#write final submission (KEY: take log of pred, make sure column names are id and log_price)
+df <- data.frame(id = test_ID, log_price = pred_xgb_3)
+write.csv(df, "submission_6_xg_3.csv", row.names = FALSE)
 
 # ## implement SVR(kernal = "linear), SVR(kernal = "rbf), EnsembleRegressors
 # library(e1071)
