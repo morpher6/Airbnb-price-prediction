@@ -4,12 +4,12 @@
 # - EDA and Histograms
 # - fit initial model
 # - feature engineering
-# - more modeling
-# DUE MARCH 2ND
+# - More modeling
+
 
 ### Step 1:  Load libraries  ###
 
-debug(utils:::unpackPkgZip) #get past firewall (click 103 times)
+debug(utils:::unpackPkgZip) #get past firewall 
 
 library(randomForest)
 library(magrittr)
@@ -28,13 +28,14 @@ library(zoo)
 library(corrplot)
 library(mlr)
 
-#### Load data ########## 
+### Load data ###
 
 path = "C:/Users/spnelson/SF/Personal Folders/Airbnb/"
 train <- read.csv(paste0(path,"trainCleanZip.csv"), header = T, stringsAsFactors = F)
 test <- read.csv(paste0(path,"test.csv"), header = T, stringsAsFactors = F)
 
-## Save the ID column so that we can drop it from merged dataset (combi)
+### Save the ID column so that we can drop it from merged dataset (combi) ###
+
 train_ID = train$id
 test_ID = test$id
 test$log_price <- NA
@@ -66,26 +67,18 @@ sapply(X = fullSet, FUN = function(x) sum(is.na(x))) # number of missing values 
 
 # convert cleaning fee to boolean
 fullSet$cleaning_fee <- as.integer(as.logical((fullSet$cleaning_fee)))
-
-
 # convert host_has profile pic to boolean 
-
 fullSet$host_has_profile_pic = ifelse(fullSet$host_has_profile_pic =="t",1,0)
-
-
 # convert host_identity_verified to boolean 
 fullSet$host_identity_verified = ifelse(fullSet$host_identity_verified =="t",1,0)
-
-
 # convert instant_bookable to boolean CHANGE
 fullSet$instant_bookable = ifelse(fullSet$instant_bookable =="t",1,0)
-
-
 fullSet$number_of_reviews <- as.numeric(fullSet$number_of_reviews )
 
+### transform data ###
 
-#transform data
-#do amenities effect price? If so, binary values can be used by creating one column per amenity (see code below)
+# -do amenities effect price? If so, binary values can be used by creating one column per amenity (see code below)
+
 #remove extra characters
 drops <- c("description", "first_review", "host_since", "last_review", "name", "thumbnail_url")
 full_sub<-fullSet[,!(names(fullSet) %in% drops)] 
@@ -119,10 +112,6 @@ for(i in 24:ncol(fullSet)){
 
 #sort(sapply(train_df, FUN = function(x) sum(is.na(x))))
 fullSet[,24:ncol(fullSet)][is.na(fullSet[,24:ncol(fullSet)])]<-0
-
-
-
-
 
 
 
@@ -180,7 +169,6 @@ fullSet$accommodates <- na.aggregate(fullSet$accommodates, FUN = median)
 
 
 # Fix reviews_scores_rating by making it categorical and binning
-# https://github.com/samuelklam/airbnb-pricing-prediction/blob/master/data-cleaning/data-cleaning-listings.ipynb
 
 fullSet$review_scores_rating <- as.numeric(fullSet$review_scores_rating)
 fullSet$ReviewCategory <- fullSet$review_scores_rating %>% cut(fullSet$review_scores_rating, breaks=c(0, 10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, Inf),
@@ -197,15 +185,10 @@ fullSet$number_of_reviews[is.na(fullSet$number_of_reviews)] <- 0
 fullSet$cleaning_fee[is.na(fullSet$cleaning_fee)] <- 0
 fullSet$ReviewCategory <- as.factor(fullSet$ReviewCategory)
 
-### Variables to get rid of ###
+### Variables to drop ###
 # amenities, latitude, longitude, neighborhood, diff_first_last_review, review_score_category
 fullSet <- fullSet[ , -which(names(fullSet) %in% c("latitude", "longitude", "neighbourhood", 'amenities', 'host_response_rate'))] 
 
-
-
-#resplit model
-# test.new <- fullSet[fullSet$isTest==1,]
-# train.new <- fullSet[fullSet$isTest==0,]
 
 ### EDA and Histograms ###
 
@@ -236,11 +219,10 @@ p1 + geom_bar(aes(city))
 
 
 
-#################### Model Running ###
+### Model Running ###
 
 #Initial Linear model
-#reduce size of train_df for initial modelleling
-# train_df_small <-  sample_frac(train.new, size = .2, replace = FALSE)
+# train_df_small <-  sample_frac(train.new, size = .2, replace = FALSE) # for running on smaller subsets
 test.lm <- fullSet[fullSet$isTest==1,]
 train.lm <- fullSet[fullSet$isTest==0,]
 train.lm$log_price <- na.aggregate(train.lm$log_price, FUN = mean)
@@ -265,7 +247,7 @@ rmse(Validation$log_price, preds_lm_1) #rmse = .4866
 df_lm_1 <- data.frame(id = test_ID, log_price = preds_lm_1) #have to do this on full dataset, but prediction is not good enough
 
 
-################## random forest
+### random forest model ###
 
 fullRF <- fullSet
 
@@ -300,7 +282,6 @@ rf_fit_1 <- randomForest(log_price ~ bathrooms + bedrooms + beds + property_type
 
 
 # How many trees are needed to reach the minimum error estimate? 
-# This is a simple problem; it appears that about 100 trees would be enough. 
 which.min(rf_fit_1$mse) #980
 # Using the importance()  function to calculate the importance of each variable
 imp <- as.data.frame(sort(importance(rf_fit_1)[,1],decreasing = TRUE),optional = T)
@@ -335,10 +316,7 @@ RMSE.forest #rmse is .47
 df_rf_1 <- data.frame(id = ids, log_price = pred_rf_1)
 
 
-
-
-
-##########Dummy encoding ##########
+### Dummy encoding for XGBoost ###
 
 # first get data type for each feature
 feature_classes <- sapply(names(fullSet), function(x) {
@@ -405,8 +383,8 @@ rmse(Validation$log_price, pred_elnet_1)
 
 df_elnet_1 <- data.frame(id = test_ID, log_price = pred_elnet_1)
 
-####### 10-fold Cross validation for each alpha = 0, 0.1, ... , 0.9, 1.0 #######
-# (For plots on Right)
+### 10-fold Cross validation for each alpha = 0, 0.1, ... , 0.9, 1.0 ###
+
 for (i in 0:10) {
   assign(paste("fit", i, sep=""), cv.glmnet(as.matrix(Training[, -1]), Training[, 1], type.measure="mse", 
                                             alpha=i/10,family="gaussian"))
@@ -453,37 +431,13 @@ MSEs <- (c(mse0, mse1, mse2, mse3, mse4, mse5, mse6, mse7, mse8, mse9, mse10))
 whichReg <- cbind(alphas, MSEs)
 whichReg #best alpha = 0
 
+fullXB <- read.csv("C:/Users/spnelson/SF/Personal Folders/Airbnb/fullXB.csv") # cleaned dataset
 
-
-# ### GBM Model ###
-#
-
-
-#library(doMC)
-set.seed(222)
-## detectCores() returns 16 cpus
-#registerDoMC(16)
-## Set up caret model training parameters
-CARET.TRAIN.CTRL <- trainControl(method = "repeatedcv", number = 5, repeats = 5,
-                                 verboseIter = FALSE, allowParallel = TRUE)
-
-gbmFit <- train(log_price ~ ., method = "gbm", metric = "RMSE", maximize = FALSE,
-                trControl = CARET.TRAIN.CTRL, tuneGrid = expand.grid(n.trees = (4:10) *
-                                                                       50, interaction.depth = c(5), shrinkage = c(0.05), n.minobsinnode = c(10)),
-                data = Training, verbose = FALSE)
-
-## print(gbmFit)
-
-
-
-
-
-
-### XGBOOST model
+### XGBOOST model ###
 
 
 set.seed(123)
-## Model parameters trained using xgb.cv function
+# Model parameters trained using xgb.cv function
 
 # xgboost fitting with arbitrary parameters
 xgb_params_1 = list(
@@ -534,8 +488,6 @@ xgbFit_2 = xgb.cv(data = as.matrix(Training[, -1]),
 
 # set up the cross-validated hyper-parameter search
 
-
-
 print(xgbFit_1)
 importance_matrix <- xgb.importance(colnames(Training[, -1]), model = xgbFit_1)
 print(importance_matrix[1:10])
@@ -559,20 +511,7 @@ rmse(Validation$log_price, pred_xgb_1) #.4078572
 
 df_xgb_1 <- data.frame(id = test_ID, log_price = pred_xgb_1)
 
-
-
-
-#RMSE score for simple average of 3 models
-rmse(Validation$log_price, (pred_ridge_1 + pred_xgb_1)/2) #.4021225
-#weigted average RMSE (adjust)
-rmse(Validation$log_price, (0.3 * pred_ridge_1 + 0.7 * pred_xgb_1)) #0.4020838
-
-
-
-
-
-
-####################### retaining on whole dataset
+### retaining on whole dataset and producing output ###
 
 #Ridge
 set.seed(123)
@@ -586,9 +525,7 @@ df_cv_lasso <- data.frame(id = test_ID, log_price = pred_ridge_2)
 write.csv(df_cv_lasso, "submission_4_Ridge_2.csv", row.names = FALSE)
 
 
-
-
-#XGB
+### XGBoost ###
 set.seed(123)
 xgbFit_3 = xgboost(data = as.matrix(training[, -1]), 
                    nfold = 5, 
@@ -618,13 +555,13 @@ df <- data.frame(id = test_ID, log_price = .7 * pred_xgb_2 + .3 * pred_ridge_2)
 write.csv(df, "submission_5_xg_ridge_2.csv", row.names = FALSE)
 
 
-## Hyperparam tuning
+### Further Hyperparameter tuning ###
 
 # modeling with MLR
 library(janitor)
 newdataobject <- Training %>% clean_names()
 
-# Tuning the parameters #
+# Tuning the parameters 
 
 xgbGrid <- expand.grid(
   nrounds = c(10000),
@@ -690,8 +627,25 @@ params <- list(objective = "reg:linear",
                #subsample = bestTrain$SubSampleRate, 
                #colsample_bytree = bestTrain$ColSampleRate
 )
+fullXB <- read.csv("C:/Users/spnelson/SF/Personal Folders/Airbnb/fullXB.csv")
+drops <- c("id")
+fullXB<-fullXB[,!(names(fullXB) %in% drops)] 
 
-xgmodel <- xgboost(params = params, data = as.matrix(Training[, -1]), label = as.matrix(Training$log_price), nround = 3500)
+fullXB <- data.frame(lapply(fullXB, function(x) as.numeric(x)))
+
+test.xg <- fullXB[fullXB$isTest==1,]
+train.xg <- fullXB[fullXB$isTest==0,]
+train.xg$log_price <- na.aggregate(train.xg$log_price, FUN = mean)
+
+set.seed(222)
+
+inTrain <- createDataPartition(y = train.xg$log_price, p = 0.7, list = FALSE)
+Training <- train.xg[inTrain, ]
+Validation <- train.xg[-inTrain, ]
+training <- train.xg
+testing <- test.xg
+
+xgmodel <- xgboost(params = params, data = as.matrix(training[, -1]), label = as.matrix(training$log_price), nround = 3500)
 
 xgBoostValidation <- predict(xgmodel,as.matrix(Validation[, -1])) 
 predicted <- data.frame(SalePrice=Validation$log_price, Prediction=xgBoostValidation)
@@ -706,21 +660,12 @@ mat <- xgb.importance (feature_names = colnames(Training),model = xgmodel)
 xgb.plot.importance (importance_matrix = mat[1:20]) 
 
 
-rmse(Validation$log_price, xgBoostValidation) #
-
+rmse(Validation$log_price, xgBoostValidation) # evaluation metric
 
 xgmodel_tuned <- xgboost(params = params, data = as.matrix(training[, -1]), label = as.matrix(training$log_price), nround = 3500)
 ## Predictions
-pred_xgb_3 <- predict(xgmodel_tuned, newdata = as.matrix(testing[, -1]))
+pred_xgb_3 <- predict(xgmodel, newdata = as.matrix(testing[, -1]))
 
 #write final submission (KEY: take log of pred, make sure column names are id and log_price)
 df <- data.frame(id = test_ID, log_price = pred_xgb_3)
-write.csv(df, "submission_6_xg_3.csv", row.names = FALSE)
-
-# ## implement SVR(kernal = "linear), SVR(kernal = "rbf), EnsembleRegressors
-# library(e1071)
-# # Use Sparse Model Matrices
-# 
-# gamma.best <- 1e-5; cost.best <- 1e+4; epsilon.best <- 0.01
-# svm_fit <- svm(x = as.matrix(Training[, -1]), y = Training[, 1], type = "eps-regression",
-#                cost = cost.best, gamma = gamma.best, epsilon = epsilon.best)
+write.csv(df, "submission_7_xg_4.csv", row.names = FALSE) #final xgboost output
